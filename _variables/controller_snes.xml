@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+<variables>
+
+<v.controller>snes</v.controller>
+<v.controllerSpacing>0.014</v.controllerSpacing>
+
+</variables>
+
+</theme>

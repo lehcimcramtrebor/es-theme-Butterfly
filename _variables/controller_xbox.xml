@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+<variables>
+
+<v.controller>xbox</v.controller>
+<v.controllerSpacing>0.005</v.controllerSpacing>
+
+</variables>
+
+</theme>

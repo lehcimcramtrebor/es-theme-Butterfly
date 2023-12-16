@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+<variables>
+
+<v.color>candy</v.color>
+<c.glowColor>00000080</c.glowColor>
+<c.selected>ffffff</c.selected>
+<c.base>100809</c.base>
+<c.text>ccc9cb</c.text>
+<c.textHeader>ff1493</c.textHeader>
+<c.menuSelector>cc1088</c.menuSelector>
+<ce.menuSelector>bb0077</ce.menuSelector>
+<c.scroll>bb007780</c.scroll>
+<c.menubg>201618</c.menubg>
+</variables>
+
+</theme>

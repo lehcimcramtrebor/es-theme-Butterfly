@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+    <include>./../theme.xml</include>
+
+<variables><region.priority region="eu"/>
+
+<system.manufacturer>Sega</system.manufacturer>
+
+<system.fullName>Megadrive</system.fullName>
+<system.fullName region="us">Genesis</system.fullName>
+
+<system.releaseYearOrNull>1988</system.releaseYearOrNull>
+<system.releaseYearOrNull region="us">1989</system.releaseYearOrNull>
+
+<desc>The Mega Drive, also known as the Sega Genesis, was a popular 16-bit home video game console known for its iconic library of games in the '90s.</desc>
+<desc region="us">The Genesis, also known as the Sega Mega Drive, was a popular 16-bit home video game console that contributed to the '90s console wars.</desc>
+<desc region="jp">The Japanese Mega Drive, known as the Sega Mega Drive in Japan, was a 16-bit home video game console released by SEGA with a library of iconic games.</desc>
+<desc lang="fr">La Mega Drive, également connue sous le nom de Sega Genesis, était une console de jeu vidéo domestique 16 bits populaire réputée pour sa bibliothèque emblématique de jeux dans les années 90.</desc>
+<desc lang="fr" region="us">La Genesis, également connue sous le nom de Sega Mega Drive, était une console de jeu vidéo domestique 16 bits populaire qui a contribué aux guerres des consoles des années 90.</desc>
+<desc lang="fr" region="jp">La Mega Drive japonaise, connue sous le nom de Sega Mega Drive au Japon, était une console de jeu vidéo domestique 16 bits sortie par SEGA avec une bibliothèque de jeux emblématiques.</desc>
+
+</variables>
+
+</theme>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+<variables>
+
+<v.color>mars</v.color>
+<c.glowColor>00000080</c.glowColor>
+<c.selected>ffffff</c.selected>
+<c.base>141410</c.base>
+<c.text>cececc</c.text>
+<c.textHeader>cccc50</c.textHeader>
+<c.menuSelector>808030</c.menuSelector>
+<ce.menuSelector>707020</ce.menuSelector>
+<c.scroll>70702080</c.scroll>
+<c.menubg>282820</c.menubg>
+
+</variables>
+
+</theme>
