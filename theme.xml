@@ -152,6 +152,31 @@
 <include name="yes" displayName="${lang.yes}"/>
 </subset>
 
+<!-- Random Videos -->
+<variables>
+<lang.randomVideos>random videos on system view</lang.randomVideos>
+<lang.randomVideos lang="fr">vidéos aléatoires sur la vue système</lang.randomVideos>
+
+<lang.randomVideosSubsetDesc>( applicable individually )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+<lang.randomVideosSubsetDesc lang="fr">( applicable individuellement )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+
+<lang.ur>in upper right corner</lang.ur>
+<lang.ur lang="fr">au coin supérieur droit</lang.ur>
+
+<lang.bl>in bottom left corner</lang.bl>
+<lang.bl lang="fr">au coin inférieur gauche</lang.bl>
+
+<lang.br>in bottom right corner</lang.br>
+<lang.br lang="fr">au coin inférieur droit</lang.br>
+</variables>
+
+<subset name="randomVideos" displayName="${lang.randomVideos}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+<include name="no" displayName="${lang.no}">./_variables/randomVideos_no.xml</include>
+<include name="ur" displayName="${lang.ur}">./_variables/randomVideos_ur.xml</include>
+<include name="bl" displayName="${lang.bl}">./_variables/randomVideos_bl.xml</include>
+<include name="br" displayName="${lang.br}">./_variables/randomVideos_br.xml</include>
+</subset>
+
 <!-- Logos subsets (x2) -->
 <variables>
 <lang.forceRegion>force region ( need refresh )</lang.forceRegion>
@@ -353,9 +378,9 @@ group: ${system.group}
 
 <!-- Extended Infos-->
 <text name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL" extra="true" zIndex="1000" fontPath=":/fonts/CabinCondensed-Bold.ttf" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" forceUppercase="true">
-<storyboard>
+<!--<storyboard>
 <animation property="opacity"								to="0"				begin="650" 		duration="200" 			mode="easeIn"						/>
-</storyboard>
+</storyboard>-->
 </text>
 
 <text name="infosExUL" extra="true" color="${c.selected}" fontSize="0.04" padding="0.025 0.04 0 0"
@@ -423,8 +448,7 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 <control name="logo,logoText">
 <storyboard event="activate">
 <animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"							/>
-<animation property="offsetY"								to="-0.3"			begin="550" 		duration="400" 			mode="easeInOut"						/>
-<animation property="opacity"								to="0"				begin="1000" 		duration="200" 			mode="easeIn"							/>
+<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"							/>
 <animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
 </storyboard>
 <storyboard event="scroll">
@@ -438,12 +462,6 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 <animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"							/>
 <animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"							/>
 <animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"							/>
-</storyboard>
-
-<storyboard event="activate" ifSubset="carousel:bottom">
-<animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"							/>
-<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
 </storyboard>
 
 <storyboard event="activate" ifSubset="carousel:wheel">
@@ -467,8 +485,7 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 
 <storyboard event="activate" ifSubset="carousel:vertical">
 <animation property="scale"				from="0.5"			to="1"									duration="125" 			mode="linear"							/>
-<animation property="offsetY"								to="-0.3"			begin="550" 		duration="400" 			mode="easeInOut"						/>
-<animation property="opacity"								to="0"				begin="1000" 		duration="200" 			mode="easeIn"							/>
+<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"							/>
 <animation property="opacity"			from="0.5"			to="1"									duration="1" 			mode="linear"/>
 </storyboard>
 <storyboard event="scroll" ifSubset="carousel:vertical">
@@ -485,25 +502,8 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 </storyboard>
 </control>
 
-<!-- Logos Relay -->
-<image name="logoRelay" extra="true"
-zIndex="1000" linearSmooth="true" maxSize="0.36 0.216" origin="0.5 0.5" pos="0.5 0.5" reflexion="0.025 0" saturation="1.2" opacity="0"
-path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png"
->
-<storyboard repeatAt="1000">
-<animation property="offsetY"								to="-0.3"			begin="550" 		duration="400" 			mode="easeInOut"						/>
-<animation property="opacity"								to="1"				begin="750" 		duration="200" 			mode="easeIn"							/>
-<animation property="scale"									to="1.1"			begin="6500"		duration="250" 			mode="bump"			autoreverse="true"	/>
-</storyboard>
-</image>
-<image name="logoRelay" extra="true" ifSubset="carousel:wheel" region="us" path="./${system.theme}/us/logo.png"/>
-<image name="logoRelay" extra="true" ifSubset="carousel:wheel" region="jp" path="./${system.theme}/jp/logo.png"/>
-<image name="logoRelay" extra="true" ifSubset="forceRegion:eu,carousel:wheel" path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png"/>
-<image name="logoRelay" extra="true" ifSubset="forceRegion:us,carousel:wheel" path="./${system.theme}/us/logo.png"/>
-<image name="logoRelay" extra="true" ifSubset="forceRegion:jp,carousel:wheel" path="./${system.theme}/jp/logo.png"/>
-
 <!-- System videos -->
-<video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="0.5 0.5" pos="0.5 0.59" maxSize="0.9 0.4" roundCorners="0.022" scale="0" effect="none"
+<video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="${v.rvOrigin}" pos="${v.rvPos}" maxSize="0.9 0.4" roundCorners="0.022" effect="none"
 default="./resources/parts/default_${v.color}.mp4"
 path="{random}"
 path="./${system.theme}/video.mp4"
@@ -511,10 +511,14 @@ path="./${v.custom}/${system.theme}/video.mp4"
 >
 <shader path=":/shaders/helmic_${v.color}.glsl"/>
 <storyboard>
-<animation property="scale"				from="0"			to="0"										duration="650" 		mode="linear"							/>
-<animation property="scale"									to="1"					begin="650"			duration="75" 		mode="easeInOut"						/>
-<animation property="offsetY"			from="0.3"									begin="550"			duration="400" 		mode="easeInOut"						/>
+<animation property="offsetX"			from="1"			to="1"									duration="650" 		mode="linear"							/>
+<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
 </storyboard>
+<storyboard ifSubset="randomVideos:bl">
+<animation property="offsetX"			from="-1"			to="-1"									duration="650" 		mode="linear"							/>
+<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
+</storyboard>
+<audio>true</audio>
 </video>
 
 </view>
