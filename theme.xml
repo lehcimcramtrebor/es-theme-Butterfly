@@ -389,7 +389,7 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 <text name="logoText" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.06" color="${c.text}" glowColor="${c.glowColor}" glowOffset="1" glowSize="1" forceUppercase="true" reflexion="0.025 0"/>
 
 <!-- Shade effect over backgrounds properties for system view -->
-<image name="shadeBackground" extra="true" color="141414" colorEnd="00000000" gradientType="vertical" opacity="0.25">
+<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="0.25">
 <storyboard>
 <animation property="opacity"								to="1"				begin="550" 		duration="400" 			mode="easeInOut"						/>
 </storyboard>
@@ -527,7 +527,7 @@ path="./${v.custom}/${system.theme}/video.mp4"
 <view name="basic,detailed,grid,gamecarousel">
 
 <!-- Shade over backgrounds properties for gamelists -->
-<image name="shadeBackground" extra="true" color="141414" colorEnd="00000000" gradientType="vertical" opacity="1"/>
+<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="1"/>
 
 <!-- Theme or customs backgrounds properties foe all gamelist-->
 <image name="gamelistBackground" extra="true" linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200"
@@ -537,7 +537,7 @@ path="./${system.theme}/wallpaper.jpg"
 path="./${v.custom}/wallpapers/theme.jpg"
 path="./${v.custom}/wallpapers/${system.theme}.jpg"
 >
-<shader path=":/shaders/crt.glsl"/>
+<shader path=":/shaders/scanlines.glsl"/>
 </image>
 
 </view>
@@ -570,7 +570,7 @@ default="./${v.custom}/wallpapers/default_fanart.jpg"
 <storyboard event="deactivateNext">
 <animation property="scale"									to="0"									duration="1"			mode="linear"							/>
 </storyboard>
-<shader path=":/shaders/crt.glsl"/>
+<shader path=":/shaders/scanlines.glsl"/>
 </image>
 
 </view>

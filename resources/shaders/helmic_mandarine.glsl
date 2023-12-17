@@ -102,14 +102,14 @@ uniform COMPAT_PRECISION float shadowmask;
 uniform COMPAT_PRECISION float msk_size;
 
 #else
-#define SCANTHICK 3.0
-#define INTENSITY 0.1
-#define BRIGHTBOOST 0.65
-#define CGWG 0.8
+#define SCANTHICK 2.0
+#define INTENSITY 0.15
+#define BRIGHTBOOST 0.25
+#define CGWG 0.3
 #define BLUR 0.6
 #define GAMMA 0.45
-#define SATURATION 1.05
-#define shadowmask 0.0
+#define SATURATION 1.0
+#define shadowmask 1.0
 #define msk_size 1.0
 
 #endif
