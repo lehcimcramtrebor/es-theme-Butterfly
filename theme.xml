@@ -512,8 +512,8 @@ path="./${v.custom}/${system.theme}/video.mp4"
 >
 <shader path=":/shaders/helmic_${v.color}.glsl"/>
 <storyboard>
-<animation property="scale"				from="0"		to="0"										duration="750" 			mode="linear"								/>
-<animation property="scale"								to="1"					begin="800"			duration="150" 			mode="easeInOut"							/>
+<animation property="scale"				from="0"		to="0"										duration="650" 			mode="linear"								/>
+<animation property="scale"								to="1"					begin="650"			duration="75" 			mode="easeInOut"							/>
 <animation property="offsetY"			from="0.3"								begin="550"			duration="400" 			mode="easeInOut"							/>
 </storyboard>
 </video>
