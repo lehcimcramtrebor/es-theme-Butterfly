@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+<variables>
+<!-- 480 576 600 640 720 768 800 864 900 960 1024 1050 1080 1152 1200 1280 1400 1440 1536 1600 1716 1800 2048 2160 2560 2880 3840 4320 -->
+<!-- not divisable by 3,125 : 480 576 720 768 864 960 1024 1080 1152 1280 1440 1536 1716 2048 2160 2560 2880 3840 4320 -->
+
+<v.rvSize>1 0.32</v.rvSize>
+
+<v.rvSize if="	{screen.height} == '480'
+||				{screen.height} == '960'
+||				{screen.height} == '1440'
+||				{screen.height} == '2880'
+||				{screen.height} == '3840'
+||				{screen.height} == '4320'	">1 0.31875</v.rvSize>
+
+<v.rvSize if="	{screen.height} == '576'
+||				{screen.height} == '720'
+||				{screen.height} == '864'
+||				{screen.height} == '1080'
+||				{screen.height} == '1152'
+||				{screen.height} == '2160'	">1 0.3194444444444444</v.rvSize>
+
+
+<v.rvSize if="	{screen.height} == '768'
+||				{screen.height} == '1024'
+||				{screen.height} == '1280'
+||				{screen.height} == '1536'
+||				{screen.height} == '2048'
+||				{screen.height} == '2560'	">1 0.3203125</v.rvSize>
+
+<v.rvSize if="	{screen.height} == '1716'	">1 0.3205128205128205</v.rvSize>
+
+</variables>
+
+</theme>
