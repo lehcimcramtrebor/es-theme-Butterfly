@@ -3,23 +3,8 @@
 <formatVersion>7</formatVersion>
 
 <variables>
-<!-- 480 576 600 640 720 768 800 864 900 960 1024 1050 1080 1152 1200 1280 1400 1440 1536 1600 1716 1800 2048 2160 2560 2880 3840 4320 -->
-<!-- not divisable by 2,5 : 576 768 864 1024 1152 1536 1716 2048 -->
 
 <v.rvSize>1 0.4</v.rvSize>
-
-<v.rvSize if="	{screen.height} == '576'
-||				{screen.height} == '1152'	">1 0.3993055555555556</v.rvSize>
-
-<v.rvSize if="	{screen.height} == '768'
-||				{screen.height} == '1536'	">1 0.4010416666666667</v.rvSize>
-
-<v.rvSize if="	{screen.height} == '864'	">1 0.400462962962963</v.rvSize>
-
-<v.rvSize if="	{screen.height} == '1024'
-||				{screen.height} == '2048'	">1 0.400390625</v.rvSize>
-
-<v.rvSize if="	{screen.height} == '1716'	">1 0.3997668997668998</v.rvSize>
 
 </variables>
 
