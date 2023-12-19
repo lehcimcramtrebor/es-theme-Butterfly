@@ -19,6 +19,18 @@
 <v.custom>../../_ButterflyCustom</v.custom>
 <v.custom ifArch="windows">../../../../_ButterflyCustom</v.custom>
 
+<!-- Screen ratio conditions to variables -->
+<v.notWide>${screen.height} > ${screen.width}/1.6</v.notWide>
+<v.ultraWide>${screen.width} > ${screen.height}*1.8</v.ultraWide>
+
+<v.329>{screen.ratio} == '32/9'</v.329>
+<v.219>{screen.ratio} == '21/9'</v.219>
+<v.161>{screen.ratio} == '16/10'</v.161>
+<v.169>{screen.ratio} == '16/9'</v.169>
+<v.54>{screen.ratio} == '5/4'</v.54>
+<v.43>{screen.ratio} == '4/3'</v.43>
+<v.32>{screen.ratio} == '3/2'</v.32>
+<v.11>{screen.ratio} == '1/1'</v.11>
 
 <!-- General language -->
 <lang.yes>yes</lang.yes>
@@ -319,21 +331,16 @@ empty=":/battery/empty.svg"
 />
 
 <!-- Clock -->
-<text name="clock" color="${c.text}" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.02" pos="0.90 0.95" size="0.09 0.058" alignment="right" verticalAlignment="center" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
+<text name="clock" color="${c.text}" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.02" origin="1 0" pos="0.995 0.95" size="0.09 0.058" alignment="right" verticalAlignment="center" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
 <color ifHelpPrompts="false">${c.selected}</color>
 <fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
 <fontSize ifCheevos="true">0.013</fontSize>
-<pos ifCheevos="true">0.89 0.9425</pos>
+<pos ifCheevos="true">0.997 0.9425</pos>
 </text>
-
-<!-- Retroachievements icon -->
-<image name="cheevosIcon" extra="true" ifCheevos="true" linearSmooth="true" path=":/parts/Contest.png" maxSize="1 0.03" origin="1 1" pos="0.9997 0.9935" color="${c.textHeader}">
-<color ifHelpPrompts="false">${c.selected}</color>
-</image>
 
 <!-- Retroachievements username -->
 <text name="username" extra="true" ifCheevos="true" text="${cheevos.username}" fontPath=":/fonts/CabinCondensed-Bold.ttf" fontSize="0.013" forceUppercase="true" color="${c.textHeader}" alignment="right"
-verticalAlignment="bottom" origin="1 1" pos="0.981 0.9975" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
+verticalAlignment="bottom" origin="1 1" pos="0.997 0.9975" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
 <color ifHelpPrompts="false">${c.selected}</color>
 </text>
 
@@ -371,8 +378,8 @@ verticalAlignment="bottom" origin="1 1" pos="0.981 0.9975" glowColor="${c.glowCo
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="system">
 
-<!-- Console 
-<text name="console" extra="true" color="00ff00" zIndex="5000" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.01 0.04 0.01 0.01">
+<!-- Console -->
+<text name="console" extra="true" color="00ff00" zIndex="5000" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.01 0.04 0.01 0.01" glowColor="${c.glowColor}" glowOffset="0" glowSize="3">
 <text>${screen.ratio} ( ${screen.width}x${screen.height} )
 ${system.fullName} ( ${system.theme} ) ${system.releaseYearOrNull}
 manufacturer: ${system.manufacturer}
@@ -380,7 +387,7 @@ hardware: ${system.hardwareType}
 group: ${system.group}
 </text>
 </text>
--->
+
 
 <!-- Extended Infos-->
 <text name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL" extra="true" zIndex="1000" fontPath=":/fonts/CabinCondensed-Bold.ttf" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" forceUppercase="true">
