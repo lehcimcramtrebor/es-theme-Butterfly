@@ -169,6 +169,9 @@
 <lang.randomVideos>random videos on system view</lang.randomVideos>
 <lang.randomVideos lang="fr">vidéos aléatoires sur la vue système</lang.randomVideos>
 
+<lang.randomVideosSize>random videos size</lang.randomVideosSize>
+<lang.randomVideosSize lang="fr">taille des vidéos aléatoires</lang.randomVideosSize>
+
 <lang.randomVideosSubsetDesc>( applicable individually )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
 <lang.randomVideosSubsetDesc lang="fr">( applicable individuellement )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
 
