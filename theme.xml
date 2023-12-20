@@ -304,6 +304,9 @@ iconStart=":/help/icon_${v.help}_start.png"
 iconSelect=":/help/icon_${v.help}_select.png"
 >
 <iconColor ifSubset="helpIcons:defaultIcons">${c.textHeader}</iconColor>
+<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+<fontSize verticalScreen="true">0.026</fontSize>
+<pos verticalScreen="true">0.004 0.985</pos>
 </helpsystem>
 
 </view>
@@ -331,17 +334,29 @@ empty=":/battery/empty.svg"
 />
 
 <!-- Clock -->
-<text name="clock" color="${c.text}" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.02" origin="1 0" pos="0.995 0.95" size="0.09 0.058" alignment="right" verticalAlignment="center" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
+<text name="clock" color="${c.text}" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.02" origin="1 0.5" pos="0.995 0.98" alignment="right" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
 <color ifHelpPrompts="false">${c.selected}</color>
+
+<origin ifCheevos="true">1 0</origin>
+
+<fontSize verticalScreen="true">0.02</fontSize>
+<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+<pos verticalScreen="true">0.99 0.9845</pos>
+
 <fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
 <fontSize ifCheevos="true">0.013</fontSize>
-<pos ifCheevos="true">0.997 0.9425</pos>
+
+<fontSize verticalScreen="true" ifCheevos="true">0.018</fontSize>
+<pos ifCheevos="true">0.997 0.9625</pos>
+<pos verticalScreen="true" ifCheevos="true">0.997 0.9705</pos>
 </text>
 
 <!-- Retroachievements username -->
 <text name="username" extra="true" ifCheevos="true" text="${cheevos.username}" fontPath=":/fonts/CabinCondensed-Bold.ttf" fontSize="0.013" forceUppercase="true" color="${c.textHeader}" alignment="right"
-verticalAlignment="bottom" origin="1 1" pos="0.997 0.9975" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
+origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
 <color ifHelpPrompts="false">${c.selected}</color>
+<fontSize verticalScreen="true" ifCheevos="true">0.018</fontSize>
+<pos verticalScreen="true" ifCheevos="true">0.997 0.9825</pos>
 </text>
 
 </view>
@@ -360,6 +375,7 @@ verticalAlignment="bottom" origin="1 1" pos="0.997 0.9975" glowColor="${c.glowCo
 <!-- Help background -->
 <image name="helpBackground" extra="true" linearSmooth="true" path=":/plainShadow.png" origin="0 1" pos="0 1" size="1 0.056" zIndex="1100" color="${c.menubg}" opacity="1">
 <visible ifHelpPrompts="false">false</visible>
+<size verticalScreen="true">1 0.04</size>
 </image>
 
 <!-- Logos -->
