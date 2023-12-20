@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+<variables>
+
+<v.rvOrigin>0.5 1</v.rvOrigin>
+<v.rvPos>0.5 0.9018518518518519</v.rvPos>
+<v.rvPos verticalScreen="true">0.5 0.95</v.rvPos>
+
+</variables>
+
+</theme>

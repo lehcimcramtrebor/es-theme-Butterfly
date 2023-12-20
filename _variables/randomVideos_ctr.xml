@@ -4,8 +4,8 @@
 
 <variables>
 
-<v.rvSize>1 0.32</v.rvSize>
-<v.rvSize verticalScreen="true">0.4 1</v.rvSize>
+<v.rvOrigin>0.5 0.5</v.rvOrigin>
+<v.rvPos>0.5 0.5</v.rvPos>
 
 </variables>
 

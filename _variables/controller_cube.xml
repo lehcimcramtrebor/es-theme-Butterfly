@@ -6,6 +6,7 @@
 
 <v.controller>cube</v.controller>
 <v.controllerSpacing>0.004</v.controllerSpacing>
+<v.controllerSpacing verticalScreen="true">0.012</v.controllerSpacing>
 
 </variables>
 

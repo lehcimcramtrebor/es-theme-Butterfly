@@ -6,6 +6,7 @@
 
 <v.controller>nes</v.controller>
 <v.controllerSpacing>0.012</v.controllerSpacing>
+<v.controllerSpacing verticalScreen="true">0.028</v.controllerSpacing>
 
 </variables>
 

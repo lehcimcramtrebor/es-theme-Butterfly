@@ -180,6 +180,24 @@
 
 <lang.br>in bottom right corner</lang.br>
 <lang.br lang="fr">au coin inférieur droit</lang.br>
+
+<lang.btm>at bottom</lang.btm>
+<lang.btm lang="fr">centrée en bas</lang.btm>
+
+<lang.ctr>at center</lang.ctr>
+<lang.ctr lang="fr">au centre</lang.ctr>
+
+<lang.small>small</lang.small>
+<lang.small lang="fr">petite</lang.small>
+
+<lang.medium>medium</lang.medium>
+<lang.medium lang="fr">moyenne</lang.medium>
+
+<lang.big>big</lang.big>
+<lang.big lang="fr">grande</lang.big>
+
+<lang.xtra>extra large</lang.xtra>
+<lang.xtra lang="fr">très grande</lang.xtra>
 </variables>
 
 <subset name="randomVideos" displayName="${lang.randomVideos}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
@@ -187,12 +205,15 @@
 <include name="ur" displayName="${lang.ur}">./_variables/randomVideos_ur.xml</include>
 <include name="bl" displayName="${lang.bl}">./_variables/randomVideos_bl.xml</include>
 <include name="br" displayName="${lang.br}">./_variables/randomVideos_br.xml</include>
+<include verticalScreen="true" name="btm" displayName="${lang.btm}">./_variables/randomVideos_btm.xml</include>
+<include verticalScreen="true" name="ctr" displayName="${lang.ctr}">./_variables/randomVideos_ctr.xml</include>
 </subset>
 
-<subset name="randomVideosSize" displayName="${lang.randomVideosSize}" ifSubset="randomVideos:ur|bl|br" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+<subset name="randomVideosSize" displayName="${lang.randomVideosSize}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 <include if="{screen.height} >= '600'" name="medium" displayName="${lang.medium}">./_variables/randomVideosSize_medium.xml</include>
 <include if="{screen.height} >= '720'" name="small" displayName="${lang.small}">./_variables/randomVideosSize_small.xml</include>
 <include name="big" displayName="${lang.big}">./_variables/randomVideosSize_big.xml</include>
+<include verticalScreen="true" ifSubset="randomVideos:btm|ctr" name="xtra" displayName="${lang.xtra}">./_variables/randomVideosSize_xtra.xml</include>
 </subset>
 
 <!-- Logos subsets (x2) -->
@@ -305,8 +326,7 @@ iconSelect=":/help/icon_${v.help}_select.png"
 >
 <iconColor ifSubset="helpIcons:defaultIcons">${c.textHeader}</iconColor>
 <fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-<fontSize verticalScreen="true">0.026</fontSize>
-<pos verticalScreen="true">0.004 0.985</pos>
+<pos verticalScreen="true">0.01 0.985</pos>
 </helpsystem>
 
 </view>
@@ -321,42 +341,47 @@ iconSelect=":/help/icon_${v.help}_select.png"
 imagePath=":/controller/${v.controller}.svg"
 itemSpacing="${v.controllerSpacing}"
 gunPath=":/controller/gun.svg"
-/>
+>
+<size verticalScreen="true">0.185 0.016</size>
+<pos verticalScreen="true">0.02 0.012</pos>
+</controllerActivity>
 
 <!-- Battery indicator -->
-<batteryIndicator name="batteryIndicator" pos="0.955 0.01" horizontalAlignment="right" itemSpacing="0.005" color="${c.selected}"
+<batteryIndicator name="batteryIndicator" pos="0 0.01" size="1 0.023" horizontalAlignment="right" itemSpacing="0.005" color="${c.selected}"
 incharge=":/battery/incharge.svg"
 full=":/battery/full.svg"
 at75=":/battery/75.svg"
 at50=":/battery/50.svg"
 at25=":/battery/25.svg"
 empty=":/battery/empty.svg"
-/>
-
+>
+<size verticalScreen="true">1 0.018</size>
+<pos verticalScreen="true">-0.01 0.011</pos>
+</batteryIndicator>
 <!-- Clock -->
 <text name="clock" color="${c.text}" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.02" origin="1 0.5" pos="0.995 0.98" alignment="right" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
 <color ifHelpPrompts="false">${c.selected}</color>
 
 <origin ifCheevos="true">1 0</origin>
 
-<fontSize verticalScreen="true">0.02</fontSize>
+<fontSize verticalScreen="true">0.018</fontSize>
 <fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
 <pos verticalScreen="true">0.99 0.9845</pos>
 
 <fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
 <fontSize ifCheevos="true">0.013</fontSize>
 
-<fontSize verticalScreen="true" ifCheevos="true">0.018</fontSize>
+<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
 <pos ifCheevos="true">0.997 0.9625</pos>
-<pos verticalScreen="true" ifCheevos="true">0.997 0.9705</pos>
+<pos verticalScreen="true" ifCheevos="true">0.996 0.9785</pos>
 </text>
 
 <!-- Retroachievements username -->
 <text name="username" extra="true" ifCheevos="true" text="${cheevos.username}" fontPath=":/fonts/CabinCondensed-Bold.ttf" fontSize="0.013" forceUppercase="true" color="${c.textHeader}" alignment="right"
 origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
 <color ifHelpPrompts="false">${c.selected}</color>
-<fontSize verticalScreen="true" ifCheevos="true">0.018</fontSize>
-<pos verticalScreen="true" ifCheevos="true">0.997 0.9825</pos>
+<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
+<pos verticalScreen="true" ifCheevos="true">0.996 0.9875</pos>
 </text>
 
 </view>
@@ -394,8 +419,8 @@ origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSi
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="system">
 
-<!-- Console -->
-<text name="console" extra="true" color="00ff00" zIndex="5000" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.01 0.04 0.01 0.01" glowColor="${c.glowColor}" glowOffset="0" glowSize="3">
+<!-- Console 
+<text name="console" extra="true" color="00ff00" zIndex="5000" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.01 0.3 0.01 0.01" glowColor="${c.glowColor}" glowOffset="0" glowSize="3">
 <text>${screen.ratio} ( ${screen.width}x${screen.height} )
 ${system.fullName} ( ${system.theme} ) ${system.releaseYearOrNull}
 manufacturer: ${system.manufacturer}
@@ -403,7 +428,7 @@ hardware: ${system.hardwareType}
 group: ${system.group}
 </text>
 </text>
-
+-->
 
 <!-- Extended Infos-->
 <text name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL" extra="true" zIndex="1000" fontPath=":/fonts/CabinCondensed-Bold.ttf" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" forceUppercase="true">
@@ -413,28 +438,43 @@ group: ${system.group}
 </text>
 
 <text name="infosExUL" extra="true" color="${c.selected}" fontSize="0.04" padding="0.025 0.04 0 0"
-text="${system.manufacturer}"/>
+text="${system.manufacturer}"
+>
+<fontSize verticalScreen="true">0.035</fontSize>
+</text>
 
 <text name="infosEx2UL" extra="true" color="${c.selected}" fontSize="0.03" padding="0.025 0.09 0 0"
 text="${system.fullName} ${v.p1} ${system.releaseYearOrNull} ${v.p2}"
-/>
+>
+<text verticalScreen="true">${system.name} ${v.p1} ${system.releaseYearOrNull} ${v.p2}</text>
+<fontSize verticalScreen="true">0.025</fontSize>
+<padding verticalScreen="true">0.025 0.065 0 0</padding>
+</text>
 
 <text name="infosEx3UL" extra="true" color="${c.textHeader}" fontSize="0.022" padding="0.025 0.13 0 0"
 text="${v.bindingTotalUL}"
-/>
+>
+<fontSize verticalScreen="true">0.016</fontSize>
+<padding verticalScreen="true">0.025 0.0875 0 0</padding>
+</text>
 
 <text name="infosEx4UL" extra="true" color="${c.selected}" fontSize="0.018" padding="0.025 0.162 0 0"
 text="${v.bindingFavorites}"
-/>
+>
+<fontSize verticalScreen="true">0.015</fontSize>
+<padding verticalScreen="true">0.025 0.103 0 0</padding>
+</text>
 
 <!-- Desc -->
 <text name="infosDesc" extra="true" zIndex="1000" fontSize="0.016" fontPath=":/fonts/Welbut__.ttf" glowColor="${c.glowColor}" glowOffset="1" glowSize="2" forceUppercase="false"
 alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" opacity="0" color="${c.text}" singleLineScroll="true">
+<pos verticalScreen="true">0 0.965</pos>
 <storyboard>
 <animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"						/>
 <animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"						/>
 </storyboard>
 <text>                                                                                                                                                                                                                                                                                                                                                                                                    ${desc}</text>
+<text verticalScreen="true">                                                                                                                                                                                                                            ${desc}</text>
 </text>
 
 
@@ -450,28 +490,43 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 </image>
 
 <!-- System view backgrounds -->
-<image name="systemBackground" extra="true" linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" default=":/parts/defaultFanart.jpg"
+<image name="systemBackground" extra="true" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" default=":/parts/defaultFanart.jpg"
 default="./${v.custom}/_default/default.jpg"
 path="{random:fanart}"
 path="./${system.theme}/wallpaper.jpg"
 path="./${v.custom}/_default/wallpaper.jpg"
 path="./${v.custom}/${system.theme}/wallpaper.jpg"
 >
+<minSize verticalScreen="false">1 1</minSize>
+<maxSize verticalScreen="true">99 1</maxSize>
 <shader path=":/shaders/scanlines.glsl"/>
 <storyboard>
-<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"						/>
-<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"						/>
+<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"												/>
+<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"												/>
 </storyboard>
 </image>
 
 <!-- System carousels -->
-<carousel name="systemcarousel" zIndex="1000" color="00000000" origin="0.5 0.5" pos="0.5 0.5" size="1.05 1" logoSize="0.36 0.216" logoScale="1" defaultTransition="instant" scrollSound=":/sounds/scroll.wav"/>
+<carousel name="systemcarousel" zIndex="1000" color="00000000" origin="0.5 0.5" pos="0.5 0.5" size="1.05 1" logoSize="0.36 0.216" logoScale="1" defaultTransition="instant" scrollSound=":/sounds/scroll.wav">
+<maxLogoCount verticalScreen="true">3</maxLogoCount>
+<size verticalScreen="true">1.15 1</size>
+<logoSize verticalScreen="true">0.50 0.08</logoSize>
+</carousel>
 
-<carousel name="systemcarousel"  ifSubset="carousel:wheel" size="0.4 1" origin="1 0.5" pos="1 0.5" type="vertical_wheel" logoRotation="${v.wheelFlip}16" logoRotationOrigin="2.75 0.5" logoAlignment="center"/>
+<carousel name="systemcarousel"  ifSubset="carousel:wheel" size="0.4 1" origin="1 0.5" pos="1 0.5" type="vertical_wheel" logoRotation="${v.wheelFlip}16" logoRotationOrigin="2.75 0.5" logoAlignment="center">
+<size verticalScreen="true">1 1</size>
+<logoSize verticalScreen="true">0.65 0.14</logoSize>
+<logoRotationOrigin verticalScreen="true">2 0.5</logoRotationOrigin>
+<logoRotation verticalScreen="true">${v.wheelFlip}26</logoRotation>
+<maxLogoCount verticalScreen="true">9</maxLogoCount>
+</carousel>
 
 <carousel name="systemcarousel"  ifSubset="carousel:bottom" origin="0.5 0" pos="0.5 0" size="1.05 0.96" logoAlignment="bottom"/>
 
-<carousel name="systemcarousel"  ifSubset="carousel:vertical" type="vertical" maxLogoCount="5"/>
+<carousel name="systemcarousel"  ifSubset="carousel:vertical" type="vertical" maxLogoCount="5">
+<logoSize verticalScreen="true">0.65 0.14</logoSize>
+<maxLogoCount verticalScreen="true">7</maxLogoCount>
+</carousel>
 
 <!-- Carousel animations -->
 <control name="logo,logoText">
