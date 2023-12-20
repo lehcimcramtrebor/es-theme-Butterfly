@@ -147,10 +147,10 @@
 </variables>
 
 <subset name="carousel" displayName="${lang.carousel}">
+<include name="vertical" displayName="${lang.carouselVertical}"/>
 <include name="horizontal" displayName="${lang.carouselHorizontal}"/>
 <include name="wheel" displayName="${lang.carouselWheel}"/>
 <include name="bottom" displayName="${lang.carouselBottom}"/>
-<include name="vertical" displayName="${lang.carouselVertical}"/>
 </subset>
 
 <!-- Wheel inverse -->
