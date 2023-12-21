@@ -204,10 +204,11 @@
 </variables>
 
 <subset name="randomVideos" displayName="${lang.randomVideos}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
-<include name="no" displayName="${lang.no}">./_variables/randomVideos_no.xml</include>
-<include name="ur" displayName="${lang.ur}">./_variables/randomVideos_ur.xml</include>
+<include name="br" verticalScreen="true" displayName="${lang.br}">./_variables/randomVideos_br.xml</include>
 <include name="bl" displayName="${lang.bl}">./_variables/randomVideos_bl.xml</include>
-<include name="br" displayName="${lang.br}">./_variables/randomVideos_br.xml</include>
+<include name="ur" displayName="${lang.ur}">./_variables/randomVideos_ur.xml</include>
+<include name="br" verticalScreen="false" displayName="${lang.br}">./_variables/randomVideos_br.xml</include>
+<include name="no" displayName="${lang.no}">./_variables/randomVideos_no.xml</include>
 <include verticalScreen="true" name="btm" displayName="${lang.btm}">./_variables/randomVideos_btm.xml</include>
 <include verticalScreen="true" name="ctr" displayName="${lang.ctr}">./_variables/randomVideos_ctr.xml</include>
 </subset>
@@ -473,8 +474,8 @@ text="${v.bindingFavorites}"
 alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" opacity="0" color="${c.text}" singleLineScroll="true">
 <pos verticalScreen="true">0 0.965</pos>
 <storyboard>
-<animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"						/>
-<animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"						/>
+<animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"							/>
+<animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
 </storyboard>
 <text>                                                                                                                                                                                                                                                                                                                                                                                                    ${desc}</text>
 <text verticalScreen="true">                                                                                                                                                                                                                            ${desc}</text>
@@ -504,8 +505,8 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 <maxSize verticalScreen="true">99 1</maxSize>
 <shader path=":/shaders/scanlines.glsl"/>
 <storyboard>
-<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"												/>
-<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"												/>
+<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
+<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"							/>
 </storyboard>
 </image>
 
@@ -534,58 +535,58 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 <!-- Carousel animations -->
 <control name="logo,logoText">
 <storyboard event="activate">
-<animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"							/>
-<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"							/>
+<animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"						/>
+<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
 <animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
 </storyboard>
 <storyboard event="scroll">
-<animation property="scale" 			from="0.4" 			to="0.4" 								duration="1" 			mode="linear"							/>
-<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"							/>
-<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"							/>
+<animation property="scale" 			from="0.4" 			to="0.4" 								duration="1" 			mode="linear"						/>
+<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
+<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
 </storyboard>
 <storyboard event="deactivate">
-<animation property="scale" 			from="1" 			to="0.4" 								duration="125" 			mode="linear"							/>
-<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"							/>
-<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"							/>
+<animation property="scale" 			from="1" 			to="0.4" 								duration="125" 			mode="linear"						/>
+<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
+<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
 </storyboard>
 
 <storyboard event="activate" ifSubset="carousel:wheel">
-<animation property="scale"				from="0.6"			to="1"									duration="125" 			mode="easeInOut"						/>
-<animation property="offsetX"								to="0.1"			begin="550" 		duration="400" 			mode="easeInOut"						/>
-<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"							/>
+<animation property="scale"				from="0.6"			to="1"									duration="125" 			mode="easeInOut"					/>
+<animation property="offsetX"								to="0.1"			begin="550" 		duration="400" 			mode="easeInOut"					/>
+<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
 <animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
 </storyboard>
 <storyboard event="scroll" ifSubset="carousel:wheel">
-<animation property="scale" 			from="0.6" 			to="0.6" 								duration="1" 			mode="linear"							/>
-<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"							/>
-<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"							/>
+<animation property="scale" 			from="0.6" 			to="0.6" 								duration="1" 			mode="linear"						/>
+<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
+<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
 </storyboard>
 <storyboard event="deactivate" ifSubset="carousel:wheel">
-<animation property="scale" 			from="1" 			to="0.6" 								duration="125" 			mode="easeInOut"						/>
-<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"							/>
-<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"							/>
+<animation property="scale" 			from="1" 			to="0.6" 								duration="125" 			mode="easeInOut"					/>
+<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
+<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
 </storyboard>
 
 <storyboard event="activate" ifSubset="carousel:vertical">
-<animation property="scale"				from="0.5"			to="1"									duration="125" 			mode="linear"							/>
-<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="opacity"			from="0.5"			to="1"									duration="1" 			mode="linear"/>
+<animation property="scale"				from="0.5"			to="1"									duration="125" 			mode="linear"						/>
+<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
+<animation property="opacity"			from="0.5"			to="1"									duration="1" 			mode="linear"						/>
 </storyboard>
 <storyboard event="scroll" ifSubset="carousel:vertical">
-<animation property="scale" 			from="0.5" 			to="0.5" 								duration="1" 			mode="linear"							/>
-<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"							/>
-<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"							/>
+<animation property="scale" 			from="0.5" 			to="0.5" 								duration="1" 			mode="linear"						/>
+<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
+<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
 </storyboard>
 <storyboard event="deactivate" ifSubset="carousel:vertical">
-<animation property="scale" 			from="1" 			to="0.5"								duration="125" 			mode="linear"							/>
-<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"							/>
-<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"							/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"							/>
+<animation property="scale" 			from="1" 			to="0.5"								duration="125" 			mode="linear"						/>
+<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
+<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
 </storyboard>
 </control>
 
@@ -608,6 +609,31 @@ path="./${v.custom}/${system.theme}/video.mp4"
 <audio>true</audio>
 </video>
 
+
+<image name="logoEx" extra="true" linearSmooth="true" zIndex="201" saturation="0.85" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
+path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png">
+<storyboard>
+<animation property="opacity" 							to="1" 					begin="850"			duration="60" 			mode="linear"						/>
+<animation property="offsetY" 			from="0.005"	to="0.005" 								duration="850" 			mode="linear"						/>
+<animation property="offsetY" 							to="0" 					begin="850"			duration="60" 			mode="easeOut"						/>
+</storyboard>
+<origin ifSubset="randomVideos:ur|br">0 1</origin>
+<pos ifSubset="randomVideos:ur|br">0.025 0.9018518518518519</pos>
+<zIndex verticalScreen="true">900</zIndex>
+<maxSize verticalScreen="true">0.4 0.08</maxSize>
+<origin verticalScreen="true">1 0</origin>
+<pos verticalScreen="true">0.97 0.05</pos>
+<origin verticalScreen="true" ifSubset="randomVideos:ur|no">1 1</origin>
+<pos verticalScreen="true" ifSubset="randomVideos:ur|no">0.97 0.93</pos>
+</image>
+
+<image name="logoEx" extra="true" region="us" path="./${system.theme}/us/logo.png"/>
+<image name="logoEx" extra="true" region="jp" path="./${system.theme}/jp/logo.png"/>
+<image name="logoEx" extra="true" ifSubset="forceRegion:eu" path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png"/>
+<image name="logoEx" extra="true" ifSubset="forceRegion:us" path="./${system.theme}/us/logo.png"/>
+<image name="logoEx" extra="true" ifSubset="forceRegion:jp" path="./${system.theme}/jp/logo.png"/>
+<image name="logoEx" extra="true" path="./${v.custom}/${system.theme}/logo.png"/>
+
 </view>
 
 
@@ -619,16 +645,16 @@ path="./${v.custom}/${system.theme}/video.mp4"
 <!-- Open gamelist Mask -->
 <image name="openMask" extra="true" path=":/plain.png" zIndex="2000" color="${c.base}ef" size="1 1" origin="0.5 0.5" pos="0.5 0.5" opacity="1">
 <storyboard>
-<animation property="opacity" 							to="0" 					begin="500"			duration="300" 			mode="easeInQuint"								/>
+<animation property="opacity" 							to="0" 					begin="500"			duration="300" 			mode="easeInQuint"					/>
 </storyboard>
 </image>
 
 <!-- Logos> -->
 <image name="logo" zIndex="2100" pos="0.5 0.5" origin="0.5 0.5" maxSize="0.36 0.216">
 <storyboard>
-<animation property="origin" 								to="0 0" 				begin="650"			duration="150" 			mode="easeInOut"							/>
-<animation property="pos" 									to="0.05 0.1" 			begin="650"			duration="150" 			mode="easeInOut"							/>
-<animation property="scale" 								to="0.6" 				begin="650"			duration="150" 			mode="easeInOut"							/>
+<animation property="origin" 								to="0 0" 				begin="650"			duration="150" 			mode="easeInOut"				/>
+<animation property="pos" 									to="0.05 0.1" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+<animation property="scale" 								to="0.6" 				begin="650"			duration="150" 			mode="easeInOut"				/>
 </storyboard>
 </image>
 
@@ -665,16 +691,16 @@ default=":/parts/defaultFanart.jpg"
 default="./${v.custom}/wallpapers/default_fanart.jpg"
 >
 <storyboard event="activateNext">
-<animation property="offsetY" 			from="0.0150" 		to="0" 									duration="250" 			mode="easeOut"							/>
+<animation property="offsetY" 			from="0.0150" 		to="0" 									duration="250" 			mode="easeOut"						/>
 </storyboard>
 <storyboard event="activatePrev">
-<animation property="offsetY"			from="-0.0150"		to="0" 									duration="250" 			mode="easeOut"							/>
+<animation property="offsetY"			from="-0.0150"		to="0" 									duration="250" 			mode="easeOut"						/>
 </storyboard>
 <storyboard event="deactivatePrev">
-<animation property="scale"									to="0" 									duration="1"			mode="linear"							/>
+<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
 </storyboard>
 <storyboard event="deactivateNext">
-<animation property="scale"									to="0"									duration="1"			mode="linear"							/>
+<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
 </storyboard>
 <shader path=":/shaders/scanlines.glsl"/>
 </image>
