@@ -19,6 +19,13 @@
 <v.custom>../../_ButterflyCustom</v.custom>
 <v.custom ifArch="windows">../../../../_ButterflyCustom</v.custom>
 
+<!-- Gamelist fanarts exclude systems -->
+<v.fanartExclude>
+	${system.theme} == 'retrobat'
+||	${system.theme} == 'tools'
+||	${system.theme} == 'setup'
+</v.fanartExclude>
+
 <!-- Screen ratio conditions to variables -->
 <v.notWide>${screen.height} > ${screen.width}/1.6</v.notWide>
 <v.ultraWide>${screen.width} > ${screen.height}*1.8</v.ultraWide>
@@ -709,6 +716,7 @@ path="./${v.custom}/wallpapers/${system.theme}.jpg"
 <!-- Fixed Backgrounds deactivate if choose random fanarts subset -->
 <image name="gamelistBackground" extra="true">
 <visible ifSubset="gamelistFanarts:yes">false</visible>
+<visible if="${v.fanartExclude}">true</visible>
 </image>
 
 <!-- Random fanarts -->
@@ -717,6 +725,7 @@ linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" sa
 default=":/parts/defaultFanart.jpg"
 default="./${v.custom}/wallpapers/default_fanart.jpg"
 >
+<visible if="${v.fanartExclude}">false</visible>
 <storyboard event="activateNext">
 <animation property="offsetY" 			from="0.0150" 		to="0" 									duration="250" 			mode="easeOut"						/>
 </storyboard>
