@@ -514,7 +514,7 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 <text name="logoText" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.06" color="${c.text}" glowColor="${c.glowColor}" glowOffset="1" glowSize="1" forceUppercase="true" reflexion="0.025 0"/>
 
 <!-- Shade effect over backgrounds properties for system view -->
-<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="0.25">
+<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="0.4">
 <storyboard>
 <animation property="opacity"								to="1"				begin="550" 		duration="400" 			mode="easeInOut"						/>
 </storyboard>
