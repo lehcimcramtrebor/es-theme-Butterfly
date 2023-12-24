@@ -11,9 +11,11 @@ Files:
 
 	- Use "wallpaper.jpg" files in folders named by theme name, examples: snes, megadrive,auto-favorites etc..
 	
-	- You can use "default.jpg" in "_default" folder to use as default wallpaper when no scrapes found.
+	- You can use "default_fanart.jpg" at root folder to use as default fanart in gamelists when no scrapes found.
+
+	- You can use "default_wallpaper.jpg" at root folder to use as default wallpaper in system view when no fanarts found.
 	
-	- You can use "wallpaper.jpg" in "_default" folder to use only one background for all theme exept systems you have customized.
+	- You can use "theme.jpg" at root folder to use only one background for all theme exept systems you have customized.
 
 
 

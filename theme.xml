@@ -528,11 +528,11 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 </image>
 
 <!-- System view backgrounds -->
-<image name="systemBackground" extra="true" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" saturation="${v.sSaturation}" default=":/parts/defaultFanart.jpg"
-default="./${v.custom}/_default/default.jpg"
+<image name="systemBackground" extra="true" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" saturation="${v.sSaturation}" default=":/parts/default_wallpaper.jpg"
+default="./${v.custom}/default_wallpaper.jpg"
 path="{random:fanart}"
 path="./${system.theme}/wallpaper.jpg"
-path="./${v.custom}/_default/wallpaper.jpg"
+path="./${v.custom}/theme.jpg"
 path="./${v.custom}/${system.theme}/wallpaper.jpg"
 >
 <minSize verticalScreen="false">1 1</minSize>
@@ -698,11 +698,11 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 
 <!-- Theme or customs backgrounds properties for all gamelist-->
 <image name="gamelistBackground" extra="true" linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" saturation="${v.gSaturation}"
-path=":/parts/defaultFanart.jpg"
-path="./${v.custom}/wallpapers/default_fanart.jpg"
+path=":/parts/default_fanart.jpg"
+path="./${v.custom}/default_fanart.jpg"
 path="./${system.theme}/wallpaper.jpg"
-path="./${v.custom}/wallpapers/theme.jpg"
-path="./${v.custom}/wallpapers/${system.theme}.jpg"
+path="./${v.custom}/theme.jpg"
+path="./${v.custom}/${system.theme}/wallpaper.jpg"
 >
 <shader path=":/shaders/scanlines.glsl"/>
 </image>
@@ -723,8 +723,8 @@ path="./${v.custom}/wallpapers/${system.theme}.jpg"
 <!-- Random fanarts -->
 <image name="md_fanart" ifSubset="gamelistFanarts:yes"
 linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" saturation="${v.gSaturation}"
-default=":/parts/defaultFanart.jpg"
-default="./${v.custom}/wallpapers/default_fanart.jpg"
+default=":/parts/default_fanart.jpg"
+default="./${v.custom}/default_fanart.jpg"
 >
 <visible if="${v.fanartExclude}">false</visible>
 <storyboard event="activateNext">
