@@ -15,3 +15,9 @@ Files:
 	
 	- You can use "wallpaper.jpg" in "_default" folder to use only one background for all theme exept systems you have customized.
 
+
+
+SCROLL SOUNDS:
+
+You can customize general scroll sound by using "scroll.wav" file at root of "_ButterflyCustom" folder, and you can customize
+sounds of each gamelist with the same file placed in themes folders.

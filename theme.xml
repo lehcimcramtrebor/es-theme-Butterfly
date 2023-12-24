@@ -523,7 +523,7 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 <!-- Shade effect over backgrounds properties for system view -->
 <image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="0.4">
 <storyboard>
-<animation property="opacity"								to="1"				begin="550" 		duration="400" 			mode="easeInOut"						/>
+<animation property="opacity"								to="0.9"				begin="550" 		duration="400" 			mode="easeInOut"						/>
 </storyboard>
 </image>
 
@@ -549,6 +549,7 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 <maxLogoCount verticalScreen="true">3</maxLogoCount>
 <size verticalScreen="true">1.15 1</size>
 <logoSize verticalScreen="true">0.50 0.08</logoSize>
+<scrollSound>./${v.custom}/scroll.wav</scrollSound>
 </carousel>
 
 <carousel name="systemcarousel"  ifSubset="carousel:wheel" size="0.4 1" origin="1 0.5" pos="1 0.5" type="vertical_wheel" logoRotation="${v.wheelFlip}16" logoRotationOrigin="2.75 0.5" logoAlignment="center">
@@ -747,6 +748,10 @@ default="./${v.custom}/wallpapers/default_fanart.jpg"
 <!-- BASIC ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="basic">
+<textlist name="gamelist" scrollSound=":/sounds/scroll.wav"
+scrollSound="./${v.custom}/scroll.wav"
+scrollSound="./${v.custom}/${system.theme}/scroll.wav"
+/>
 
 </view>
 
@@ -754,6 +759,10 @@ default="./${v.custom}/wallpapers/default_fanart.jpg"
 <!-- DETAILED ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="detailed">
+<textlist name="gamelist" scrollSound=":/sounds/scroll.wav"
+scrollSound="./${v.custom}/scroll.wav"
+scrollSound="./${v.custom}/${system.theme}/scroll.wav"
+/>
 
 </view>
 
@@ -761,6 +770,10 @@ default="./${v.custom}/wallpapers/default_fanart.jpg"
 <!-- GRID -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="grid">
+<imagegrid name="gamegrid" scrollSound=":/sounds/scroll.wav"
+scrollSound="./${v.custom}/scroll.wav"
+scrollSound="./${v.custom}/${system.theme}/scroll.wav"
+/>
 
 </view>
 
@@ -770,13 +783,15 @@ default="./${v.custom}/wallpapers/default_fanart.jpg"
 <view name="gamecarousel">
 
 <gamecarousel name="gamecarousel" zIndex="1000" type="vertical_wheel" origin="1 0" pos="1 0" size="0.34 1" imageSource="marquee" scrollSound=":/sounds/scroll.wav"
+scrollSound="./${v.custom}/scroll.wav"
+scrollSound="./${v.custom}/${system.theme}/scroll.wav"
 logoScale="2"
 logoSize="0.46 0.18"
 logoAlignment="center"
 logoRotation="${v.wheelFlip}17"
 logoRotationOrigin="3 0.5"
 maxLogoCount="9"
-/>    
+/>
 
 <image name="gamecarouselLogo" saturation="1.2"/>
 
