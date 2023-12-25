@@ -433,7 +433,7 @@ origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSi
 <image name="hide" extra="true" zIndex="100" path=":/plain.png" color="${c.base}" size="1 1"/>
 
 <!-- Scanlines effect -->
-<image name="scanlines" extra="true" linearSmooth="false" path=":/scanlines.png" tile="true" size="1 1" zIndex="500" color="000000" opacity="0.5"/>
+<image name="scanlines" extra="true" linearSmooth="false" path=":/scanlines.png" tile="true" size="1 1" zIndex="500" color="000000" opacity="0.35"/>
 
 <!-- Shade effect over backgrounds path/size for all views -->
 <image name="shadeBackground" extra="true" linearSmooth="true" path=":/plain.png" size="1 1" zIndex="300"/>
