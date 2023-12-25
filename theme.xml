@@ -432,6 +432,9 @@ origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSi
 <!-- Hide all under zIndex 100 -->
 <image name="hide" extra="true" zIndex="100" path=":/plain.png" color="${c.base}" size="1 1"/>
 
+<!-- Scanlines effect -->
+<image name="scanlines" extra="true" linearSmooth="false" path=":/scanlines.png" tile="true" size="1 1" zIndex="500" color="000000" opacity="0.5"/>
+
 <!-- Shade effect over backgrounds path/size for all views -->
 <image name="shadeBackground" extra="true" linearSmooth="true" path=":/plain.png" size="1 1" zIndex="300"/>
 
@@ -537,7 +540,6 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 >
 <minSize verticalScreen="false">1 1</minSize>
 <maxSize verticalScreen="true">99 1</maxSize>
-<shader path=":/shaders/scanlines.glsl"/>
 <storyboard>
 <animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
 <animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"							/>
@@ -704,7 +706,6 @@ path="./${system.theme}/wallpaper.jpg"
 path="./${v.custom}/theme.jpg"
 path="./${v.custom}/${system.theme}/wallpaper.jpg"
 >
-<shader path=":/shaders/scanlines.glsl"/>
 </image>
 
 </view>
@@ -739,7 +740,6 @@ default="./${v.custom}/default_fanart.jpg"
 <storyboard event="deactivateNext">
 <animation property="scale"									to="0"									duration="1"			mode="linear"						/>
 </storyboard>
-<shader path=":/shaders/scanlines.glsl"/>
 </image>
 
 </view>
