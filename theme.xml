@@ -19,12 +19,29 @@
 <v.custom>../../_ButterflyCustom</v.custom>
 <v.custom ifArch="windows">../../../../_ButterflyCustom</v.custom>
 
-<!-- Gamelist fanarts exclude systems -->
+<!-- Gamelist fanarts exclude systems (systems listed here don't display fanarts on gamelists) -->
 <v.fanartExclude>
 	${system.theme} == 'retrobat'
 ||	${system.theme} == 'tools'
 ||	${system.theme} == 'setup'
+||	${system.theme} == 'imageviewer'
 </v.fanartExclude>
+
+<!-- System view videos exclude systems (systems listed here don't display video on system view) -->
+<v.rvExclude>
+	${system.theme} == 'tools'
+||	${system.theme} == 'setup'
+||	${system.theme} == 'imageviewer'
+</v.rvExclude>
+
+<!-- System view description exclude systems (systems listed here don't display description on system view) -->
+<v.descExclude>
+	${system.theme} == 'xxx'
+||	${system.theme} == 'xxx'
+</v.descExclude>
+
+<!-- Extented infos description system -->
+<extInfos>TEST.</extInfos>
 
 <!-- Screen ratio conditions to variables -->
 <v.notWide>${screen.height} > ${screen.width}/1.6</v.notWide>
@@ -508,14 +525,16 @@ text="${v.bindingFavorites}"
 
 <!-- Desc -->
 <text name="infosDesc" extra="true" zIndex="1000" fontSize="0.016" fontPath=":/fonts/Welbut__.ttf" glowColor="${c.glowColor}" glowOffset="1" glowSize="2" forceUppercase="false"
-alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" opacity="0" color="${c.text}" singleLineScroll="true">
+alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" opacity="0" color="${c.text}" singleLineScroll="true"
+>
 <pos verticalScreen="true">0 0.965</pos>
 <storyboard>
 <animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"							/>
 <animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
 </storyboard>
-<text>                                                                                                                                                                                                                                                                                                                                                                                                    ${desc}</text>
-<text verticalScreen="true">                                                                                                                                                                                                                            ${desc}</text>
+<text>                                                                                                                                                                                                                                                                                                                                                                                                    ${desc} ${extInfos}</text>
+<text verticalScreen="true">                                                                                                                                                                                                                            ${desc} ${extInfos}</text>
+<visible if="${v.descExclude}">false</visible>
 </text>
 
 
@@ -644,6 +663,7 @@ path="./${v.custom}/${system.theme}/video.mp4"
 <animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
 </storyboard>
 <audio>true</audio>
+<visible if="${v.rvExclude}">false</visible>
 </video>
 
 
