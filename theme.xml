@@ -647,7 +647,7 @@ path="./${v.custom}/${system.theme}/video.mp4"
 </video>
 
 
-<image name="logoEx" extra="true" linearSmooth="true" zIndex="350" saturation="0.85" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
+<image name="logoEx" extra="true" linearSmooth="true" zIndex="900" saturation="0.85" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
 path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png">
 <shader>:/shaders/shadow.glsl</shader>
 <storyboard>
@@ -657,7 +657,6 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 </storyboard>
 <origin ifSubset="randomVideos:ur|br">0 1</origin>
 <pos ifSubset="randomVideos:ur|br">0.025 0.9018518518518519</pos>
-<zIndex verticalScreen="true">900</zIndex>
 <maxSize verticalScreen="true">0.4 0.08</maxSize>
 <origin verticalScreen="true">1 0</origin>
 <pos verticalScreen="true">0.97 0.05</pos>
