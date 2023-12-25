@@ -47,7 +47,7 @@ void main()
     gl_Position = MVPMatrix * VertexCoord;
     COL0 = COLOR;
     TEX0.xy = TexCoord.xy * 1.00001;
-    invDims=1.0/TextureSize.xy;
+    invDims=1.04/TextureSize.xy;
 }
 
 #elif defined(FRAGMENT)
@@ -158,7 +158,7 @@ vec3 saturation (vec3 textureColor)
 void main()
 {
     vec2 pos = TEX0.xy * 0.995+0.0025;
-    vec2 p = pos * TextureSize; 
+vec2 p = (pos - 0.02) * TextureSize;  // Décalage pour centrer
     vec2 i = floor(p)*1.0001 + 0.5;
     vec2 f = p - i;
     p = (i + 4.0*f*f*f)*invDims;
@@ -188,8 +188,8 @@ vec3 middleBorderColor = vec3(0.635, 0.635, 0.635); // Couleur médiane (gris da
 vec3 innerBorderColor = vec3(0.0, 0.0, 0.0); // Couleur intérieure (noir dans cet exemple)
 
 float outerBorderSize = 0.005; // Taille de la bordure extérieure
-float newBorderSize = 0.010; // Taille de la nouvelle bordure
-float middleBorderSize = 0.014; // Taille de la bordure médiane
+float newBorderSize = 0.008; // Taille de la nouvelle bordure
+float middleBorderSize = 0.016; // Taille de la bordure médiane
 float innerBorderSize = 0.019; // Taille de la bordure intérieure
 
 // Créez la bordure extérieure
@@ -200,7 +200,7 @@ if (pos.x < outerBorderSize || pos.x > 1.0 - outerBorderSize || pos.y < outerBor
 
 // Créez la nouvelle bordure
 if (pos.x < newBorderSize || pos.x > 1.0 - newBorderSize || pos.y < newBorderSize || pos.y > 1.0 - newBorderSize) {
-    FragColor = vec4(newBorderColor, 0.1);
+    FragColor = vec4(newBorderColor, 0.2);
     return;
 }
 

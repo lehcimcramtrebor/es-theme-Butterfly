@@ -628,13 +628,13 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 </control>
 
 <!-- System videos -->
-<video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="${v.rvOrigin}" pos="${v.rvPos}" maxSize="${v.rvSize}" roundCorners="0.022" effect="none"
+<video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="${v.rvOrigin}" pos="${v.rvPos}" maxSize="${v.rvSize}" roundCorners="0.016" effect="none"
 default="./resources/parts/default_${v.color}.mp4"
 path="{random}"
 path="./${system.theme}/video.mp4"
 path="./${v.custom}/${system.theme}/video.mp4"
 >
-<shader if="{screen.height} >= '480'" path=":/shaders/helmic_${v.color}.glsl"/>
+<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
 <storyboard>
 <animation property="offsetX"			from="1"			to="1"									duration="650" 		mode="linear"							/>
 <animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
