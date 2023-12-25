@@ -647,8 +647,9 @@ path="./${v.custom}/${system.theme}/video.mp4"
 </video>
 
 
-<image name="logoEx" extra="true" linearSmooth="true" zIndex="201" saturation="0.85" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
+<image name="logoEx" extra="true" linearSmooth="true" zIndex="350" saturation="0.85" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
 path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png">
+<shader>:/shaders/shadow.glsl</shader>
 <storyboard>
 <animation property="opacity" 							to="1" 					begin="850"			duration="60" 			mode="linear"						/>
 <animation property="offsetY" 			from="0.005"	to="0.005" 								duration="850" 			mode="linear"						/>

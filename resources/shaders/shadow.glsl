@@ -61,7 +61,7 @@ void main(void)
 	
 	float offset = shadowOffset;
 	if (offset == 0.0) {
-		offset = 6.0;
+		offset = 3.0;
 	}
 	
 	vec2 step = 1.0 / textureSize;
@@ -94,7 +94,7 @@ void main(void)
 	blurColor.r = 0;
 	blurColor.g = 0;
 	blurColor.b = 0;
-	blurColor.a *= 0.5;
+	blurColor.a *= 0.15;
 	
 	// Output the final blurred color
 	gl_FragColor = (sampleTexture(u_tex, v_padtex) + blurColor);
