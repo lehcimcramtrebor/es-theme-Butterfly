@@ -80,6 +80,48 @@
 <!-- SUBSETS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
+<!-- Music subset -->
+<variables>
+<lang.music>play music</lang.music>
+<lang.music lang="fr">jouer les musiques</lang.music>
+
+<lang.music_recalbox>from recalbox</lang.music_recalbox>
+<lang.music_recalbox lang="fr">de recalbox</lang.music_recalbox>
+
+<lang.music_mrBoom>from mr.boom</lang.music_mrBoom>
+<lang.music_mrBoom lang="fr">de mr.boom</lang.music_mrBoom>
+
+<lang.music_batocera>from batocera (old songs)</lang.music_batocera>
+<lang.music_batocera lang="fr">de batocera (les anciennes)</lang.music_batocera>
+
+<lang.music_comixZone>from comix zone</lang.music_comixZone>
+<lang.music_comixZone lang="fr">de comix zone</lang.music_comixZone>
+
+<lang.music_retrobat>from retrobat</lang.music_retrobat>
+<lang.music_retrobat lang="fr">de retrobat</lang.music_retrobat>
+
+<lang.music_frontend>from this frontend</lang.music_frontend>
+<lang.music_frontend lang="fr">de ce frontend</lang.music_frontend>
+
+<lang.music_custom>from custom folder (if availables)</lang.music_custom>
+<lang.music_custom lang="fr">du dossier custom (si disponibles)</lang.music_custom>
+
+<lang.music_notAllow>no</lang.music_notAllow>
+<lang.music_notAllow lang="fr">non</lang.music_notAllow>
+
+</variables>
+
+<subset name="music" displayName="${lang.music}">
+<include name="recalbox" displayName="${lang.music_recalbox}">./_variables/music_recalbox.xml</include>
+<include name="mrBoom" displayName="${lang.music_mrBoom}">./_variables/music_mrBoom.xml</include>
+<include name="batocera" displayName="${lang.music_batocera}">./_variables/music_batocera.xml</include>
+<include name="comixZone" displayName="${lang.music_comixZone}">./_variables/music_comixZone.xml</include>
+<include name="retrobat" displayName="${lang.music_retrobat}">./_variables/music_retrobat.xml</include>
+<include name="frontend" displayName="${lang.music_frontend}"/>
+<include name="custom" displayName="${lang.music_custom}"/>
+<include name="notAllow" displayName="${lang.music_notAllow}"/>
+</subset>
+
 <!-- Colorset subset -->
 <variables>
 <lang.colorset>colorset</lang.colorset>
@@ -184,11 +226,14 @@
 <lang.randomVideos>random videos on system view</lang.randomVideos>
 <lang.randomVideos lang="fr">vidéos aléatoires sur la vue système</lang.randomVideos>
 
+<lang.randomVideosAudio>random videos audio</lang.randomVideosAudio>
+<lang.randomVideosAudio lang="fr">audio des vidéos aléatoires</lang.randomVideosAudio>
+
 <lang.randomVideosSize>random videos size</lang.randomVideosSize>
 <lang.randomVideosSize lang="fr">taille des vidéos aléatoires</lang.randomVideosSize>
 
-<lang.randomVideosSubsetDesc>( applicable individually )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
-<lang.randomVideosSubsetDesc lang="fr">( applicable individuellement )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+<lang.randomVideosSubsetDesc>( system individual option )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+<lang.randomVideosSubsetDesc lang="fr">( option système individuelle )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
 
 <lang.ur>in upper right corner</lang.ur>
 <lang.ur lang="fr">au coin supérieur droit</lang.ur>
@@ -235,6 +280,11 @@
 <include verticalScreen="true" ifSubset="randomVideos:btm|ctr" name="xtra" displayName="${lang.xtra}">./_variables/randomVideosSize_xtra.xml</include>
 </subset>
 
+<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+<include name="no" displayName="${lang.no}">./_variables/randomVideosAudio_no.xml</include>
+<include name="yes" displayName="${lang.yes}">./_variables/randomVideosAudio_yes.xml</include>
+</subset>
+
 <!-- Logos subsets (x2) -->
 <variables>
 <lang.forceRegion>force region ( need refresh )</lang.forceRegion>
@@ -276,7 +326,7 @@
 
 <menuText name="menufooter" fontPath=":/fonts/Cabin-Regular.ttf" fontSize="0.018" color="${c.text}"/>
 
-<menuTextSmall name="menutextsmall" fontPath=":/fonts/CabinCondensed-Regular.ttf" fontSize="0.018"/>
+<menuTextSmall name="menutextsmall" fontPath=":/fonts/CabinCondensed-Regular.ttf" fontSize="0.017"/>
 
 <menuGroup name="menugroup" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.026" color="${c.textHeader}" separatorColor="00000000" backgroundColor="00000000" lineSpacing="2.75"/>
 
@@ -452,6 +502,11 @@ group: ${system.group}
 </text>
 -->
 
+<!-- Music -->
+<sound name="directory" ifSubset="music:recalbox|batocera|mrBoom|retrobat|comixZone" path="./resources/music/${v.musicDirectory}/"/>
+<sound name="bgsound" ifSubset="music:notAllow" path="./resources/music/silence.ogg"/>
+<sound name="bgsound" ifSubset="music:custom" path="./${v.custom}/${system.theme}/music.ogg" path="./${v.custom}/${system.theme}/music.mp3"/>
+
 <!-- Extended Infos-->
 <text name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL" extra="true" zIndex="1000" fontPath=":/fonts/CabinCondensed-Bold.ttf" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" forceUppercase="true">
 <!--<storyboard>
@@ -625,7 +680,7 @@ path="./${v.custom}/${system.theme}/video.mp4"
 <animation property="offsetX"			from="-1"			to="-1"									duration="650" 		mode="linear"							/>
 <animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
 </storyboard>
-<audio>true</audio>
+<audio>${v.rvAudio}</audio>
 <visible if="${v.rvExclude}">false</visible>
 </video>
 
