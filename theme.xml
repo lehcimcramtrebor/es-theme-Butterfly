@@ -576,9 +576,9 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 <image name="systemBackground" extra="true" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" default=":/parts/default_wallpaper.jpg"
 default="./${v.custom}/default_wallpaper.jpg"
 path="{random:fanart}"
-path="./${system.theme}/wallpaper.jpg"
+path="./${system.theme}/wallpaper.m3u"
 path="./${v.custom}/theme.jpg"
-path="./${v.custom}/${system.theme}/wallpaper.jpg"
+path="./${v.custom}/${system.theme}/wallpaper.m3u"
 >
 <minSize verticalScreen="false">1 1</minSize>
 <maxSize verticalScreen="true">99 1</maxSize>
@@ -673,8 +673,8 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 <video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="${v.rvOrigin}" pos="${v.rvPos}" maxSize="${v.rvSize}" roundCorners="0.016" effect="none"
 default="./resources/parts/default_${v.color}.mp4"
 path="{random}"
-path="./${system.theme}/video.mp4"
-path="./${v.custom}/${system.theme}/video.mp4"
+path="./${system.theme}/video.m3u"
+path="./${v.custom}/${system.theme}/video.m3u"
 >
 <shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
 <storyboard>
