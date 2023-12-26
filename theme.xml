@@ -34,15 +34,6 @@
 ||	${system.theme} == 'imageviewer'
 </v.rvExclude>
 
-<!-- System view description exclude systems (systems listed here don't display description on system view) -->
-<v.descExclude>
-	${system.theme} == 'xxx'
-||	${system.theme} == 'xxx'
-</v.descExclude>
-
-<!-- Extented infos description system -->
-<extInfos>TEST.</extInfos>
-
 <!-- Screen ratio conditions to variables -->
 <v.notWide>${screen.height} > ${screen.width}/1.6</v.notWide>
 <v.ultraWide>${screen.width} > ${screen.height}*1.8</v.ultraWide>
@@ -532,9 +523,8 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 <animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"							/>
 <animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
 </storyboard>
-<text>                                                                                                                                                                                                                                                                                                                                                                                                    ${desc} ${extInfos}</text>
-<text verticalScreen="true">                                                                                                                                                                                                                            ${desc} ${extInfos}</text>
-<visible if="${v.descExclude}">false</visible>
+<text>                                                                                                                                                                                                                                                                                                                                                                                                    ${desc}</text>
+<text verticalScreen="true">                                                                                                                                                                                                                            ${desc}</text>
 </text>
 
 
