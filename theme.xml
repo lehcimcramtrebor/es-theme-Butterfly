@@ -96,33 +96,6 @@
 <include name="candy">./_variables/colors_candy.xml</include>
 </subset>
 
-<!-- Saturation subsets -->
-<variables>
-<lang.systemBackgroundSaturation>system backgrounds saturation</lang.systemBackgroundSaturation>
-<lang.systemBackgroundSaturation lang="fr">saturation des fonds du système</lang.systemBackgroundSaturation>
-
-<lang.gamelistBackgroundSaturation>gamelists backgrounds saturation</lang.gamelistBackgroundSaturation>
-<lang.gamelistBackgroundSaturation lang="fr">saturation des fonds des listes de jeux</lang.gamelistBackgroundSaturation>
-</variables>
-
-<subset name="systemBackgroundSaturation" displayName="${lang.systemBackgroundSaturation}">
-<include name="100%">./_variables/systemBackgroundSaturation_100.xml</include>
-<include name="80%">./_variables/systemBackgroundSaturation_080.xml</include>
-<include name="60%">./_variables/systemBackgroundSaturation_060.xml</include>
-<include name="40%">./_variables/systemBackgroundSaturation_040.xml</include>
-<include name="20%">./_variables/systemBackgroundSaturation_020.xml</include>
-<include name="0%">./_variables/systemBackgroundSaturation_000.xml</include>
-</subset>
-
-<subset name="gamelistBackgroundSaturation" displayName="${lang.gamelistBackgroundSaturation}">
-<include name="100%">./_variables/gamelistBackgroundSaturation_100.xml</include>
-<include name="80%">./_variables/gamelistBackgroundSaturation_080.xml</include>
-<include name="60%">./_variables/gamelistBackgroundSaturation_060.xml</include>
-<include name="40%">./_variables/gamelistBackgroundSaturation_040.xml</include>
-<include name="20%">./_variables/gamelistBackgroundSaturation_020.xml</include>
-<include name="0%">./_variables/gamelistBackgroundSaturation_000.xml</include>
-</subset>
-
 <!-- Help subset -->
 <variables>
 <lang.helpIcons>help icons</lang.helpIcons>
@@ -540,7 +513,7 @@ alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" o
 </image>
 
 <!-- System view backgrounds -->
-<image name="systemBackground" extra="true" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" saturation="${v.sSaturation}" default=":/parts/default_wallpaper.jpg"
+<image name="systemBackground" extra="true" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" default=":/parts/default_wallpaper.jpg"
 default="./${v.custom}/default_wallpaper.jpg"
 path="{random:fanart}"
 path="./${system.theme}/wallpaper.jpg"
@@ -657,7 +630,7 @@ path="./${v.custom}/${system.theme}/video.mp4"
 </video>
 
 
-<image name="logoEx" extra="true" linearSmooth="true" zIndex="900" saturation="0.85" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
+<image name="logoEx" extra="true" linearSmooth="true" zIndex="900" saturation="1.2" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
 path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png">
 <shader>:/shaders/shadow.glsl</shader>
 <storyboard>
@@ -709,7 +682,7 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 <image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="1"/>
 
 <!-- Theme or customs backgrounds properties for all gamelist-->
-<image name="gamelistBackground" extra="true" linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" saturation="${v.gSaturation}"
+<image name="gamelistBackground" extra="true" linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200"
 path=":/parts/default_fanart.jpg"
 path="./${v.custom}/default_fanart.jpg"
 path="./${system.theme}/wallpaper.jpg"
@@ -734,7 +707,7 @@ path="./${v.custom}/${system.theme}/wallpaper.jpg"
 
 <!-- Random fanarts -->
 <image name="md_fanart" ifSubset="gamelistFanarts:yes"
-linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" saturation="${v.gSaturation}"
+linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200"
 default=":/parts/default_fanart.jpg"
 default="./${v.custom}/default_fanart.jpg"
 >
