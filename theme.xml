@@ -330,7 +330,7 @@
 
 <menuGroup name="menugroup" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.026" color="${c.textHeader}" separatorColor="00000000" backgroundColor="00000000" lineSpacing="2.75"/>
 
-<menuBackground name="menubg" color="${c.menubg}cf" cornerSize="32 32" scrollbarColor="${c.scroll}" scrollbarCorner="0" scrollbarSize="0.0025" scrollbarAlignment="innerright" roundCorners="0.018">
+<menuBackground name="menubg" color="${c.menubg}ee" cornerSize="32 32" scrollbarColor="${c.scroll}" scrollbarCorner="0" scrollbarSize="0.0025" scrollbarAlignment="innerright" roundCorners="0.018">
 <shader>
 <path>:/shaders/blur.glsl</path>
 <blur>3</blur>
