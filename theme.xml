@@ -322,10 +322,8 @@
 <include name="no" displayName="${lang.no}"/>
 </subset>
 
-<!-- Logos subsets (x2) -->
+<!-- Logos subsets -->
 <variables>
-<lang.forceRegion>logos - force region ( need refresh )</lang.forceRegion>
-<lang.forceRegion lang="fr">logos - forcer une région ( nécessite un rafraîchissement )</lang.forceRegion>
 
 <lang.neogeoSubsetDesc>( by system only option )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
 <lang.neogeoSubsetDesc lang="fr">( option individuelle uniquement )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
@@ -334,13 +332,6 @@
 <subset name="neogeo" displayName="neo-geo">
 <include name="aes" displayName="aes">./_variables/logo_aes.xml</include>
 <include name="mvs" displayName="mvs"/>
-</subset>
-
-<subset name="forceRegion" displayName="${lang.forceRegion}" appliesTo="${lang.neogeoSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
-<include name="no" displayName="${lang.no}"/>
-<include name="eu"/>
-<include name="us"/>
-<include name="jp"/>
 </subset>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -510,9 +501,6 @@ origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSi
 <image name="logo" linearSmooth="true" reflexion="0.025 0" saturation="1.2" path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png"/>
 <image name="logo" region="us" path="./${system.theme}/us/logo.png"/>
 <image name="logo" region="jp" path="./${system.theme}/jp/logo.png"/>
-<image name="logo" ifSubset="forceRegion:eu" path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png"/>
-<image name="logo" ifSubset="forceRegion:us" path="./${system.theme}/us/logo.png"/>
-<image name="logo" ifSubset="forceRegion:jp" path="./${system.theme}/jp/logo.png"/>
 <image name="logo" path="./${v.custom}/${system.theme}/logo.png"/>
 
 </view>
@@ -739,9 +727,6 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 
 <image name="logoEx" extra="true" region="us" path="./${system.theme}/us/logo.png"/>
 <image name="logoEx" extra="true" region="jp" path="./${system.theme}/jp/logo.png"/>
-<image name="logoEx" extra="true" ifSubset="forceRegion:eu" path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png"/>
-<image name="logoEx" extra="true" ifSubset="forceRegion:us" path="./${system.theme}/us/logo.png"/>
-<image name="logoEx" extra="true" ifSubset="forceRegion:jp" path="./${system.theme}/jp/logo.png"/>
 <image name="logoEx" extra="true" path="./${v.custom}/${system.theme}/logo.png"/>
 
 </view>
