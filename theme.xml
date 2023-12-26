@@ -716,6 +716,7 @@ path="./${system.theme}/wallpaper.jpg"
 path="./${v.custom}/theme.jpg"
 path="./${v.custom}/${system.theme}/wallpaper.jpg"
 >
+<shader><path>:/shaders/blur.glsl</path><blur>8</blur></shader>
 </image>
 
 </view>
@@ -737,6 +738,7 @@ linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" sa
 default=":/parts/default_fanart.jpg"
 default="./${v.custom}/default_fanart.jpg"
 >
+<shader><path>:/shaders/blur.glsl</path><blur>8</blur></shader>
 <visible if="${v.fanartExclude}">false</visible>
 <storyboard event="activateNext">
 <animation property="offsetY" 			from="0.0150" 		to="0" 									duration="250" 			mode="easeOut"						/>
