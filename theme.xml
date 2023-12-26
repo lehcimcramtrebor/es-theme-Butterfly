@@ -231,19 +231,25 @@
 <include name="yes" displayName="${lang.yes}"/>
 </subset>
 
-<!-- Random Videos (x2)-->
+<!-- Random Videos & fanarts -->
 <variables>
-<lang.randomVideos>random videos on system view</lang.randomVideos>
-<lang.randomVideos lang="fr">vidéos aléatoires sur la vue système</lang.randomVideos>
+<lang.randomVideos>system - random videos</lang.randomVideos>
+<lang.randomVideos lang="fr">système - vidéos aléatoires</lang.randomVideos>
 
-<lang.randomVideosAudio>random videos audio</lang.randomVideosAudio>
-<lang.randomVideosAudio lang="fr">audio des vidéos aléatoires</lang.randomVideosAudio>
+<lang.randomVideosAudio>system - random videos audio</lang.randomVideosAudio>
+<lang.randomVideosAudio lang="fr">système - audio des vidéos aléatoires</lang.randomVideosAudio>
 
-<lang.randomVideosSize>random videos size</lang.randomVideosSize>
-<lang.randomVideosSize lang="fr">taille des vidéos aléatoires</lang.randomVideosSize>
+<lang.randomVideosSize>system - random videos size</lang.randomVideosSize>
+<lang.randomVideosSize lang="fr">système - taille des vidéos aléatoires</lang.randomVideosSize>
 
-<lang.randomVideosSubsetDesc>( system individual option )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
-<lang.randomVideosSubsetDesc lang="fr">( option système individuelle )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+<lang.forceRandomVideos>system - force scraped videos</lang.forceRandomVideos>
+<lang.forceRandomVideos lang="fr">système - forcer les vidéos scrapées</lang.forceRandomVideos>
+
+<lang.forceRandomFanarts>system - force scraped fanarts</lang.forceRandomFanarts>
+<lang.forceRandomFanarts lang="fr">système - forcer les fanarts scrapés</lang.forceRandomFanarts>
+
+<lang.randomVideosSubsetDesc>( applicable individually )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+<lang.randomVideosSubsetDesc lang="fr">( applicable individuellement )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
 
 <lang.ur>in upper right corner</lang.ur>
 <lang.ur lang="fr">au coin supérieur droit</lang.ur>
@@ -295,13 +301,34 @@
 <include name="yes" displayName="${lang.yes}">./_variables/randomVideosAudio_yes.xml</include>
 </subset>
 
+<subset name="forceRandomVideos" displayName="${lang.forceRandomVideos}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+<include name="no" displayName="${lang.no}"/>
+<include name="yes" displayName="${lang.yes}"/>
+</subset>
+
+<subset name="forceRandomFanarts" displayName="${lang.forceRandomFanarts}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+<include name="no" displayName="${lang.no}"/>
+<include name="yes" displayName="${lang.yes}"/>
+</subset>
+
+<!-- Subset to display themed backgrounds or scraped fanarts in gamelists -->
+<variables>
+<lang.gamelistFanarts>gamelist - display games fanarts as backgrounds</lang.gamelistFanarts>
+<lang.gamelistFanarts lang="fr">liste des jeux - fanarts en arrière-plan</lang.gamelistFanarts>
+</variables>
+
+<subset name="gamelistFanarts" displayName="${lang.gamelistFanarts}" appliesTo="${v.allViews}">
+<include name="yes" displayName="${lang.yes}"/>
+<include name="no" displayName="${lang.no}"/>
+</subset>
+
 <!-- Logos subsets (x2) -->
 <variables>
-<lang.forceRegion>force region ( need refresh )</lang.forceRegion>
-<lang.forceRegion lang="fr">forcer une région ( nécessite un rafraîchissement )</lang.forceRegion>
+<lang.forceRegion>logos - force region ( need refresh )</lang.forceRegion>
+<lang.forceRegion lang="fr">logos - forcer une région ( nécessite un rafraîchissement )</lang.forceRegion>
 
-<lang.neogeoSubsetDesc>( apply from gamelist )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
-<lang.neogeoSubsetDesc lang="fr">( utilisez-le depuis une liste )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
+<lang.neogeoSubsetDesc>( by system only option )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
+<lang.neogeoSubsetDesc lang="fr">( option individuelle uniquement )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
 </variables>
 
 <subset name="neogeo" displayName="neo-geo">
@@ -314,17 +341,6 @@
 <include name="eu"/>
 <include name="us"/>
 <include name="jp"/>
-</subset>
-
-<!-- Subset to display themed backgrounds or scraped fanarts in gamelists -->
-<variables>
-<lang.gamelistFanarts>display games fanarts as gamelists background</lang.gamelistFanarts>
-<lang.gamelistFanarts lang="fr">fanarts en arrière-plan des listes de jeux</lang.gamelistFanarts>
-</variables>
-
-<subset name="gamelistFanarts" displayName="${lang.gamelistFanarts}" appliesTo="${v.allViews}">
-<include name="yes" displayName="${lang.yes}"/>
-<include name="no" displayName="${lang.no}"/>
 </subset>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -590,6 +606,7 @@ path="./${system.theme}/wallpaper.m3u"
 path="./${v.custom}/theme.jpg"
 path="./${v.custom}/${system.theme}/wallpaper.m3u"
 >
+<path ifSubset="forceRandomFanarts:yes">{random:fanart}</path>
 <minSize verticalScreen="false">1 1</minSize>
 <maxSize verticalScreen="true">99 1</maxSize>
 <storyboard>
@@ -686,6 +703,7 @@ path="{random}"
 path="./${system.theme}/video.m3u"
 path="./${v.custom}/${system.theme}/video.m3u"
 >
+<path ifSubset="forceRandomVideos:yes">{random}</path>
 <shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
 <storyboard>
 <animation property="offsetX"			from="1"			to="1"									duration="650" 		mode="linear"							/>
