@@ -14,25 +14,13 @@
 
 <!--			<desc>Custom_description</desc>												-->
 
-<!--			<desc lang="fr">Description_personnalisée</desc>							-->
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--AND DON'T TOUCH ANYTHING AFTER THIS ! ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--READ ME ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		You can use lang="xx" or region="xx" (eu, us or jp) for any variables, for example megadrive was released in 1988 in "eu" and "jp" and 1989 in "us",
-		you can write:
 		
-		<system.releaseYearOrNull>1988</system.releaseYearOrNull>
-		<system.releaseYearOrNull region="us">1989</system.releaseYearOrNull>
-		
-		For pcengine name, you can write:
-		
-		<system.fullName>Pc Engine</system.fullName>
-		<system.fullName region="us">Turbo Grafx 16</system.fullName>
-
 		Year must be > 1958.
 		
 		"v.displayVideo" variable can be "yes" or "no" and can force force example to display (or not) system view video on systems originally not like "tools", "setup" or "imageviewer" etc..
