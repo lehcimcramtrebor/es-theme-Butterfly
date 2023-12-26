@@ -23,6 +23,8 @@ Files:
 	
 	- You can use "theme.jpg" at root folder to use only one background for all theme exept systems you have customized.
 
+	  Be careful, if you do not customize the wallpapers then delete the "wallpaper.m3u" and .jpg files from the theme folder concerned to let theme display original content.
+
 VIDEOS:
 
 By default, this theme use scraped videos as system view presentation, but you can customise each system with yours.
@@ -34,7 +36,7 @@ Files:
 	- To use multiples videos add "video-01.mp4", "video-02.mp4", "video-03.mp4" etc.. You can go up to "video-100.mp4".
 	  System view will randomly play each videos including "video.mp4".
 
-	  Be careful, if you do not customize the videos then delete the "video.m3u" file from the theme folder concerned to let theme display random videos.
+	  Be careful, if you do not customize the videos then delete the "video.m3u" and .mp4 files from the theme folder concerned to let theme display random videos.
 
 SCROLL SOUNDS:
 
