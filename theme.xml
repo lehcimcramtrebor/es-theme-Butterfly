@@ -682,6 +682,8 @@ path="./${v.custom}/${system.theme}/video.mp4"
 </storyboard>
 <audio>${v.rvAudio}</audio>
 <visible if="${v.rvExclude}">false</visible>
+<visible if="${v.displayVideo} == 'yes'">true</visible>
+<visible if="${v.displayVideo} == 'no'">false</visible>
 </video>
 
 

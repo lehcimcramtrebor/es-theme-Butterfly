@@ -4,6 +4,7 @@
 <!--MODIFY ONLY AFTER THIS (YOU MUST DELETE " <!-- " TO ACTIVATE A LINE) ---------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
+<!--			<v.displayVideo>yes</v.displayVideo>										-->
 
 <!--			<system.manufacturer>Custom_Manufacturer</system.manufacturer>				-->
 
@@ -33,6 +34,8 @@
 		<system.fullName region="us">Turbo Grafx 16</system.fullName>
 
 		Year must be > 1958.
+		
+		"v.displayVideo" variable can be "yes" or "no" and can force force example to display (or not) system view video on systems originally not like "tools", "setup" or "imageviewer" etc..
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
