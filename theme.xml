@@ -72,7 +72,17 @@
 
 <v.bindingTotalUL>${lang.elements}: {binding:total}</v.bindingTotalUL>
 
-<v.bindingFavorites if="{system.theme} != 'auto-favorites'">( {binding:favorites} ${lang.favorites} )</v.bindingFavorites>
+<v.custom-collections if="{system.theme} == 'custom-collections'">( {binding:subSystems} ) </v.custom-collections>
+
+<v.bindingFavorites>( {binding:favorites} ${lang.favorites} )</v.bindingFavorites>
+<v.bindingFavorites if="
+	{system.theme} == 'auto-favorites'
+||	{system.theme} == 'retrobat'
+||	{system.theme} == 'tools'
+||	{system.theme} == 'setup'
+||	{system.theme} == 'kodi'
+||	{system.theme} == 'imageviewer'
+"></v.bindingFavorites>
 
 </variables>
 
@@ -526,7 +536,7 @@ text="${system.manufacturer}"
 </text>
 
 <text name="infosEx2UL" extra="true" color="${c.selected}" fontSize="0.03" padding="0.025 0.09 0 0"
-text="${system.fullName} ${v.p1} ${system.releaseYearOrNull} ${v.p2}"
+text="${system.fullName} ${v.custom-collections}${v.p1} ${system.releaseYearOrNull} ${v.p2}"
 >
 <text verticalScreen="true">${system.name} ${v.p1} ${system.releaseYearOrNull} ${v.p2}</text>
 <fontSize verticalScreen="true">0.025</fontSize>
