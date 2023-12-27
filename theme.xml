@@ -745,11 +745,16 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 </image>
 
 <!-- Logos> -->
-<image name="logo" zIndex="2100" pos="0.5 0.5" origin="0.5 0.5" maxSize="0.4 0.1733333333333333">
+<image name="logo" zIndex="2100" pos="0.5 0.5" origin="0.5 0.5" maxSize="0.4 0.1733333333333333" colorEnd="cccccc">
 <storyboard>
 <animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
 <animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
 <animation property="scale" 								to="0.75" 				begin="650"			duration="150" 			mode="easeInOut"				/>
+</storyboard>
+<maxSize verticalScreen="true">0.6 0.1</maxSize>
+<storyboard verticalScreen="true">
+<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
 </storyboard>
 </image>
 
@@ -828,8 +833,11 @@ alignment="center"
 scrollSound=":/sounds/scroll.wav"
 scrollSound="./${v.custom}/scroll.wav"
 scrollSound="./${v.custom}/${system.theme}/scroll.wav"
-/>
-
+>
+<lines verticalScreen="true">25</lines>
+<pos verticalScreen="true">0.5 0.14</pos>
+<size verticalScreen="true">1 0.82</size>
+</textlist>
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
