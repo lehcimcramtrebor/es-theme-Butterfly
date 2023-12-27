@@ -214,9 +214,9 @@
 </variables>
 
 <subset name="carousel" displayName="${lang.carousel}">
+<include name="wheel" displayName="${lang.carouselWheel}"/>
 <include name="vertical" displayName="${lang.carouselVertical}"/>
 <include name="horizontal" displayName="${lang.carouselHorizontal}"/>
-<include name="wheel" displayName="${lang.carouselWheel}"/>
 <include name="bottom" displayName="${lang.carouselBottom}"/>
 </subset>
 
@@ -745,13 +745,15 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 </image>
 
 <!-- Logos> -->
-<image name="logo" zIndex="2100" pos="0.5 0.5" origin="0.5 0.5" maxSize="0.36 0.216">
+<image name="logo" zIndex="2100" pos="0.5 0.5" origin="0.5 0.5" maxSize="0.4 0.1733333333333333">
 <storyboard>
-<animation property="origin" 								to="0 0" 				begin="650"			duration="150" 			mode="easeInOut"				/>
-<animation property="pos" 									to="0.05 0.1" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-<animation property="scale" 								to="0.6" 				begin="650"			duration="150" 			mode="easeInOut"				/>
+<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+<animation property="scale" 								to="0.75" 				begin="650"			duration="150" 			mode="easeInOut"				/>
 </storyboard>
 </image>
+
+<!-- Logos> -->
 
 <!-- Shade over backgrounds properties for gamelists -->
 <image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="1"/>
@@ -808,7 +810,22 @@ default="./${v.custom}/default_fanart.jpg"
 <!-- BASIC ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="basic">
-<textlist name="gamelist" scrollSound=":/sounds/scroll.wav"
+
+<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="1" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="15" forceUppercase="true"
+horizontalMargin="0.01"
+origin="0.5 0"
+pos="0.5 0.15"
+size="1 0.8"
+primaryColor="${c.text}"
+secondaryColor="${c.text}"
+extraTextColor="${c.textHeader}ee"
+extraTextSelectedColor="${c.selected}"
+selectedColor="${c.selected}"
+selectorColor="${c.menuSelector}ef"
+selectorColorEnd="${ce.menuSelector}ef"
+selectorImagePath=":/parts/selectorBasic.png"
+alignment="center"
+scrollSound=":/sounds/scroll.wav"
 scrollSound="./${v.custom}/scroll.wav"
 scrollSound="./${v.custom}/${system.theme}/scroll.wav"
 />
