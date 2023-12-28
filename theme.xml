@@ -324,7 +324,6 @@
 
 <!-- Logos subsets -->
 <variables>
-
 <lang.neogeoSubsetDesc>( by system only option )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
 <lang.neogeoSubsetDesc lang="fr">( option individuelle uniquement )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
 </variables>
@@ -332,6 +331,17 @@
 <subset name="neogeo" displayName="neo-geo">
 <include name="aes" displayName="aes">./_variables/logo_aes.xml</include>
 <include name="mvs" displayName="mvs"/>
+</subset>
+
+<!-- Dev console -->
+<variables>
+<lang.dev>display console</lang.dev>
+<lang.dev lang="fr">afficher la console</lang.dev>
+</variables>
+
+<subset name="dev" displayName="${lang.dev}">
+<include name="no" displayName="${lang.no}"/>
+<include name="yes" displayName="${lang.yes}"/>
 </subset>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -510,16 +520,38 @@ origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSi
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="system">
 
-<!-- Console 
-<text name="console" extra="true" color="00ff00" zIndex="5000" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.01 0.3 0.01 0.01" glowColor="${c.glowColor}" glowOffset="0" glowSize="3">
-<text>${screen.ratio} ( ${screen.width}x${screen.height} )
-${system.fullName} ( ${system.theme} ) ${system.releaseYearOrNull}
-manufacturer: ${system.manufacturer}
-hardware: ${system.hardwareType}
-group: ${system.group}
+<!-- Console -->
+<text name="console" ifSubset="dev:yes" extra="true" zIndex="5000" fontPath=":/fonts/Welbut__.ttf" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.025 0.2 0.01 0.01"
+color="00ff00" glowColor="000000" glowOffset="0" glowSize="4">
+<text>
+DEV CONSOLE:
+
+GENERAL:
+${screen.ratio} ( ${screen.width}x${screen.height} )
+Vertical screen: ${screen.vertical}
+Architecture: ${global.architecture}
+Lang: ${global.language}
+Help: ${global.help}
+Clock: ${global.clock}
+Cheevos: ${global.cheevos} ( ${global.cheevos.username} )
+Netplay: ${global.netplay} ( ${global.netplay.username} )
+
+SYSTEM:
+Full Name: ${system.fullName}
+Short Name: ${system.name}
+Theme: ( ${system.theme} )
+Collection: ( ${system.collection} )
+Manufacturer: ${system.manufacturer}
+Sorted by: ${system.sortedBy}
+Release Date: ${system.releaseYear}
+Hardware: ${system.hardwareType}
+Group: ${system.group}
+Savestates: ${system.savestates}
+Netplay: ${system.netplay}
+Cheevos: ${system.cheevos}
 </text>
 </text>
--->
+
 
 <!-- Music -->
 <sound name="directory" ifSubset="music:recalbox|batocera|mrBoom|retrobat|comixZone" path="./resources/music/${v.musicDirectory}/"/>
@@ -737,6 +769,47 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="basic,detailed,grid,gamecarousel">
 
+<!-- Console -->
+<text name="console" ifSubset="dev:yes" extra="true" zIndex="5000" fontPath=":/fonts/Welbut__.ttf" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.025 0.02 0.01 0.01"
+color="00ff00" glowColor="000000" glowOffset="0" glowSize="4">
+<text>
+DEV CONSOLE:
+
+{game:name}
+Genre: {game:genre}
+Family: {game:family}
+Lang: {game:lang}
+Region: {game:region}
+Rating: {game:rating}
+Cheevos hash: {game:cheevosHash}
+Cheevos ID: {game:cheevosId}
+
+File: {game:rom}
+CRC32: {game:crc32}
+MD5: {game:md5}
+
+Video: {game:video}
+Image: {game:image}
+Fanart: {game:fanart}
+Thumbnail: {game:thumbnail}
+Marquee: {game:marquee}
+Boxback: {game:boxback}
+Manual: {game:manual}
+Map: {game:map}
+Titleshot: {game:titleshot}
+Magazine: {game:magazine}
+Bezel: {game:bezel}
+Cartridge: {game:cartridge}
+Boxart: {game:boxart}
+Wheel: {game:wheel}
+Mix: {game:mix}
+
+Favorite: {game:favorite}
+Game played: {game:played}
+</text>
+</text>
+
+
 <!-- Open gamelist Mask -->
 <image name="openMask" extra="true" path=":/plain.png" zIndex="2000" color="${c.base}ef" size="1 1" origin="0.5 0.5" pos="0.5 0.5" opacity="1">
 <storyboard>
@@ -826,8 +899,8 @@ secondaryColor="${c.text}"
 extraTextColor="${c.textHeader}ee"
 extraTextSelectedColor="${c.selected}"
 selectedColor="${c.selected}"
-selectorColor="${c.menuSelector}ef"
-selectorColorEnd="${ce.menuSelector}ef"
+selectorColor="${c.textHeader}"
+selectorColorEnd="${c.textHeader}"
 selectorImagePath=":/parts/selectorBasic.png"
 alignment="center"
 scrollSound=":/sounds/scroll.wav"
@@ -838,16 +911,36 @@ scrollSound="./${v.custom}/${system.theme}/scroll.wav"
 <pos verticalScreen="true">0.5 0.14</pos>
 <size verticalScreen="true">1 0.82</size>
 </textlist>
+
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- DETAILED ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="detailed">
-<textlist name="gamelist" scrollSound=":/sounds/scroll.wav"
+
+<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="1" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="15" forceUppercase="true"
+horizontalMargin="0.01"
+origin="0.5 0"
+pos="0.5 0.15"
+size="1 0.8"
+primaryColor="${c.text}"
+secondaryColor="${c.text}"
+extraTextColor="${c.textHeader}ee"
+extraTextSelectedColor="${c.selected}"
+selectedColor="${c.selected}"
+selectorColor="${c.textHeader}"
+selectorColorEnd="${c.textHeader}"
+selectorImagePath=":/parts/selectorBasic.png"
+alignment="center"
+scrollSound=":/sounds/scroll.wav"
 scrollSound="./${v.custom}/scroll.wav"
 scrollSound="./${v.custom}/${system.theme}/scroll.wav"
-/>
+>
+<lines verticalScreen="true">25</lines>
+<pos verticalScreen="true">0.5 0.14</pos>
+<size verticalScreen="true">1 0.82</size>
+</textlist>
 
 </view>
 
