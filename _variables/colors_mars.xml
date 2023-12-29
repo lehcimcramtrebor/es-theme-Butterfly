@@ -7,13 +7,13 @@
 <v.color>mars</v.color>
 <c.glowColor>00000080</c.glowColor>
 <c.selected>ffffff</c.selected>
-<c.base>141410</c.base>
+<c.base>101014</c.base>
 <c.text>cececc</c.text>
 <c.textHeader>cccc50</c.textHeader>
 <c.menuSelector>808030</c.menuSelector>
 <ce.menuSelector>707020</ce.menuSelector>
 <c.scroll>70702080</c.scroll>
-<c.menubg>282820</c.menubg>
+<c.menubg>202028</c.menubg>
 
 </variables>
 

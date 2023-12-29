@@ -7,13 +7,13 @@
 <v.color>smoke</v.color>
 <c.glowColor>00000080</c.glowColor>
 <c.selected>ffffff</c.selected>
-<c.base>101012</c.base>
+<c.base>101014</c.base>
 <c.text>cccccc</c.text>
 <c.textHeader>bbbbcd</c.textHeader>
 <c.menuSelector>40404e</c.menuSelector>
 <ce.menuSelector>30303c</ce.menuSelector>
 <c.scroll>30303580</c.scroll>
-<c.menubg>202024</c.menubg>
+<c.menubg>202028</c.menubg>
 
 </variables>
 

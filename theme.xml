@@ -717,7 +717,7 @@ path="./${v.custom}/${system.theme}/wallpaper.m3u"
 </control>
 
 <!-- System videos -->
-<video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="${v.rvOrigin}" pos="${v.rvPos}" maxSize="${v.rvSize}" roundCorners="0.016" effect="none"
+<video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="${v.rvOrigin}" pos="${v.rvPos}" maxSize="${v.rvSize}" roundCorners="0.016"
 default="./resources/parts/default_${v.color}.mp4"
 path="{random}"
 path="./${system.theme}/video.m3u"
@@ -742,7 +742,7 @@ path="./${v.custom}/${system.theme}/video.m3u"
 
 <image name="logoEx" extra="true" linearSmooth="true" zIndex="900" saturation="1.2" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
 path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png">
-<shader>:/shaders/shadow.glsl</shader>
+<shader>:/shaders/shadow2.glsl</shader>
 <storyboard>
 <animation property="opacity" 							to="1" 					begin="850"			duration="60" 			mode="linear"						/>
 <animation property="offsetY" 			from="0.005"	to="0.005" 								duration="850" 			mode="linear"						/>
@@ -834,7 +834,7 @@ Game played: {game:played}
 <!-- Logos> -->
 
 <!-- Shade over backgrounds properties for gamelists -->
-<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="1"/>
+<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="0.65"/>
 
 <!-- Theme or customs backgrounds properties for all gamelist-->
 <image name="gamelistBackground" extra="true" linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200"
@@ -869,10 +869,10 @@ default="./${v.custom}/default_fanart.jpg"
 <shader><path>:/shaders/blur.glsl</path><blur>8</blur></shader>
 <visible if="${v.fanartExclude}">false</visible>
 <storyboard event="activateNext">
-<animation property="offsetY" 			from="0.0150" 		to="0" 									duration="250" 			mode="easeOut"						/>
+<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
 </storyboard>
 <storyboard event="activatePrev">
-<animation property="offsetY"			from="-0.0150"		to="0" 									duration="250" 			mode="easeOut"						/>
+<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
 </storyboard>
 <storyboard event="deactivatePrev">
 <animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
@@ -889,18 +889,18 @@ default="./${v.custom}/default_fanart.jpg"
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="basic">
 
-<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="1" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="15" forceUppercase="true"
+<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="15" forceUppercase="true"
 horizontalMargin="0.01"
-origin="0.5 0"
-pos="0.5 0.15"
-size="1 0.8"
+origin="0.5 0.5"
+pos="0.5 0.545"
+size="0.95 0.78"
 primaryColor="${c.text}"
 secondaryColor="${c.text}"
 extraTextColor="${c.textHeader}ee"
 extraTextSelectedColor="${c.selected}"
 selectedColor="${c.selected}"
 selectorColor="${c.textHeader}"
-selectorColorEnd="${c.textHeader}"
+selectorColorEnd="${c.menuSelector}"
 selectorImagePath=":/parts/selectorBasic.png"
 alignment="center"
 scrollSound=":/sounds/scroll.wav"
@@ -911,6 +911,12 @@ scrollSound="./${v.custom}/${system.theme}/scroll.wav"
 <pos verticalScreen="true">0.5 0.14</pos>
 <size verticalScreen="true">1 0.82</size>
 </textlist>
+
+<image name="gamelistFrame" extra="true" linearSmooth="true" zIndex="900" path=":/plain.png" color="${c.textHeader}" colorEnd="${ce.menuSelector}" gradientType="vertical" roundCorners="0.005" opacity="0.15"
+origin="0.5 0.5"
+pos="0.5 0.545"
+size="0.95 0.78"
+/>
 
 </view>
 
@@ -919,18 +925,18 @@ scrollSound="./${v.custom}/${system.theme}/scroll.wav"
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <view name="detailed">
 
-<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="1" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="15" forceUppercase="true"
+<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="5" forceUppercase="true"
 horizontalMargin="0.01"
-origin="0.5 0"
-pos="0.5 0.15"
-size="1 0.8"
+origin="0.5 0.5"
+pos="0.22 0.8"
+size="0.39 0.26"
 primaryColor="${c.text}"
 secondaryColor="${c.text}"
 extraTextColor="${c.textHeader}ee"
 extraTextSelectedColor="${c.selected}"
 selectedColor="${c.selected}"
 selectorColor="${c.textHeader}"
-selectorColorEnd="${c.textHeader}"
+selectorColorEnd="${c.menuSelector}"
 selectorImagePath=":/parts/selectorBasic.png"
 alignment="center"
 scrollSound=":/sounds/scroll.wav"
@@ -942,6 +948,57 @@ scrollSound="./${v.custom}/${system.theme}/scroll.wav"
 <size verticalScreen="true">1 0.82</size>
 </textlist>
 
+<image name="gamelistFrame" extra="true" linearSmooth="true" zIndex="900" path=":/plain.png" color="${c.textHeader}" colorEnd="${ce.menuSelector}" gradientType="vertical" roundCorners="0.005" opacity="0.9"
+origin="0.5 0.5"
+pos="0.22 0.8"
+size="0.39 0.26"
+>
+<storyboard event="open">
+<animation property="opacity"								to="0.45" 			begin="0"			duration="1" 			mode="linear"						/>
+</storyboard>
+<storyboard event="activateNext">
+<animation property="opacity"				from="0.9"		to="0.9" 								duration="850" 			mode="linear"						/>
+<animation property="opacity"								to="0.45" 			begin="850"			duration="150" 			mode="easeIn"						/>
+</storyboard>
+<storyboard event="activatePrev">
+<animation property="opacity"				from="0.9"		to="0.9" 								duration="850" 			mode="linear"						/>
+<animation property="opacity"								to="0.45" 			begin="850"			duration="150" 			mode="easeIn"						/>
+</storyboard>
+<storyboard event="deactivatePrev">
+<animation property="opacity"								to="1" 									duration="1"			mode="linear"						/>
+</storyboard>
+<storyboard event="deactivateNext">
+<animation property="opacity"								to="1" 									duration="1"			mode="linear"						/>
+</storyboard>
+</image>
+<!--
+<video name="md_video" zIndex="1100" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.42" maxSize="0.4 0.4" roundCorners="0.019"
+showSnapshotNoVideo="true"
+showSnapshotDelay="false"
+delay="0"
+effect="none"
+>
+<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+<audio>true</audio>
+</video>
+
+<image name="md_thumbnail" linearSmooth="true" zIndex="1200" linearSmooth="true" origin="0.5 1" pos="0.15 0.624" maxSize="0.25 0.39" default=":/parts/noThumb.png">
+<shader>:/shaders/shadow3.glsl</shader>
+</image>
+<!--
+<image name="md_marquee" linearSmooth="true" zIndex="1200" linearSmooth="true" origin="0.5 0.55" pos="0.5 0.62" maxSize="0.15 0.12" saturation="1.2" default=":/parts/noMarquee.png">
+<shader>:/shaders/shadow2.glsl</shader>
+</image>
+
+<text name="md_description" zIndex="1000" color="${c.selected}" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" fontPath=":/fonts/Cabin-BoldItalic.ttf" fontSize="0.020" forceUppercase="true"
+origin="0.5 1"
+pos="0.85 0.68"
+size="0.26 0.330"
+backgroundColor="0000000"
+alignment="left"
+verticalAlignment="top"
+/>
+-->
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->

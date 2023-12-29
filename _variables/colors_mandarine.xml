@@ -7,13 +7,13 @@
 <v.color>mandarine</v.color>
 <c.glowColor>00000080</c.glowColor>
 <c.selected>ffffff</c.selected>
-<c.base>131108</c.base>
+<c.base>101014</c.base>
 <c.text>cccfc8</c.text>
 <c.textHeader>fea347</c.textHeader>
 <c.menuSelector>dd7030</c.menuSelector>
 <ce.menuSelector>dd6020</ce.menuSelector>
 <c.scroll>dd602080</c.scroll>
-<c.menubg>262216</c.menubg>
+<c.menubg>202028</c.menubg>
 
 </variables>
 

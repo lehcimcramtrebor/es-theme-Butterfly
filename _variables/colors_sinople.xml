@@ -7,13 +7,13 @@
 <v.color>sinople</v.color>
 <c.glowColor>00000080</c.glowColor>
 <c.selected>ffffff</c.selected>
-<c.base>101410</c.base>
+<c.base>101014</c.base>
 <c.text>cccecc</c.text>
 <c.textHeader>30dd30</c.textHeader>
 <c.menuSelector>158015</c.menuSelector>
 <ce.menuSelector>057005</ce.menuSelector>
 <c.scroll>05700580</c.scroll>
-<c.menubg>202820</c.menubg>
+<c.menubg>202028</c.menubg>
 
 </variables>
 
