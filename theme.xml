@@ -313,12 +313,13 @@
 
 <!-- Subset to display themed backgrounds or scraped fanarts in gamelists -->
 <variables>
-<lang.gamelistFanarts>gamelist - display games fanarts as backgrounds</lang.gamelistFanarts>
-<lang.gamelistFanarts lang="fr">liste des jeux - fanarts en arrière-plan</lang.gamelistFanarts>
+<lang.gamelistBackgrounds>gamelist - backgrounds</lang.gamelistBackgrounds>
+<lang.gamelistBackgrounds lang="fr">liste des jeux - arrière-plan</lang.gamelistBackgrounds>
 </variables>
 
-<subset name="gamelistFanarts" displayName="${lang.gamelistFanarts}" appliesTo="${v.allViews}">
-<include name="yes" displayName="${lang.yes}"/>
+<subset name="gamelistBackgrounds" displayName="${lang.gamelistBackgrounds}" appliesTo="${v.allViews}">
+<include name="fanarts" displayName="${lang.fanarts}"/>
+<include name="screenshots" displayName="${lang.screenshots}"/>
 <include name="no" displayName="${lang.no}"/>
 </subset>
 
@@ -908,13 +909,14 @@ text="{game:players}"
 </image>
 
 <!-- Random fanarts -->
-<image name="md_fanart" ifSubset="gamelistFanarts:yes"
-linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200"
-default=":/parts/default_fanart.jpg"
-default="./${v.custom}/default_fanart.jpg"
+
+<image name="gameScreenshot" extra="true" ifSubset="gamelistBackgrounds:screenshots"
+linearSmooth="false" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="199"
+default=":/parts/default_screenshot.jpg"
+default="./${v.custom}/default_screenshot.jpg"
+path="{game:image}"
 >
-<shader><path>:/shaders/blur.glsl</path><blur>6</blur></shader>
-<visible if="${v.fanartExclude}">false</visible>
+<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
 <storyboard event="activateNext">
 <animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
 </storyboard>
@@ -927,12 +929,57 @@ default="./${v.custom}/default_fanart.jpg"
 <storyboard event="deactivateNext">
 <animation property="scale"									to="0"									duration="1"			mode="linear"						/>
 </storyboard>
+<visible if="${v.fanartExclude}">false</visible>
+</image>
+
+<image name="gameDefaultFanarts" extra="true" ifSubset="gamelistBackgrounds:fanarts"
+linearSmooth="false" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="199"
+default=":/parts/default_screenshot.jpg"
+default="./${v.custom}/default_screenshot.jpg"
+path="{game:image}"
+>
+<visible>!exists({game:fanart})</visible>
+<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
+<storyboard event="activateNext">
+<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+</storyboard>
+<storyboard event="activatePrev">
+<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+</storyboard>
+<storyboard event="deactivatePrev">
+<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+</storyboard>
+<storyboard event="deactivateNext">
+<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+</storyboard>
+<visible if="${v.fanartExclude}">false</visible>
+</image>
+
+<image name="gameFanart" extra="true" ifSubset="gamelistBackgrounds:fanarts"
+linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200"
+path="{game:fanart}"
+>
+<visible>exists({game:fanart})</visible>
+<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
+<storyboard event="activateNext">
+<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+</storyboard>
+<storyboard event="activatePrev">
+<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+</storyboard>
+<storyboard event="deactivatePrev">
+<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+</storyboard>
+<storyboard event="deactivateNext">
+<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+</storyboard>
+<visible if="${v.fanartExclude}">false</visible>
 </image>
 
 <!-- Theme or customs backgrounds properties for scraped gamelist-->
 <image name="gamelistBackground" extra="true"
 >
-<visible ifSubset="gamelistFanarts:yes">false</visible>
+<visible ifSubset="gamelistBackgrounds:fanarts|screenshots">false</visible>
 </image>
 
 </view>
