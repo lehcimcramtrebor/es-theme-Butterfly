@@ -2,529 +2,816 @@
 <theme>
 <formatVersion>7</formatVersion>
 
-<!-- Custom infos -->
-<include>./${v.custom}/${system.theme}/theme.xml</include>
+	<!-- Custom infos -->
+
+	<include>./${v.custom}/${system.theme}/theme.xml</include>
+
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- VARIABLES --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<variables>
+	<variables>
 
-<!-- Region priority -->
-<v.region region="eu">region</v.region>
-<v.allViews>basic,detailed,grid,gamecarousel</v.allViews>
+		<!-- Region priority -->
+		
+		<v.region region="eu">region</v.region>
 
-<!-- Customs path -->
-<v.custom>../../_ButterflyCustom</v.custom>
-<v.custom ifArch="windows">../../../../_ButterflyCustom</v.custom>
 
-<!-- Gamelist fanarts exclude systems (systems listed here don't display fanarts on gamelists) -->
-<v.fanartExclude>
-	${system.theme} == 'retrobat'
-||	${system.theme} == 'tools'
-||	${system.theme} == 'setup'
-||	${system.theme} == 'imageviewer'
-</v.fanartExclude>
+		<!-- All views -->
+		
+		<v.allViews>basic,detailed,grid,gamecarousel</v.allViews>
 
-<!-- System view videos exclude systems (systems listed here don't display video on system view) -->
-<v.rvExclude>
-	${system.theme} == 'tools'
-||	${system.theme} == 'setup'
-||	${system.theme} == 'imageviewer'
-</v.rvExclude>
 
-<!-- Screen ratio conditions to variables -->
-<v.notWide>${screen.height} > ${screen.width}/1.6</v.notWide>
-<v.ultraWide>${screen.width} > ${screen.height}*1.8</v.ultraWide>
+		<!-- Customs path -->
 
-<v.329>{screen.ratio} == '32/9'</v.329>
-<v.219>{screen.ratio} == '21/9'</v.219>
-<v.161>{screen.ratio} == '16/10'</v.161>
-<v.169>{screen.ratio} == '16/9'</v.169>
-<v.54>{screen.ratio} == '5/4'</v.54>
-<v.43>{screen.ratio} == '4/3'</v.43>
-<v.32>{screen.ratio} == '3/2'</v.32>
-<v.11>{screen.ratio} == '1/1'</v.11>
+		<v.custom>../../_ButterflyCustom</v.custom>
+		<v.custom ifArch="windows">../../../../_ButterflyCustom</v.custom>
 
-<!-- General language -->
-<lang.yes>yes</lang.yes>
-<lang.yes lang="fr">oui</lang.yes>
 
-<lang.no>no</lang.no>
-<lang.no lang="fr">non</lang.no>
+		<!-- Gamelist fanarts exclude systems (systems listed here don't display fanarts on gamelists) -->
 
-<!-- System Infos EX -->
-<lang.elements>elements</lang.elements>
-<lang.elements lang="fr">éléments</lang.elements>
+		<v.fanartExclude>
+			${system.theme} == 'retrobat'
+		||	${system.theme} == 'tools'
+		||	${system.theme} == 'setup'
+		||	${system.theme} == 'imageviewer'
+		</v.fanartExclude>
 
-<lang.tables>tables</lang.tables>
-<lang.tables lang="fr">tables</lang.tables>
 
-<lang.games>games</lang.games>
-<lang.games lang="fr">jeux</lang.games>
+		<!-- System view videos exclude systems (systems listed here don't display video on system view) -->
 
-<lang.favorites>favorites</lang.favorites>
-<lang.favorites lang="fr">favoris</lang.favorites>
+		<v.rvExclude>
+			${system.theme} == 'tools'
+		||	${system.theme} == 'setup'
+		||	${system.theme} == 'imageviewer'
+		</v.rvExclude>
 
-<v.p1 if="{system.releaseYearOrNull} >= '1958'">(</v.p1>
-<v.p2 if="{system.releaseYearOrNull} >= '1958'">)</v.p2>
 
-<v.bindingTotalUL>${lang.elements}: {binding:total}</v.bindingTotalUL>
+		<!-- Screen ratio conditions to variables -->
 
-<v.custom-collections if="{system.theme} == 'custom-collections'">( {binding:subSystems} ) </v.custom-collections>
+		<v.notWide>${screen.height} > ${screen.width}/1.6</v.notWide>
+		<v.ultraWide>${screen.width} > ${screen.height}*1.8</v.ultraWide>
 
-<v.bindingFavorites>( {binding:favorites} ${lang.favorites} )</v.bindingFavorites>
-<v.bindingFavorites if="
-	{system.theme} == 'auto-favorites'
-||	{system.theme} == 'retrobat'
-||	{system.theme} == 'tools'
-||	{system.theme} == 'setup'
-||	{system.theme} == 'kodi'
-||	{system.theme} == 'imageviewer'
-"></v.bindingFavorites>
+		<v.329>{screen.ratio} == '32/9'</v.329>
+		<v.219>{screen.ratio} == '21/9'</v.219>
+		<v.161>{screen.ratio} == '16/10'</v.161>
+		<v.169>{screen.ratio} == '16/9'</v.169>
+		<v.54>{screen.ratio} == '5/4'</v.54>
+		<v.43>{screen.ratio} == '4/3'</v.43>
+		<v.32>{screen.ratio} == '3/2'</v.32>
+		<v.11>{screen.ratio} == '1/1'</v.11>
 
-</variables>
+
+		<!-- General language -->
+
+		<lang.yes>yes</lang.yes>
+		<lang.yes lang="fr">oui</lang.yes>
+
+		<lang.no>no</lang.no>
+		<lang.no lang="fr">non</lang.no>
+
+
+		<!-- System Infos EX -->
+
+		<lang.elements>elements</lang.elements>
+		<lang.elements lang="fr">éléments</lang.elements>
+
+		<lang.tables>tables</lang.tables>
+		<lang.tables lang="fr">tables</lang.tables>
+
+		<lang.games>games</lang.games>
+		<lang.games lang="fr">jeux</lang.games>
+
+		<lang.favorites>favorites</lang.favorites>
+		<lang.favorites lang="fr">favoris</lang.favorites>
+
+		<v.p1 if="{system.releaseYearOrNull} >= '1958'">(</v.p1>
+		<v.p2 if="{system.releaseYearOrNull} >= '1958'">)</v.p2>
+
+		<v.bindingTotalUL>${lang.elements}: {binding:total}</v.bindingTotalUL>
+
+		<v.custom-collections if="{system.theme} == 'custom-collections'">( {binding:subSystems} ) </v.custom-collections>
+
+		<v.bindingFavorites>( {binding:favorites} ${lang.favorites} )</v.bindingFavorites>
+
+		<v.bindingFavorites if="
+			{system.theme} == 'auto-favorites'
+		||	{system.theme} == 'retrobat'
+		||	{system.theme} == 'tools'
+		||	{system.theme} == 'setup'
+		||	{system.theme} == 'kodi'
+		||	{system.theme} == 'imageviewer'
+		"></v.bindingFavorites>
+
+	</variables>
+
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- SUBSETS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<!-- Music subset -->
-<variables>
-<lang.music>play music</lang.music>
-<lang.music lang="fr">jouer les musiques</lang.music>
+	<!-- Music subset -->
 
-<lang.music_recalbox>from recalbox</lang.music_recalbox>
-<lang.music_recalbox lang="fr">de recalbox</lang.music_recalbox>
+	<variables>
 
-<lang.music_mrBoom>from mr.boom</lang.music_mrBoom>
-<lang.music_mrBoom lang="fr">de mr.boom</lang.music_mrBoom>
+		<lang.music>play music</lang.music>
+		<lang.music lang="fr">jouer les musiques</lang.music>
 
-<lang.music_batocera>from batocera (old songs)</lang.music_batocera>
-<lang.music_batocera lang="fr">de batocera (les anciennes)</lang.music_batocera>
+		<lang.music_recalbox>from recalbox</lang.music_recalbox>
+		<lang.music_recalbox lang="fr">de recalbox</lang.music_recalbox>
 
-<lang.music_comixZone>from comix zone</lang.music_comixZone>
-<lang.music_comixZone lang="fr">de comix zone</lang.music_comixZone>
+		<lang.music_mrBoom>from mr.boom</lang.music_mrBoom>
+		<lang.music_mrBoom lang="fr">de mr.boom</lang.music_mrBoom>
 
-<lang.music_retrobat>from retrobat</lang.music_retrobat>
-<lang.music_retrobat lang="fr">de retrobat</lang.music_retrobat>
+		<lang.music_batocera>from batocera (old songs)</lang.music_batocera>
+		<lang.music_batocera lang="fr">de batocera (les anciennes)</lang.music_batocera>
 
-<lang.music_frontend>from this frontend</lang.music_frontend>
-<lang.music_frontend lang="fr">de ce frontend</lang.music_frontend>
+		<lang.music_comixZone>from comix zone</lang.music_comixZone>
+		<lang.music_comixZone lang="fr">de comix zone</lang.music_comixZone>
 
-<lang.music_custom>from custom folder (if availables)</lang.music_custom>
-<lang.music_custom lang="fr">du dossier custom (si disponibles)</lang.music_custom>
+		<lang.music_retrobat>from retrobat</lang.music_retrobat>
+		<lang.music_retrobat lang="fr">de retrobat</lang.music_retrobat>
 
-<lang.music_notAllow>no</lang.music_notAllow>
-<lang.music_notAllow lang="fr">non</lang.music_notAllow>
+		<lang.music_frontend>from this frontend</lang.music_frontend>
+		<lang.music_frontend lang="fr">de ce frontend</lang.music_frontend>
 
-</variables>
+		<lang.music_custom>from custom folder (if availables)</lang.music_custom>
+		<lang.music_custom lang="fr">du dossier custom (si disponibles)</lang.music_custom>
 
-<subset name="music" displayName="${lang.music}">
-<include name="recalbox" displayName="${lang.music_recalbox}">./_variables/music_recalbox.xml</include>
-<include name="mrBoom" displayName="${lang.music_mrBoom}">./_variables/music_mrBoom.xml</include>
-<include name="batocera" displayName="${lang.music_batocera}">./_variables/music_batocera.xml</include>
-<include name="comixZone" displayName="${lang.music_comixZone}">./_variables/music_comixZone.xml</include>
-<include name="retrobat" displayName="${lang.music_retrobat}">./_variables/music_retrobat.xml</include>
-<include name="frontend" displayName="${lang.music_frontend}"/>
-<include name="custom" displayName="${lang.music_custom}"/>
-<include name="notAllow" displayName="${lang.music_notAllow}"/>
-</subset>
+		<lang.music_notAllow>no</lang.music_notAllow>
+		<lang.music_notAllow lang="fr">non</lang.music_notAllow>
 
-<!-- Colorset subset -->
-<variables>
-<lang.colorset>colorset</lang.colorset>
-<lang.colorset lang="fr">jeu de couleurs</lang.colorset>
-</variables>
+	</variables>
 
-<subset name="colorset" displayName="${lang.colorset}">
-<include name="cobalt">./_variables/colors_cobalt.xml</include>
-<include name="smoke">./_variables/colors_smoke.xml</include>
-<include name="mars">./_variables/colors_mars.xml</include>
-<include name="wine">./_variables/colors_wine.xml</include>
-<include name="sinople">./_variables/colors_sinople.xml</include>
-<include name="mandarine">./_variables/colors_mandarine.xml</include>
-<include name="candy">./_variables/colors_candy.xml</include>
-</subset>
 
-<!-- Help subset -->
-<variables>
-<lang.helpIcons>help icons</lang.helpIcons>
-<lang.helpIcons lang="fr">icônes de l'aide</lang.helpIcons>
+	<subset name="music" displayName="${lang.music}">
 
-<lang.defaultIcons>default</lang.defaultIcons>
-<lang.defaultIcons lang="fr">par défaut</lang.defaultIcons>
-</variables>
+		<include name="recalbox"			displayName="${lang.music_recalbox}"		>./_variables/music_recalbox.xml</include>
+		<include name="mrBoom"				displayName="${lang.music_mrBoom}"			>./_variables/music_mrBoom.xml</include>
+		<include name="batocera"			displayName="${lang.music_batocera}"		>./_variables/music_batocera.xml</include>
+		<include name="comixZone"			displayName="${lang.music_comixZone}"		>./_variables/music_comixZone.xml</include>
+		<include name="retrobat"			displayName="${lang.music_retrobat}"		>./_variables/music_retrobat.xml</include>
+		<include name="frontend"			displayName="${lang.music_frontend}"		/>
+		<include name="custom"				displayName="${lang.music_custom}"			/>
+		<include name="notAllow"			displayName="${lang.music_notAllow}"		/>
+		
+	</subset>
 
-<subset name="helpIcons" displayName="${lang.helpIcons}">
-<include name="defaultIcons" displayName="${lang.defaultIcons}"/>
-<include name="xboxIcons" displayName="xbox">./_variables/help_xbox.xml</include>
-<include name="xboxOneIcons" displayName="xbox one">./_variables/help_xboxone.xml</include>
-<include name="arcadeIcons" displayName="arcade">./_variables/help_arcade.xml</include>
-<include name="psxIcons" displayName="psx">./_variables/help_psx.xml</include>
-<include name="snesIcons" displayName="snes / super famicom">./_variables/help_snes.xml</include>
-<include name="snesAltIcons" displayName="snes / super famicom (alt)">./_variables/help_snesalt.xml</include>
-</subset>
 
-<!-- Controller overlay subset -->
-<variables>
-<lang.controller>controller activity</lang.controller>
-<lang.controller lang="fr">contrôleur d'activité</lang.controller>
+	<!-- Colorset subset -->
 
-<lang.player>player</lang.player>
-<lang.player lang="fr">joueur</lang.player>
-<lang.gamepad>generic gamepad</lang.gamepad>
-<lang.gamepad lang="fr">manette générique</lang.gamepad>
-</variables>
+	<variables>
 
-<subset name="controller" displayName="${lang.controller}">
-<include name="stick" displayName="arcade">./_variables/controller_stick.xml</include>
-<include name="player" displayName="${lang.player}">./_variables/controller_player.xml</include>
-<include name="gamepad" displayName="${lang.gamepad}">./_variables/controller_gamepad.xml</include>
-<include name="nes" displayName="nes / famicom">./_variables/controller_nes.xml</include>
-<include name="snes" displayName="snes / super famicom">./_variables/controller_snes.xml</include>
-<include name="n64" displayName="nintendo 64">./_variables/controller_n64.xml</include>
-<include name="cube" displayName="gamecube">./_variables/controller_cube.xml</include>
-<include name="megadrive" displayName="megadrive">./_variables/controller_megadrive.xml</include>
-<include name="megadrive6" displayName="megadrive x6">./_variables/controller_megadrive6.xml</include>
-<include name="xbox" displayName="xbox">./_variables/controller_xbox.xml</include>
-<include name="psx" displayName="psx">./_variables/controller_psx.xml</include>
-<include name="ps4" displayName="ps4">./_variables/controller_ps4.xml</include>
-<include name="ps5" displayName="ps5">./_variables/controller_ps5.xml</include>
-</subset>
+		<lang.colorset>colorset</lang.colorset>
+		<lang.colorset lang="fr">jeu de couleurs</lang.colorset>
+		
+	</variables>
 
-<!-- Carousel subset -->
-<variables>
-<lang.carousel>carousel</lang.carousel>
-<lang.carousel lang="fr">carrousel</lang.carousel>
 
-<lang.carouselHorizontal>standard</lang.carouselHorizontal>
-<lang.carouselHorizontal lang="fr">standard</lang.carouselHorizontal>
+	<subset name="colorset" displayName="${lang.colorset}">
 
-<lang.carouselWheel>wheel</lang.carouselWheel>
-<lang.carouselWheel lang="fr">roue</lang.carouselWheel>
+		<include name="cobalt"			>./_variables/colors_cobalt.xml</include>
+		<include name="smoke"			>./_variables/colors_smoke.xml</include>
+		<include name="mars"			>./_variables/colors_mars.xml</include>
+		<include name="wine"			>./_variables/colors_wine.xml</include>
+		<include name="sinople"			>./_variables/colors_sinople.xml</include>
+		<include name="mandarine"		>./_variables/colors_mandarine.xml</include>
+		<include name="candy"			>./_variables/colors_candy.xml</include>
+		
+	</subset>
 
-<lang.carouselBottom>bottom</lang.carouselBottom>
-<lang.carouselBottom lang="fr">en bas</lang.carouselBottom>
 
-<lang.carouselVertical>vertical</lang.carouselVertical>
-<lang.carouselVertical lang="fr">vertical</lang.carouselVertical>
+	<!-- Help subset -->
 
-</variables>
+	<variables>
 
-<subset name="carousel" displayName="${lang.carousel}">
-<include name="wheel" displayName="${lang.carouselWheel}"/>
-<include name="vertical" displayName="${lang.carouselVertical}"/>
-<include name="horizontal" displayName="${lang.carouselHorizontal}"/>
-<include name="bottom" displayName="${lang.carouselBottom}"/>
-</subset>
+		<lang.helpIcons>help icons</lang.helpIcons>
+		<lang.helpIcons lang="fr">icônes de l'aide</lang.helpIcons>
 
-<!-- Wheel inverse -->
-<variables>
-<lang.wheelFlip>flip wheels rotation</lang.wheelFlip>
-<lang.wheelFlip lang="fr">inverser le sens des roues du thème</lang.wheelFlip>
-</variables>
+		<lang.defaultIcons>default</lang.defaultIcons>
+		<lang.defaultIcons lang="fr">par défaut</lang.defaultIcons>
+		
+	</variables>
 
-<subset name="wheelFlip" displayName="${lang.wheelFlip}">
-<include name="no" displayName="${lang.no}">./_variables/wheel_flip.xml</include>
-<include name="yes" displayName="${lang.yes}"/>
-</subset>
 
-<!-- Random Videos & fanarts -->
-<variables>
-<lang.randomVideos>system - random videos</lang.randomVideos>
-<lang.randomVideos lang="fr">système - vidéos aléatoires</lang.randomVideos>
+	<subset name="helpIcons" displayName="${lang.helpIcons}">
 
-<lang.randomVideosAudio>system - random videos audio</lang.randomVideosAudio>
-<lang.randomVideosAudio lang="fr">système - audio des vidéos aléatoires</lang.randomVideosAudio>
+		<include name="defaultIcons"			displayName="${lang.defaultIcons}"				/>
+		<include name="xboxIcons"				displayName="xbox"								>./_variables/help_xbox.xml</include>
+		<include name="xboxOneIcons"			displayName="xbox one"							>./_variables/help_xboxone.xml</include>
+		<include name="arcadeIcons"				displayName="arcade"							>./_variables/help_arcade.xml</include>
+		<include name="psxIcons"				displayName="psx"								>./_variables/help_psx.xml</include>
+		<include name="snesIcons"				displayName="snes / super famicom"				>./_variables/help_snes.xml</include>
+		<include name="snesAltIcons"			displayName="snes / super famicom (alt)"		>./_variables/help_snesalt.xml</include>
+		
+	</subset>
 
-<lang.randomVideosSize>system - random videos size</lang.randomVideosSize>
-<lang.randomVideosSize lang="fr">système - taille des vidéos aléatoires</lang.randomVideosSize>
 
-<lang.forceRandomVideos>system - force scraped videos</lang.forceRandomVideos>
-<lang.forceRandomVideos lang="fr">système - forcer les vidéos scrapées</lang.forceRandomVideos>
+	<!-- Controller overlay subset -->
 
-<lang.forceRandomFanarts>system - force scraped fanarts</lang.forceRandomFanarts>
-<lang.forceRandomFanarts lang="fr">système - forcer les fanarts scrapés</lang.forceRandomFanarts>
+	<variables>
 
-<lang.randomVideosSubsetDesc>( applicable individually )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
-<lang.randomVideosSubsetDesc lang="fr">( applicable individuellement )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+		<lang.controller>controller activity</lang.controller>
+		<lang.controller lang="fr">contrôleur d'activité</lang.controller>
 
-<lang.ur>in upper right corner</lang.ur>
-<lang.ur lang="fr">au coin supérieur droit</lang.ur>
+		<lang.player>player</lang.player>
+		<lang.player lang="fr">joueur</lang.player>
+		<lang.gamepad>generic gamepad</lang.gamepad>
+		<lang.gamepad lang="fr">manette générique</lang.gamepad>
+		
+	</variables>
 
-<lang.bl>in bottom left corner</lang.bl>
-<lang.bl lang="fr">au coin inférieur gauche</lang.bl>
 
-<lang.br>in bottom right corner</lang.br>
-<lang.br lang="fr">au coin inférieur droit</lang.br>
+	<subset name="controller" displayName="${lang.controller}">
 
-<lang.btm>at bottom</lang.btm>
-<lang.btm lang="fr">centrée en bas</lang.btm>
+		<include name="stick"				displayName="arcade"						>./_variables/controller_stick.xml</include>
+		<include name="player"				displayName="${lang.player}"				>./_variables/controller_player.xml</include>
+		<include name="gamepad"				displayName="${lang.gamepad}"				>./_variables/controller_gamepad.xml</include>
+		<include name="nes"					displayName="nes / famicom"					>./_variables/controller_nes.xml</include>
+		<include name="snes"				displayName="snes / super famicom"			>./_variables/controller_snes.xml</include>
+		<include name="n64"					displayName="nintendo 64"					>./_variables/controller_n64.xml</include>
+		<include name="cube"				displayName="gamecube"						>./_variables/controller_cube.xml</include>
+		<include name="megadrive"			displayName="megadrive"						>./_variables/controller_megadrive.xml</include>
+		<include name="megadrive6"			displayName="megadrive x6"					>./_variables/controller_megadrive6.xml</include>
+		<include name="xbox"				displayName="xbox"							>./_variables/controller_xbox.xml</include>
+		<include name="psx"					displayName="psx"							>./_variables/controller_psx.xml</include>
+		<include name="ps4"					displayName="ps4"							>./_variables/controller_ps4.xml</include>
+		<include name="ps5"					displayName="ps5"							>./_variables/controller_ps5.xml</include>
+		
+	</subset>
 
-<lang.ctr>at center</lang.ctr>
-<lang.ctr lang="fr">au centre</lang.ctr>
 
-<lang.small>small</lang.small>
-<lang.small lang="fr">petite</lang.small>
+	<!-- Carousel subset -->
 
-<lang.medium>medium</lang.medium>
-<lang.medium lang="fr">moyenne</lang.medium>
+	<variables>
 
-<lang.big>big</lang.big>
-<lang.big lang="fr">grande</lang.big>
+		<lang.carousel>carousel</lang.carousel>
+		<lang.carousel lang="fr">carrousel</lang.carousel>
 
-<lang.xtra>extra large</lang.xtra>
-<lang.xtra lang="fr">très grande</lang.xtra>
-</variables>
+		<lang.carouselHorizontal>standard</lang.carouselHorizontal>
+		<lang.carouselHorizontal lang="fr">standard</lang.carouselHorizontal>
 
-<subset name="randomVideos" displayName="${lang.randomVideos}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
-<include name="br" verticalScreen="true" displayName="${lang.br}">./_variables/randomVideos_br.xml</include>
-<include name="bl" displayName="${lang.bl}">./_variables/randomVideos_bl.xml</include>
-<include name="ur" displayName="${lang.ur}">./_variables/randomVideos_ur.xml</include>
-<include name="br" verticalScreen="false" displayName="${lang.br}">./_variables/randomVideos_br.xml</include>
-<include name="no" displayName="${lang.no}">./_variables/randomVideos_no.xml</include>
-<include verticalScreen="true" name="btm" displayName="${lang.btm}">./_variables/randomVideos_btm.xml</include>
-<include verticalScreen="true" name="ctr" displayName="${lang.ctr}">./_variables/randomVideos_ctr.xml</include>
-</subset>
+		<lang.carouselWheel>wheel</lang.carouselWheel>
+		<lang.carouselWheel lang="fr">roue</lang.carouselWheel>
 
-<subset name="randomVideosSize" displayName="${lang.randomVideosSize}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
-<include if="{screen.height} >= '600'" name="medium" displayName="${lang.medium}">./_variables/randomVideosSize_medium.xml</include>
-<include if="{screen.height} >= '720'" name="small" displayName="${lang.small}">./_variables/randomVideosSize_small.xml</include>
-<include name="big" displayName="${lang.big}">./_variables/randomVideosSize_big.xml</include>
-<include verticalScreen="true" ifSubset="randomVideos:btm|ctr" name="xtra" displayName="${lang.xtra}">./_variables/randomVideosSize_xtra.xml</include>
-</subset>
+		<lang.carouselBottom>bottom</lang.carouselBottom>
+		<lang.carouselBottom lang="fr">en bas</lang.carouselBottom>
 
-<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
-<include name="no" displayName="${lang.no}">./_variables/randomVideosAudio_no.xml</include>
-<include name="yes" displayName="${lang.yes}">./_variables/randomVideosAudio_yes.xml</include>
-</subset>
+		<lang.carouselVertical>vertical</lang.carouselVertical>
+		<lang.carouselVertical lang="fr">vertical</lang.carouselVertical>
 
-<subset name="forceRandomVideos" displayName="${lang.forceRandomVideos}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
-<include name="no" displayName="${lang.no}"/>
-<include name="yes" displayName="${lang.yes}"/>
-</subset>
+	</variables>
 
-<subset name="forceRandomFanarts" displayName="${lang.forceRandomFanarts}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
-<include name="no" displayName="${lang.no}"/>
-<include name="yes" displayName="${lang.yes}"/>
-</subset>
 
-<!-- Subset to display themed backgrounds or scraped fanarts in gamelists -->
-<variables>
-<lang.gamelistBackgrounds>gamelist - backgrounds</lang.gamelistBackgrounds>
-<lang.gamelistBackgrounds lang="fr">liste des jeux - arrière-plan</lang.gamelistBackgrounds>
-</variables>
+	<subset name="carousel" displayName="${lang.carousel}">
 
-<subset name="gamelistBackgrounds" displayName="${lang.gamelistBackgrounds}" appliesTo="${v.allViews}">
-<include name="fanarts" displayName="${lang.fanarts}"/>
-<include name="screenshots" displayName="${lang.screenshots}"/>
-<include name="no" displayName="${lang.no}"/>
-</subset>
+		<include name="wheel"				displayName="${lang.carouselWheel}"					/>
+		<include name="vertical"			displayName="${lang.carouselVertical}"				/>
+		<include name="horizontal"			displayName="${lang.carouselHorizontal}"			/>
+		<include name="bottom"				displayName="${lang.carouselBottom}"				/>
+		
+	</subset>
 
-<!-- Logos subsets -->
-<variables>
-<lang.neogeoSubsetDesc>( by system only option )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
-<lang.neogeoSubsetDesc lang="fr">( option individuelle uniquement )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
-</variables>
 
-<subset name="neogeo" displayName="neo-geo">
-<include name="aes" displayName="aes">./_variables/logo_aes.xml</include>
-<include name="mvs" displayName="mvs"/>
-</subset>
+	<!-- Wheel inverse -->
 
-<!-- Dev console -->
-<variables>
-<lang.dev>display console</lang.dev>
-<lang.dev lang="fr">afficher la console</lang.dev>
-</variables>
+	<variables>
 
-<subset name="dev" displayName="${lang.dev}">
-<include name="no" displayName="${lang.no}"/>
-<include name="yes" displayName="${lang.yes}"/>
-</subset>
+		<lang.wheelFlip>flip wheels rotation</lang.wheelFlip>
+		<lang.wheelFlip lang="fr">inverser le sens des roues du thème</lang.wheelFlip>
+		
+	</variables>
+
+
+	<subset name="wheelFlip" displayName="${lang.wheelFlip}">
+
+		<include name="no"			displayName="${lang.no}"			>./_variables/wheel_flip.xml</include>
+		<include name="yes"			displayName="${lang.yes}"			/>
+		
+	</subset>
+
+
+	<!-- Random Videos & fanarts -->
+
+	<variables>
+
+		<lang.randomVideos>system - random videos</lang.randomVideos>
+		<lang.randomVideos lang="fr">système - vidéos aléatoires</lang.randomVideos>
+
+		<lang.randomVideosAudio>system - random videos audio</lang.randomVideosAudio>
+		<lang.randomVideosAudio lang="fr">système - audio des vidéos aléatoires</lang.randomVideosAudio>
+
+		<lang.randomVideosSize>system - random videos size</lang.randomVideosSize>
+		<lang.randomVideosSize lang="fr">système - taille des vidéos aléatoires</lang.randomVideosSize>
+
+		<lang.forceRandomVideos>system - force scraped videos</lang.forceRandomVideos>
+		<lang.forceRandomVideos lang="fr">système - forcer les vidéos scrapées</lang.forceRandomVideos>
+
+		<lang.forceRandomFanarts>system - force scraped fanarts</lang.forceRandomFanarts>
+		<lang.forceRandomFanarts lang="fr">système - forcer les fanarts scrapés</lang.forceRandomFanarts>
+
+		<lang.randomVideosSubsetDesc>( applicable individually )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+		<lang.randomVideosSubsetDesc lang="fr">( applicable individuellement )</lang.randomVideosSubsetDesc><!-- alt+0160 spaces -->
+
+		<lang.ur>in upper right corner</lang.ur>
+		<lang.ur lang="fr">au coin supérieur droit</lang.ur>
+
+		<lang.bl>in bottom left corner</lang.bl>
+		<lang.bl lang="fr">au coin inférieur gauche</lang.bl>
+
+		<lang.br>in bottom right corner</lang.br>
+		<lang.br lang="fr">au coin inférieur droit</lang.br>
+
+		<lang.btm>at bottom</lang.btm>
+		<lang.btm lang="fr">centrée en bas</lang.btm>
+
+		<lang.ctr>at center</lang.ctr>
+		<lang.ctr lang="fr">au centre</lang.ctr>
+
+		<lang.small>small</lang.small>
+		<lang.small lang="fr">petite</lang.small>
+
+		<lang.medium>medium</lang.medium>
+		<lang.medium lang="fr">moyenne</lang.medium>
+
+		<lang.big>big</lang.big>
+		<lang.big lang="fr">grande</lang.big>
+
+		<lang.xtra>extra large</lang.xtra>
+		<lang.xtra lang="fr">très grande</lang.xtra>
+		
+	</variables>
+
+
+	<subset name="randomVideos" displayName="${lang.randomVideos}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+
+		<include name="br"		verticalScreen="true"		displayName="${lang.br}"			>./_variables/randomVideos_br.xml</include>
+		<include name="bl"									displayName="${lang.bl}"			>./_variables/randomVideos_bl.xml</include>
+		<include name="ur"									displayName="${lang.ur}"			>./_variables/randomVideos_ur.xml</include>
+		<include name="br"		verticalScreen="false"		displayName="${lang.br}"			>./_variables/randomVideos_br.xml</include>
+		<include name="no"									displayName="${lang.no}"			>./_variables/randomVideos_no.xml</include>
+		<include name="btm"		verticalScreen="true"		displayName="${lang.btm}"			>./_variables/randomVideos_btm.xml</include>
+		<include name="ctr"		verticalScreen="true"		displayName="${lang.ctr}"			>./_variables/randomVideos_ctr.xml</include>
+		
+	</subset>
+
+
+	<subset name="randomVideosSize" displayName="${lang.randomVideosSize}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+
+		<include if="{screen.height} >= '600'"												name="medium"		displayName="${lang.medium}"		>./_variables/randomVideosSize_medium.xml</include>
+		<include if="{screen.height} >= '720'"												name="small"		displayName="${lang.small}"			>./_variables/randomVideosSize_small.xml</include>
+		<include																			name="big"			displayName="${lang.big}"			>./_variables/randomVideosSize_big.xml</include>
+		<include verticalScreen="true"				ifSubset="randomVideos:btm|ctr"			name="xtra"			displayName="${lang.xtra}"			>./_variables/randomVideosSize_xtra.xml</include>
+		
+	</subset>
+
+
+	<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+
+		<include name="no"			displayName="${lang.no}"			>./_variables/randomVideosAudio_no.xml</include>
+		<include name="yes"			displayName="${lang.yes}"			>./_variables/randomVideosAudio_yes.xml</include>
+		
+	</subset>
+
+
+	<subset name="forceRandomVideos" displayName="${lang.forceRandomVideos}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+
+		<include name="no"			displayName="${lang.no}"		/>
+		<include name="yes"			displayName="${lang.yes}"		/>
+		
+	</subset>
+
+
+	<subset name="forceRandomFanarts" displayName="${lang.forceRandomFanarts}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+
+		<include name="no"			displayName="${lang.no}"			/>
+		<include name="yes"			displayName="${lang.yes}"			/>
+		
+	</subset>
+
+
+	<!-- Subset to display themed backgrounds or scraped fanarts in gamelists -->
+
+	<variables>
+
+		<lang.gamelistBackgrounds>gamelist - backgrounds</lang.gamelistBackgrounds>
+		<lang.gamelistBackgrounds lang="fr">liste des jeux - arrière-plan</lang.gamelistBackgrounds>
+		
+	</variables>
+
+
+	<subset name="gamelistBackgrounds" displayName="${lang.gamelistBackgrounds}" appliesTo="${v.allViews}">
+
+		<include name="fanarts"				displayName="${lang.fanarts}"				/>
+		<include name="screenshots"			displayName="${lang.screenshots}"			/>
+		<include name="no"					displayName="${lang.no}"					/>
+		
+	</subset>
+
+
+	<!-- Logos subsets -->
+
+	<variables>
+
+		<lang.neogeoSubsetDesc>( by system only option )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
+		<lang.neogeoSubsetDesc lang="fr">( option individuelle uniquement )</lang.neogeoSubsetDesc><!-- alt+0160 spaces -->
+		
+	</variables>
+
+
+	<subset name="neogeo" displayName="neo-geo">
+
+		<include name="aes"			displayName="aes"			>./_variables/logo_aes.xml</include>
+		<include name="mvs"			displayName="mvs"			/>
+		
+	</subset>
+
+
+	<!-- Dev console -->
+
+	<variables>
+
+		<lang.dev>display console</lang.dev>
+		<lang.dev lang="fr">afficher la console</lang.dev>
+		
+	</variables>
+
+
+	<subset name="dev" displayName="${lang.dev}">
+
+		<include name="no"			displayName="${lang.no}"			/>
+		<include name="yes"			displayName="${lang.yes}"			/>
+		
+	</subset>
+
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- MENUS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="menu">
 
-<menuText name="menutitle" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.03" color="${c.text}"/>
+	<menuText
+		name="menutitle"
+		fontPath=":/fonts/Cabin-Bold.ttf"
+		fontSize="0.03"
+		color="${c.text}"
+	/>
 
-<menuText name="menufooter" fontPath=":/fonts/Cabin-Regular.ttf" fontSize="0.018" color="${c.text}"/>
 
-<menuTextSmall name="menutextsmall" fontPath=":/fonts/CabinCondensed-Regular.ttf" fontSize="0.017"/>
+	<menuText
+		name="menufooter"
+		fontPath=":/fonts/Cabin-Regular.ttf"
+		fontSize="0.018"
+		color="${c.text}"
+	/>
 
-<menuGroup name="menugroup" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.026" color="${c.textHeader}" separatorColor="00000000" backgroundColor="00000000" lineSpacing="2.75"/>
 
-<menuBackground name="menubg" color="${c.menubg}ee" cornerSize="32 32" scrollbarColor="${c.scroll}" scrollbarCorner="0" scrollbarSize="0.0025" scrollbarAlignment="innerright" roundCorners="0.018">
-<shader>
-<path>:/shaders/blur.glsl</path>
-<blur>3</blur>
-</shader>
-</menuBackground>
+	<menuTextSmall
+		name="menutextsmall"
+		fontPath=":/fonts/CabinCondensed-Regular.ttf"
+		fontSize="0.017"
+	/>
 
-<menuTextEdit name="menutextedit" inactive=":/menu/textinput_ninepatch.png" active=":/menu/textinput_ninepatch_active.png"/>
 
-<menuButton name="menubutton" path=":/menu/button.png" filledPath=":/menu/button_filled.png" cornerSize="8 8"/>
+	<menuGroup
+		name="menugroup"
+		fontPath=":/fonts/Cabin-Bold.ttf"
+		fontSize="0.026"
+		color="${c.textHeader}"
+		separatorColor="00000000"
+		backgroundColor="00000000"
+		lineSpacing="2.75"
+	/>
 
-<menuText name="menutext" fontPath=":/fonts/Cabin-Regular.ttf" fontSize="0.025"
-color="${c.text}"
-separatorColor="00000000"
-selectorColor="${c.menuSelector}"
-selectorColorEnd="${ce.menuSelector}"
-selectedColor="${c.selected}"
-selectorGradientType="horizontal"
-/>
 
-<menuIcons name="menuicons"
-iconKodi=":/menu/Kodi.png"
-iconSystem=":/menu/System.png"
-iconUpdates=":/menu/Updates.png"
-iconGames=":/menu/Games.png"
-iconControllers=":/menu/Controllers.png"
-iconUI=":/menu/UI.png"
-iconSound=":/menu/Sound.png"
-iconNetwork=":/menu/Network.png"
-iconScraper=":/menu/Scraper.png"
-iconAdvanced=":/menu/Advanced.png"
-iconQuit=":/menu/Quit.png"
-iconRestart=":/menu/Restart.png"
-iconShutdown=":/menu/Shutdown.png"
-iconFastShutdown=":/menu/Fastshutdown.png"
-iconRetroachievements=":/menu/Contest.png"
-iconManual=":/menu/Manual.png"
-/>
+	<menuBackground
+		name="menubg"
+		color="${c.menubg}ee"
+		cornerSize="32 32"
+		scrollbarColor="${c.scroll}"
+		scrollbarCorner="0"
+		scrollbarSize="0.0025"
+		scrollbarAlignment="innerright"
+		roundCorners="0.018"
+	>
+		
+		<shader>
+			<path>:/shaders/blur.glsl</path>
+			<blur>3</blur>
+		</shader>
+		
+	</menuBackground>
+
+
+	<menuTextEdit
+		name="menutextedit"
+		inactive=":/menu/textinput_ninepatch.png"
+		active=":/menu/textinput_ninepatch_active.png"
+	/>
+
+
+	<menuButton
+		name="menubutton"
+		path=":/menu/button.png"
+		filledPath=":/menu/button_filled.png"
+		cornerSize="8 8"
+	/>
+
+
+	<menuText
+		name="menutext"
+		fontPath=":/fonts/Cabin-Regular.ttf"
+		fontSize="0.025"
+		color="${c.text}"
+		separatorColor="00000000"
+		selectorColor="${c.menuSelector}"
+		selectorColorEnd="${ce.menuSelector}"
+		selectedColor="${c.selected}"
+		selectorGradientType="horizontal"
+	/>
+
+
+	<menuIcons
+		name="menuicons"
+		iconKodi=":/menu/Kodi.png"
+		iconSystem=":/menu/System.png"
+		iconUpdates=":/menu/Updates.png"
+		iconGames=":/menu/Games.png"
+		iconControllers=":/menu/Controllers.png"
+		iconUI=":/menu/UI.png"
+		iconSound=":/menu/Sound.png"
+		iconNetwork=":/menu/Network.png"
+		iconScraper=":/menu/Scraper.png"
+		iconAdvanced=":/menu/Advanced.png"
+		iconQuit=":/menu/Quit.png"
+		iconRestart=":/menu/Restart.png"
+		iconShutdown=":/menu/Shutdown.png"
+		iconFastShutdown=":/menu/Fastshutdown.png"
+		iconRetroachievements=":/menu/Contest.png"
+		iconManual=":/menu/Manual.png"
+	/>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- HELP ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="menu,system,basic,detailed,grid,gamecarousel">
 
-<helpsystem name="help"
-textColor="${c.text}"
-fontSize="0.02"
-origin="0 0.5"
-pos="0.004 0.98"
-fontPath=":/fonts/Cabin-Bold.ttf"
-iconColor="ffffff"
-glowColor="${c.glowColor}"
-glowOffset="1"
-glowSize="1"
-iconUpDown=":/help/icon_${v.help}_updown.png"
-iconLeftRight=":/help/icon_${v.help}${v.help}_leftright.png"
-iconUpDownLeftRight=":/help/icon_${v.help}_all.png"
-iconA=":/help/icon_${v.help}_a.png"
-iconB=":/help/icon_${v.help}_b.png"
-iconX=":/help/icon_${v.help}_x.png"
-iconY=":/help/icon_${v.help}_y.png"
-iconL=":/help/icon_${v.help}_l.png"
-iconR=":/help/icon_${v.help}_r.png"
-iconStart=":/help/icon_${v.help}_start.png"
-iconSelect=":/help/icon_${v.help}_select.png"
->
-<iconColor ifSubset="helpIcons:defaultIcons">${c.textHeader}</iconColor>
-<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-<pos verticalScreen="true">0.01 0.985</pos>
-</helpsystem>
+	<helpsystem
+		name="help"
+		textColor="${c.text}"
+		fontSize="0.02"
+		origin="0 0.5"
+		pos="0.004 0.98"
+		fontPath=":/fonts/Cabin-Bold.ttf"
+		iconColor="ffffff"
+		glowColor="${c.glowColor}"
+		glowOffset="1" glowSize="1"
+		iconUpDown=":/help/icon_${v.help}_updown.png"
+		iconLeftRight=":/help/icon_${v.help}${v.help}_leftright.png"
+		iconUpDownLeftRight=":/help/icon_${v.help}_all.png"
+		iconA=":/help/icon_${v.help}_a.png"
+		iconB=":/help/icon_${v.help}_b.png"
+		iconX=":/help/icon_${v.help}_x.png"
+		iconY=":/help/icon_${v.help}_y.png"
+		iconL=":/help/icon_${v.help}_l.png"
+		iconR=":/help/icon_${v.help}_r.png"
+		iconStart=":/help/icon_${v.help}_start.png"
+		iconSelect=":/help/icon_${v.help}_select.png"
+	>
+		
+		<iconColor ifSubset="helpIcons:defaultIcons">${c.textHeader}</iconColor>
+		<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+		<pos verticalScreen="true">0.01 0.985</pos>
+	
+	</helpsystem>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- SCREEN ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="screen">
 
-<!-- Controller activity -->
-<controllerActivity name="controllerActivity" pos="0.01 0.012" size="0.185 0.023" color="${c.selected}" activityColor="${c.textHeader}" hotkeyColor="ff3030"
-imagePath=":/controller/${v.controller}.svg"
-itemSpacing="${v.controllerSpacing}"
-gunPath=":/controller/gun.svg"
->
-<size verticalScreen="true">0.185 0.016</size>
-<pos verticalScreen="true">0.02 0.012</pos>
-</controllerActivity>
+	<!-- Controller activity -->
+	
+	<controllerActivity
+		name="controllerActivity"
+		pos="0.01 0.012"
+		size="0.185 0.023"
+		color="${c.selected}"
+		activityColor="${c.textHeader}"
+		hotkeyColor="ff3030"
+		imagePath=":/controller/${v.controller}.svg"
+		itemSpacing="${v.controllerSpacing}"
+		gunPath=":/controller/gun.svg"
+	>
+		
+		<size verticalScreen="true">0.185 0.016</size>
+		<pos verticalScreen="true">0.02 0.012</pos>
+		
+	</controllerActivity>
 
-<!-- Battery indicator -->
-<batteryIndicator name="batteryIndicator" pos="0 0.01" size="1 0.023" horizontalAlignment="right" itemSpacing="0.005" color="${c.selected}"
-incharge=":/battery/incharge.svg"
-full=":/battery/full.svg"
-at75=":/battery/75.svg"
-at50=":/battery/50.svg"
-at25=":/battery/25.svg"
-empty=":/battery/empty.svg"
->
-<size verticalScreen="true">1 0.018</size>
-<pos verticalScreen="true">-0.01 0.011</pos>
-</batteryIndicator>
-<!-- Clock -->
-<text name="clock" color="${c.text}" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.02" origin="1 0.5" pos="0.995 0.98" alignment="right" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
-<color ifHelpPrompts="false">${c.selected}</color>
 
-<origin ifCheevos="true">1 0</origin>
+	<!-- Battery indicator -->
+	
+	<batteryIndicator
+		name="batteryIndicator"
+		pos="0 0.01"
+		size="1 0.023"
+		horizontalAlignment="right"
+		itemSpacing="0.005"
+		color="${c.selected}"
+		incharge=":/battery/incharge.svg"
+		full=":/battery/full.svg"
+		at75=":/battery/75.svg"
+		at50=":/battery/50.svg"
+		at25=":/battery/25.svg"
+		empty=":/battery/empty.svg"
+	>
+		
+		<size verticalScreen="true">1 0.018</size>
+		<pos verticalScreen="true">-0.01 0.011</pos>
+	
+	</batteryIndicator>
+	
+	
+	<!-- Clock -->
+	
+	<text
+		name="clock"
+		color="${c.text}"
+		fontPath=":/fonts/Cabin-Bold.ttf"
+		fontSize="0.02"
+		origin="1 0.5"
+		pos="0.995 0.98"
+		alignment="right"
+		glowColor="${c.glowColor}"
+		glowOffset="1"
+		glowSize="1"
+	>
+		
+		<color ifHelpPrompts="false">${c.selected}</color>
 
-<fontSize verticalScreen="true">0.018</fontSize>
-<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-<pos verticalScreen="true">0.99 0.9845</pos>
+		<origin ifCheevos="true">1 0</origin>
 
-<fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-<fontSize ifCheevos="true">0.013</fontSize>
+		<fontSize verticalScreen="true">0.018</fontSize>
+		<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+		<pos verticalScreen="true">0.99 0.9845</pos>
 
-<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
-<pos ifCheevos="true">0.997 0.9625</pos>
-<pos verticalScreen="true" ifCheevos="true">0.996 0.9785</pos>
-</text>
+		<fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+		<fontSize ifCheevos="true">0.013</fontSize>
 
-<!-- Retroachievements username -->
-<text name="username" extra="true" ifCheevos="true" text="${cheevos.username}" fontPath=":/fonts/CabinCondensed-Bold.ttf" fontSize="0.013" forceUppercase="true" color="${c.textHeader}" alignment="right"
-origin="1 0" pos="0.997 0.9775" glowColor="${c.glowColor}" glowOffset="1" glowSize="1">
-<color ifHelpPrompts="false">${c.selected}</color>
-<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
-<pos verticalScreen="true" ifCheevos="true">0.996 0.9875</pos>
-</text>
+		<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
+		<pos ifCheevos="true">0.997 0.9625</pos>
+		<pos verticalScreen="true" ifCheevos="true">0.996 0.9785</pos>
+	
+	</text>
+
+
+	<!-- Retroachievements username -->
+	
+	<text
+		name="username"
+		extra="true"
+		ifCheevos="true"
+		text="${cheevos.username}"
+		fontPath=":/fonts/CabinCondensed-Bold.ttf"
+		fontSize="0.013"
+		forceUppercase="true"
+		color="${c.textHeader}"
+		alignment="right"
+		origin="1 0"
+		pos="0.997 0.9775"
+		glowColor="${c.glowColor}"
+		glowOffset="1"
+		glowSize="1"
+	>
+		
+		<color ifHelpPrompts="false">${c.selected}</color>
+		
+		<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
+		<pos verticalScreen="true" ifCheevos="true">0.996 0.9875</pos>
+	
+	</text>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- ALL VIEWS ( COMMONS ) --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="system,basic,detailed,grid,gamecarousel">
 
-<!-- Hide all under zIndex 100 -->
-<image name="hide" extra="true" zIndex="100" path=":/plain.png" color="${c.base}" size="1 1"/>
+	<!-- Hide all under zIndex 100 -->
+	
+	<image
+		name="hide"
+		extra="true"
+		zIndex="100"
+		path=":/plain.png"
+		color="${c.base}"
+		size="1 1"
+	/>
 
-<!-- Scanlines effect -->
-<image name="scanlines" extra="true" linearSmooth="false" path=":/scanlines.png" tile="true" size="1 1" zIndex="500" color="000000" opacity="0.35"/>
 
-<!-- Shade effect over backgrounds path/size for all views -->
-<image name="shadeBackground" extra="true" linearSmooth="true" path=":/plain.png" size="1 1" zIndex="300"/>
+	<!-- Scanlines effect -->
+	
+	<image
+		name="scanlines"
+		extra="true"
+		linearSmooth="false"
+		path=":/scanlines.png"
+		tile="true"
+		size="1 1"
+		zIndex="500"
+		color="000000"
+		opacity="0.35"
+	/>
 
-<!-- Help background -->
-<image name="helpBackground" extra="true" linearSmooth="true" path=":/plainShadow.png" origin="0 1" pos="0 1" size="1 0.056" zIndex="1100" color="${c.menubg}" opacity="1">
-<visible ifHelpPrompts="false">false</visible>
-<size verticalScreen="true">1 0.04</size>
-</image>
 
-<!-- Logos -->
-<image name="logo" linearSmooth="true" reflexion="0.025 0" saturation="1.2" path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png"/>
-<image name="logo" region="us" path="./${system.theme}/us/logo.png"/>
-<image name="logo" region="jp" path="./${system.theme}/jp/logo.png"/>
-<image name="logo" path="./${v.custom}/${system.theme}/logo.png"/>
+	<!-- Shade effect over backgrounds path/size for all views -->
+	
+	<image
+		name="shadeBackground"
+		extra="true"
+		linearSmooth="true"
+		path=":/plain.png"
+		size="1 1"
+		zIndex="300"
+	/>
+
+
+	<!-- Help background -->
+	
+	<image
+		name="helpBackground"
+		extra="true"
+		linearSmooth="true"
+		path=":/plainShadow.png"
+		origin="0 1" pos="0 1"
+		size="1 0.056"
+		zIndex="1100"
+		color="${c.menubg}"
+		opacity="1"
+	>
+	
+		<visible ifHelpPrompts="false">false</visible>
+		<size verticalScreen="true">1 0.04</size>
+		
+	</image>
+
+
+	<!-- Logos -->
+	
+	<image
+		name="logo"
+		linearSmooth="true"
+		reflexion="0.025 0"
+		saturation="1.2"
+	/>
+
+
+	<image name="logo"						path="./${system.theme}/logo.png"/>
+	<image name="logo"						path="./${system.theme}${v.aes}/logo.png"/>
+	<image name="logo"						path="./${system.theme}/logo-${lang}.png"/>
+	<image name="logo"		region="us"		path="./${system.theme}/us/logo.png"/>
+	<image name="logo"		region="jp"		path="./${system.theme}/jp/logo.png" />
+	<image name="logo"						path="./${v.custom}/${system.theme}/logo.png"/>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- SYSTEM ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="system">
 
-<!-- Console -->
-<text name="console" ifSubset="dev:yes" extra="true" zIndex="5000" fontPath=":/fonts/Welbut__.ttf" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.025 0.2 0.01 0.01"
-color="00ff00" glowColor="000000" glowOffset="0" glowSize="4">
-<text>
+	<!-- Console -->
+	
+	<text
+		extra="true"
+		name="console"
+		ifSubset="dev:yes"
+		zIndex="5000"
+		fontPath=":/fonts/Welbut__.ttf"
+		fontSize="0.016"
+		size="1 1"
+		alignment="left"
+		verticalAlignment="top"
+		padding="0.025 0.2 0.01 0.01"
+		color="00ff00"
+		glowColor="000000"
+		glowOffset="0"
+		glowSize="4"
+	>
+	
+		<text>
 DEV CONSOLE:
 
 GENERAL:
@@ -550,220 +837,419 @@ Group: ${system.group}
 Savestates: ${system.savestates}
 Netplay: ${system.netplay}
 Cheevos: ${system.cheevos}
-</text>
-</text>
+		</text>
+		
+	</text>
 
 
-<!-- Music -->
-<sound name="directory" ifSubset="music:recalbox|batocera|mrBoom|retrobat|comixZone" path="./resources/music/${v.musicDirectory}/"/>
-<sound name="bgsound" ifSubset="music:notAllow" path="./resources/music/silence.ogg"/>
-<sound name="bgsound" ifSubset="music:custom" path="./${v.custom}/${system.theme}/music.ogg" path="./${v.custom}/${system.theme}/music.mp3"/>
-
-<!-- Extended Infos-->
-<text name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL" extra="true" zIndex="1000" fontPath=":/fonts/CabinCondensed-Bold.ttf" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" forceUppercase="true">
-<!--<storyboard>
-<animation property="opacity"								to="0"				begin="650" 		duration="200" 			mode="easeIn"						/>
-</storyboard>-->
-</text>
-
-<text name="infosExUL" extra="true" color="${c.selected}" fontSize="0.04" padding="0.025 0.04 0 0"
-text="${system.manufacturer}"
->
-<fontSize verticalScreen="true">0.035</fontSize>
-</text>
-
-<text name="infosEx2UL" extra="true" color="${c.selected}" fontSize="0.03" padding="0.025 0.09 0 0"
-text="${system.fullName} ${v.custom-collections}${v.p1} ${system.releaseYearOrNull} ${v.p2}"
->
-<text verticalScreen="true">${system.name} ${v.p1} ${system.releaseYearOrNull} ${v.p2}</text>
-<fontSize verticalScreen="true">0.025</fontSize>
-<padding verticalScreen="true">0.025 0.065 0 0</padding>
-</text>
-
-<text name="infosEx3UL" extra="true" color="${c.textHeader}" fontSize="0.022" padding="0.025 0.13 0 0"
-text="${v.bindingTotalUL}"
->
-<fontSize verticalScreen="true">0.016</fontSize>
-<padding verticalScreen="true">0.025 0.0875 0 0</padding>
-</text>
-
-<text name="infosEx4UL" extra="true" color="${c.selected}" fontSize="0.018" padding="0.025 0.1615 0 0"
-text="${v.bindingFavorites}"
->
-<fontSize verticalScreen="true">0.015</fontSize>
-<padding verticalScreen="true">0.025 0.103 0 0</padding>
-</text>
-
-<!-- Desc -->
-<text name="infosDesc" extra="true" zIndex="1000" fontSize="0.02" fontPath=":/fonts/Welbut__.ttf" glowColor="${c.glowColor}" glowOffset="1" glowSize="2" forceUppercase="false"
-alignment="left" w="1" origin="0 1" pos ="0 0.955"  verticalAlignment="bottom" opacity="0" color="${c.text}" singleLineScroll="true"
->
-<pos verticalScreen="true">0 0.968</pos>
-<storyboard>
-<animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"							/>
-<animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
-</storyboard>
-<text>                                                                                                                                                                                                                                                                                                                                      ${desc}</text>
-<text verticalScreen="true">                                                                                                                                                                                         ${desc}</text>
-</text>
+	<!-- Music -->
+	
+	<sound name="directory"		ifSubset="music:recalbox|batocera|mrBoom|retrobat|comixZone"		path="./resources/music/${v.musicDirectory}/"/>
+	<sound name="bgsound"		ifSubset="music:notAllow"											path="./resources/music/silence.ogg"/>
+	<sound name="bgsound"		ifSubset="music:custom"												path="./${v.custom}/${system.theme}/music.ogg"/>
+	<sound name="bgsound"		ifSubset="music:custom"												path="./${v.custom}/${system.theme}/music.mp3"/>
 
 
-<!-- Logos Text -->
-
-<text name="logoText" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.06" color="${c.text}" glowColor="${c.glowColor}" glowOffset="1" glowSize="1" forceUppercase="true" reflexion="0.025 0"/>
-
-<!-- Shade effect over backgrounds properties for system view -->
-<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="0.4">
-<storyboard>
-<animation property="opacity"								to="0.7"				begin="550" 		duration="400" 			mode="easeInOut"						/>
-</storyboard>
-<storyboard ifSubset="randomVideos:ur|bl|br|ctr|btm">
-<animation property="opacity"								to="0.9"				begin="550" 		duration="400" 			mode="easeInOut"						/>
-</storyboard>
-</image>
-
-<!-- System view backgrounds -->
-<image name="systemBackground" extra="true" linearSmooth="true" origin="0.5 0.5" pos="0.5 0.5" zIndex="200" default=":/parts/default_wallpaper.jpg"
-default="./${v.custom}/default_wallpaper.jpg"
-path="{random:fanart}"
-path="./${system.theme}/wallpaper.m3u"
-path="./${v.custom}/theme.jpg"
-path="./${v.custom}/${system.theme}/wallpaper.m3u"
->
-<path ifSubset="forceRandomFanarts:yes">{random:fanart}</path>
-<minSize verticalScreen="false">1 1</minSize>
-<maxSize verticalScreen="true">99 1</maxSize>
-<storyboard>
-<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
-<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"							/>
-</storyboard>
-</image>
-
-<!-- System carousels -->
-<carousel name="systemcarousel" zIndex="1000" color="00000000" origin="0.5 0.5" pos="0.5 0.5" size="1.05 1" logoSize="0.36 0.216" logoScale="1" defaultTransition="instant" scrollSound=":/sounds/scroll.wav">
-<maxLogoCount verticalScreen="true">3</maxLogoCount>
-<size verticalScreen="true">1.15 1</size>
-<logoSize verticalScreen="true">0.50 0.08</logoSize>
-<scrollSound>./${v.custom}/scroll.wav</scrollSound>
-</carousel>
-
-<carousel name="systemcarousel"  ifSubset="carousel:wheel" size="0.4 1" origin="1 0.5" pos="1 0.5" type="vertical_wheel" logoRotation="${v.wheelFlip}16" logoRotationOrigin="2.75 0.5" logoAlignment="center">
-<size verticalScreen="true">1 1</size>
-<logoSize verticalScreen="true">0.65 0.14</logoSize>
-<logoRotationOrigin verticalScreen="true">2 0.5</logoRotationOrigin>
-<logoRotation verticalScreen="true">${v.wheelFlip}26</logoRotation>
-<maxLogoCount verticalScreen="true">9</maxLogoCount>
-</carousel>
-
-<carousel name="systemcarousel"  ifSubset="carousel:bottom" origin="0.5 0" pos="0.5 0" size="1.05 0.96" logoAlignment="bottom"/>
-
-<carousel name="systemcarousel"  ifSubset="carousel:vertical" type="vertical" maxLogoCount="5">
-<logoSize verticalScreen="true">0.65 0.14</logoSize>
-<maxLogoCount verticalScreen="true">7</maxLogoCount>
-</carousel>
-
-<!-- Carousel animations -->
-<control name="logo,logoText">
-<storyboard event="activate">
-<animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"						/>
-<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
-</storyboard>
-<storyboard event="scroll">
-<animation property="scale" 			from="0.4" 			to="0.4" 								duration="1" 			mode="linear"						/>
-<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
-<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-</storyboard>
-<storyboard event="deactivate">
-<animation property="scale" 			from="1" 			to="0.4" 								duration="125" 			mode="linear"						/>
-<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
-<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-</storyboard>
-
-<storyboard event="activate" ifSubset="carousel:wheel">
-<animation property="scale"				from="0.6"			to="1"									duration="125" 			mode="easeInOut"					/>
-<animation property="offsetX"								to="0.1"			begin="550" 		duration="400" 			mode="easeInOut"					/>
-<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
-</storyboard>
-<storyboard event="scroll" ifSubset="carousel:wheel">
-<animation property="scale" 			from="0.6" 			to="0.6" 								duration="1" 			mode="linear"						/>
-<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
-<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
-</storyboard>
-<storyboard event="deactivate" ifSubset="carousel:wheel">
-<animation property="scale" 			from="1" 			to="0.6" 								duration="125" 			mode="easeInOut"					/>
-<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
-<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
-</storyboard>
-
-<storyboard event="activate" ifSubset="carousel:vertical">
-<animation property="scale"				from="0.5"			to="1"									duration="125" 			mode="linear"						/>
-<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="opacity"			from="0.5"			to="1"									duration="1" 			mode="linear"						/>
-</storyboard>
-<storyboard event="scroll" ifSubset="carousel:vertical">
-<animation property="scale" 			from="0.5" 			to="0.5" 								duration="1" 			mode="linear"						/>
-<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
-<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-</storyboard>
-<storyboard event="deactivate" ifSubset="carousel:vertical">
-<animation property="scale" 			from="1" 			to="0.5"								duration="125" 			mode="linear"						/>
-<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
-<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-</storyboard>
-</control>
-
-<!-- System videos -->
-<video name="sVideo" extra="true" linearSmooth="true" zIndex="800" origin="${v.rvOrigin}" pos="${v.rvPos}" maxSize="${v.rvSize}" roundCorners="0.016"
-default="./resources/parts/default_${v.color}.mp4"
-path="{random}"
-path="./${system.theme}/video.m3u"
-path="./${v.custom}/${system.theme}/video.m3u"
->
-<path ifSubset="forceRandomVideos:yes">{random}</path>
-<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
-<storyboard>
-<animation property="offsetX"			from="1"			to="1"									duration="650" 		mode="linear"							/>
-<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
-</storyboard>
-<storyboard ifSubset="randomVideos:bl">
-<animation property="offsetX"			from="-1"			to="-1"									duration="650" 		mode="linear"							/>
-<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
-</storyboard>
-<audio>${v.rvAudio}</audio>
-<visible if="${v.rvExclude}">false</visible>
-<visible if="${v.displayVideo} == 'yes'">true</visible>
-<visible if="${v.displayVideo} == 'no'">false</visible>
-</video>
+	<!-- Extended Infos-->
+	
+	<text
+		name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL"
+		extra="true"
+		zIndex="1000"
+		fontPath=":/fonts/CabinCondensed-Bold.ttf"
+		glowColor="${c.glowColor}"
+		glowOffset="2"
+		glowSize="1"
+		forceUppercase="true"
+	/>
 
 
-<image name="logoEx" extra="true" linearSmooth="true" zIndex="900" saturation="1.2" color="ffffff" origin="1 0.5" pos="0.975 0.8418518518518519" maxSize="0.2 0.12" opacity="0"
-path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path="./${system.theme}/logo-${lang}.png">
-<shader>:/shaders/shadow2.glsl</shader>
-<storyboard>
-<animation property="opacity" 							to="1" 					begin="850"			duration="60" 			mode="linear"						/>
-<animation property="offsetY" 			from="0.005"	to="0.005" 								duration="850" 			mode="linear"						/>
-<animation property="offsetY" 							to="0" 					begin="850"			duration="60" 			mode="easeOut"						/>
-</storyboard>
-<origin ifSubset="randomVideos:ur|br">0 1</origin>
-<pos ifSubset="randomVideos:ur|br">0.025 0.9018518518518519</pos>
-<maxSize verticalScreen="true">0.4 0.08</maxSize>
-<origin verticalScreen="true">1 0</origin>
-<pos verticalScreen="true">0.97 0.05</pos>
-<origin verticalScreen="true" ifSubset="randomVideos:ur|no">1 1</origin>
-<pos verticalScreen="true" ifSubset="randomVideos:ur|no">0.97 0.93</pos>
-</image>
+	<text
+		name="infosExUL"
+		extra="true"
+		color="${c.selected}"
+		fontSize="0.04"
+		padding="0.025 0.04 0 0"
+		text="${system.manufacturer}"
+	>
 
-<image name="logoEx" extra="true" region="us" path="./${system.theme}/us/logo.png"/>
-<image name="logoEx" extra="true" region="jp" path="./${system.theme}/jp/logo.png"/>
-<image name="logoEx" extra="true" path="./${v.custom}/${system.theme}/logo.png"/>
+		<fontSize verticalScreen="true">0.035</fontSize>
+
+	</text>
+
+
+	<text
+		name="infosEx2UL"
+		extra="true"
+		color="${c.selected}"
+		fontSize="0.03"
+		padding="0.025 0.09 0 0"
+		text="${system.fullName} ${v.custom-collections}${v.p1} ${system.releaseYearOrNull} ${v.p2}"
+	>
+		
+		<text verticalScreen="true">${system.name} ${v.p1} ${system.releaseYearOrNull} ${v.p2}</text>
+		<fontSize verticalScreen="true">0.025</fontSize>
+		<padding verticalScreen="true">0.025 0.065 0 0</padding>
+		
+	</text>
+
+
+	<text
+		name="infosEx3UL"
+		extra="true"
+		color="${c.textHeader}"
+		fontSize="0.022"
+		padding="0.025 0.13 0 0"
+		text="${v.bindingTotalUL}"
+	>
+		
+		<fontSize verticalScreen="true">0.016</fontSize>
+		<padding verticalScreen="true">0.025 0.0875 0 0</padding>
+		
+	</text>
+
+
+	<text
+		name="infosEx4UL"
+		extra="true"
+		color="${c.selected}"
+		fontSize="0.018"
+		padding="0.025 0.1615 0 0"
+		text="${v.bindingFavorites}"
+	>
+		
+		<fontSize verticalScreen="true">0.015</fontSize>
+		<padding verticalScreen="true">0.025 0.103 0 0</padding>
+		
+	</text>
+
+
+	<!-- Desc -->
+	
+	<text
+		name="infosDesc"
+		extra="true"
+		zIndex="1000"
+		fontSize="0.02"
+		fontPath=":/fonts/Welbut__.ttf"
+		glowColor="${c.glowColor}"
+		glowOffset="1"
+		glowSize="2"
+		forceUppercase="false"
+		alignment="left"
+		w="1"
+		origin="0 1"
+		pos ="0 0.955"
+		verticalAlignment="bottom"
+		opacity="0"
+		color="${c.text}"
+		singleLineScroll="true"
+	>
+
+		<storyboard>
+			<animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"							/>
+			<animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
+		</storyboard>
+
+		<text>                                                                                                                                                                                                                                                                                                                                      ${desc}</text>
+
+		<text verticalScreen="true">                                                                                                                                                                                         ${desc}</text>
+
+		<pos verticalScreen="true">0 0.968</pos>
+
+	</text>
+
+
+	<!-- Logos Text -->
+
+	<text
+		name="logoText"
+		fontPath=":/fonts/Cabin-Bold.ttf"
+		fontSize="0.06"
+		color="${c.text}"
+		glowColor="${c.glowColor}"
+		glowOffset="1"
+		glowSize="1"
+		forceUppercase="true"
+		reflexion="0.025 0"
+	/>
+
+
+	<!-- Shade effect over backgrounds properties for system view -->
+	
+	<image
+		name="shadeBackground"
+		extra="true"
+		color="${c.base}cc"
+		colorEnd="${c.base}1a"
+		gradientType="vertical"
+		opacity="0.4"
+	>
+		
+		<storyboard>
+			<animation property="opacity"								to="0.7"				begin="550" 		duration="400" 			mode="easeInOut"						/>
+		</storyboard>
+		
+		<storyboard ifSubset="randomVideos:ur|bl|br|ctr|btm">
+			<animation property="opacity"								to="0.9"				begin="550" 		duration="400" 			mode="easeInOut"						/>
+		</storyboard>
+		
+	</image>
+
+
+	<!-- System view backgrounds -->
+	
+	<image
+		name="systemBackground"
+		extra="true"
+		linearSmooth="true"
+		origin="0.5 0.5"
+		pos="0.5 0.5"
+		zIndex="200"
+	>
+		
+		<storyboard>
+			<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
+			<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"							/>
+		</storyboard>
+		
+		<minSize verticalScreen="false">1 1</minSize>
+		<maxSize verticalScreen="true">99 1</maxSize>
+	
+	</image>
+
+	<image name="systemBackground" extra="true"												default=":/parts/default_wallpaper.jpg"/>
+	<image name="systemBackground" extra="true"												default="./${v.custom}/default_wallpaper.jpg"/>
+	<image name="systemBackground" extra="true"												path="{random:fanart}"/>
+	<image name="systemBackground" extra="true"												path="./${system.theme}/wallpaper.m3u"/>
+	<image name="systemBackground" extra="true" 											path="./${v.custom}/theme.jpg"/>
+	<image name="systemBackground" extra="true"												path="./${v.custom}/${system.theme}/wallpaper.m3u"/>
+	<image name="systemBackground" extra="true"		ifSubset="forceRandomFanarts:yes"		path="{random:fanart}"/>
+
+
+	<!-- System carousels -->
+	
+	<carousel
+		name="systemcarousel"
+		zIndex="1000"
+		color="00000000"
+		origin="0.5 0.5"
+		pos="0.5 0.5"
+		size="1.05 1"
+		logoSize="0.36 0.216"
+		logoScale="1"
+		defaultTransition="instant"
+		scrollSound=":/sounds/scroll.wav"
+	>
+		
+		<scrollSound>./${v.custom}/scroll.wav</scrollSound>
+		
+		<maxLogoCount verticalScreen="true">3</maxLogoCount>
+		<size verticalScreen="true">1.15 1</size>
+		<logoSize verticalScreen="true">0.50 0.08</logoSize>
+	
+	</carousel>
+
+
+	<carousel
+		name="systemcarousel"
+		ifSubset="carousel:wheel"
+		size="0.4 1"
+		origin="1 0.5"
+		pos="1 0.5"
+		type="vertical_wheel"
+		logoRotation="${v.wheelFlip}16"
+		logoRotationOrigin="2.75 0.5"
+		logoAlignment="center"
+	>
+	
+		<size verticalScreen="true">1 1</size>
+		<logoSize verticalScreen="true">0.65 0.14</logoSize>
+		<logoRotationOrigin verticalScreen="true">2 0.5</logoRotationOrigin>
+		<logoRotation verticalScreen="true">${v.wheelFlip}26</logoRotation>
+		<maxLogoCount verticalScreen="true">9</maxLogoCount>
+	
+	</carousel>
+
+
+	<carousel
+		name="systemcarousel"
+		ifSubset="carousel:bottom"
+		origin="0.5 0"
+		pos="0.5 0"
+		size="1.05 0.96"
+		logoAlignment="bottom"
+	/>
+
+
+	<carousel
+		name="systemcarousel"
+		ifSubset="carousel:vertical"
+		type="vertical"
+		maxLogoCount="5"
+	>
+		
+		<logoSize verticalScreen="true">0.65 0.14</logoSize>
+		<maxLogoCount verticalScreen="true">7</maxLogoCount>
+		
+	</carousel>
+
+
+	<!-- Carousel animations -->
+	
+	<control
+		name="logo,logoText"
+	>
+		
+		<storyboard event="activate">
+			<animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"						/>
+			<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
+		</storyboard>
+		
+		<storyboard event="scroll">
+			<animation property="scale" 			from="0.4" 			to="0.4" 								duration="1" 			mode="linear"						/>
+			<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
+			<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+		</storyboard>
+		
+		<storyboard event="deactivate">
+			<animation property="scale" 			from="1" 			to="0.4" 								duration="125" 			mode="linear"						/>
+			<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
+			<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+		</storyboard>
+
+
+		<storyboard event="activate" ifSubset="carousel:wheel">
+			<animation property="scale"				from="0.6"			to="1"									duration="125" 			mode="easeInOut"					/>
+			<animation property="offsetX"								to="0.1"			begin="550" 		duration="400" 			mode="easeInOut"					/>
+			<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
+		</storyboard>
+		
+		<storyboard event="scroll" ifSubset="carousel:wheel">
+			<animation property="scale" 			from="0.6" 			to="0.6" 								duration="1" 			mode="linear"						/>
+			<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
+			<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
+		</storyboard>
+		
+		<storyboard event="deactivate" ifSubset="carousel:wheel">
+			<animation property="scale" 			from="1" 			to="0.6" 								duration="125" 			mode="easeInOut"					/>
+			<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
+			<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
+		</storyboard>
+
+
+		<storyboard event="activate" ifSubset="carousel:vertical">
+			<animation property="scale"				from="0.5"			to="1"									duration="125" 			mode="linear"						/>
+			<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="opacity"			from="0.5"			to="1"									duration="1" 			mode="linear"						/>
+		</storyboard>
+		
+		<storyboard event="scroll" ifSubset="carousel:vertical">
+			<animation property="scale" 			from="0.5" 			to="0.5" 								duration="1" 			mode="linear"						/>
+			<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
+			<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+		</storyboard>
+		
+		<storyboard event="deactivate" ifSubset="carousel:vertical">
+			<animation property="scale" 			from="1" 			to="0.5"								duration="125" 			mode="linear"						/>
+			<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
+			<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+		</storyboard>
+		
+	</control>
+
+
+	<!-- System videos -->
+	
+	<video
+		name="sVideo"
+		extra="true"
+		linearSmooth="true"
+		zIndex="800"
+		origin="${v.rvOrigin}"
+		pos="${v.rvPos}"
+		maxSize="${v.rvSize}"
+		roundCorners="0.016"
+	>
+		
+		<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+		
+		<storyboard>
+			<animation property="offsetX"			from="1"			to="1"									duration="650" 		mode="linear"							/>
+			<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
+		</storyboard>
+		
+		<storyboard ifSubset="randomVideos:bl">
+			<animation property="offsetX"			from="-1"			to="-1"									duration="650" 		mode="linear"							/>
+			<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
+		</storyboard>
+		
+		<audio>${v.rvAudio}</audio>
+		
+		<visible if="${v.rvExclude}">false</visible>
+		<visible if="${v.displayVideo} == 'yes'">true</visible>
+		<visible if="${v.displayVideo} == 'no'">false</visible>
+		
+	</video>
+
+
+	<video name="sVideo" extra="true"												default="./resources/parts/default_${v.color}.mp4"/>
+	<video name="sVideo" extra="true"												path="{random}"/>
+	<video name="sVideo" extra="true"												path="./${system.theme}/video.m3u"/>
+	<video name="sVideo" extra="true"												path="./${v.custom}/${system.theme}/video.m3u"/>
+	<video name="sVideo" extra="true"		ifSubset="forceRandomVideos:yes"		path="{random}"/>
+
+
+	<!-- Logos extra -->
+	
+	<image
+		name="logoEx"
+		extra="true"
+		linearSmooth="true"
+		zIndex="900"
+		saturation="1.2"
+		color="ffffff"
+		origin="1 0.5"
+		pos="0.975 0.8418518518518519"
+		maxSize="0.2 0.12"
+		opacity="0"
+	>
+	
+		<shader>:/shaders/shadow2.glsl</shader>
+		
+		<storyboard>
+			<animation property="opacity" 							to="1" 					begin="850"			duration="60" 			mode="linear"						/>
+			<animation property="offsetY" 			from="0.005"	to="0.005" 								duration="850" 			mode="linear"						/>
+			<animation property="offsetY" 							to="0" 					begin="850"			duration="60" 			mode="easeOut"						/>
+		</storyboard>
+		
+		<origin ifSubset="randomVideos:ur|br">0 1</origin>
+		<pos ifSubset="randomVideos:ur|br">0.025 0.9018518518518519</pos>
+		
+		<maxSize verticalScreen="true">0.4 0.08</maxSize>
+		<origin verticalScreen="true">1 0</origin>
+		<pos verticalScreen="true">0.97 0.05</pos>
+		
+		<origin verticalScreen="true" ifSubset="randomVideos:ur|no">1 1</origin>
+		<pos verticalScreen="true" ifSubset="randomVideos:ur|no">0.97 0.93</pos>
+		
+	</image>
+
+
+	<image name="logoEx" extra="true"							path="./${system.theme}/logo.png"/>
+	<image name="logoEx" extra="true"							path="./${system.theme}${v.aes}/logo.png"/>
+	<image name="logoEx" extra="true"							path="./${system.theme}/logo-${lang}.png"/>
+	<image name="logoEx" extra="true"		region="us"			path="./${system.theme}/us/logo.png"/>
+	<image name="logoEx" extra="true"		region="jp"			path="./${system.theme}/jp/logo.png"/>
+	<image name="logoEx" extra="true"							path="./${v.custom}/${system.theme}/logo.png"/>
 
 </view>
 
@@ -771,12 +1257,29 @@ path="./${system.theme}/logo.png" path="./${system.theme}${v.aes}/logo.png" path
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- BASIC DETAILED GRID GAMECAROUSEL ( GAMELISTS COMMONS )------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="basic,detailed,grid,gamecarousel">
 
-<!-- Console -->
-<text name="console" ifSubset="dev:yes" extra="true" zIndex="5000" fontPath=":/fonts/Welbut__.ttf" fontSize="0.016" size="1 1" alignment="left" verticalAlignment="top" padding="0.025 0.02 0.01 0.01"
-color="00ff00" glowColor="000000" glowOffset="0" glowSize="4">
-<text>
+	<!-- Console -->
+	
+	<text
+		name="console"
+		ifSubset="dev:yes"
+		extra="true"
+		zIndex="5000"
+		fontPath=":/fonts/Welbut__.ttf"
+		fontSize="0.016"
+		size="1 1"
+		alignment="left"
+		verticalAlignment="top"
+		padding="0.025 0.02 0.01 0.01"
+		color="00ff00"
+		glowColor="000000"
+		glowOffset="0"
+		glowSize="4"
+	>
+
+		<text>
 DEV CONSOLE:
 
 {game:name}
@@ -810,369 +1313,676 @@ Mix: {game:mix}
 
 Favorite: {game:favorite}
 Game played: {game:played}
-</text>
-</text>
+		</text>
+		
+	</text>
 
 
-<!-- Open gamelist Mask -->
-<image name="openMask" extra="true" path=":/plain.png" zIndex="2000" color="${c.base}ef" size="1 1" origin="0.5 0.5" pos="0.5 0.5" opacity="1">
-<storyboard>
-<animation property="opacity" 							to="0" 					begin="500"			duration="300" 			mode="easeInQuint"					/>
-</storyboard>
-</image>
+	<!-- Open gamelist Mask -->
+	
+	<image
+		name="openMask"
+		extra="true"
+		path=":/plain.png"
+		zIndex="2000"
+		color="${c.base}ef"
+		size="1 1"
+		origin="0.5 0.5"
+		pos="0.5 0.5"
+		opacity="1"
+	>
+	
+		<storyboard>
+			<animation property="opacity" 							to="0" 					begin="500"			duration="300" 			mode="easeInQuint"					/>
+		</storyboard>
+		
+	</image>
 
-<!-- Logos> -->
-<image name="logo" zIndex="2100" pos="0.5 0.5" origin="0.5 0.5" maxSize="0.3 0.18" colorEnd="cccccc"/>
 
-<!-- Shade over backgrounds properties for gamelists -->
-<image name="shadeBackground" extra="true" color="${c.base}cc" colorEnd="${c.base}1a" gradientType="vertical" opacity="0.7"/>
+	<!-- Logos> -->
+	
+	<image
+		name="logo"
+		zIndex="2100"
+		pos="0.5 0.5"
+		origin="0.5 0.5"
+		maxSize="0.3 0.18"
+		colorEnd="cccccc"
+	/>
 
-<!-- Theme or customs backgrounds properties for all gamelist-->
-<image name="gamelistBackground" extra="true" linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="199"
-path=":/parts/default_fanart.jpg"
-path="./${v.custom}/default_fanart.jpg"
-path="./${system.theme}/wallpaper.jpg"
-path="./${v.custom}/theme.jpg"
-path="./${v.custom}/${system.theme}/wallpaper.jpg"
->
-<shader><path>:/shaders/blur.glsl</path><blur>4</blur></shader>
-</image>
 
+	<!-- Shade over backgrounds properties for gamelists -->
+	
+	<image
+		name="shadeBackground"
+		extra="true"
+		color="${c.base}cc"
+		colorEnd="${c.base}1a"
+		gradientType="vertical"
+		opacity="0.7"
+	/>
+
+
+	<!-- Theme or customs backgrounds properties for all gamelist-->
+	
+	<image
+		name="gamelistBackground"
+		extra="true"
+		linearSmooth="true"
+		minSize="1 1"
+		origin="0.5 0.5"
+		pos="0.5 0.5"
+		zIndex="199"
+	>
+	
+		<shader><path>:/shaders/blur.glsl</path><blur>4</blur></shader>
+	
+	</image>
+	
+	<image name="gamelistBackground" extra="true"		path=":/parts/default_fanart.jpg"/>/>
+	<image name="gamelistBackground" extra="true"		path="./${v.custom}/default_fanart.jpg"/>
+	<image name="gamelistBackground" extra="true"		path="./${system.theme}/wallpaper.jpg"/>
+	<image name="gamelistBackground" extra="true"		path="./${v.custom}/theme.jpg"/>
+	<image name="gamelistBackground" extra="true"		path="./${v.custom}/${system.theme}/wallpaper.jpg"/>
+	
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- DETAILED GRID GAMECAROUSEL ( SCRAPED GAMELISTS COMMONS )----------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="detailed,grid,gamecarousel">
 
+	<!-- Extended Games Infos-->
+	
+	<text
+		name="gamesExUL,gamesExULbis,gamesEx2UL,gamesEx3UL,gamesEx4UL"
+		extra="true"
+		zIndex="1200"
+		forceUppercase="true"
+		fontPath=":/fonts/CabinCondensed-Bold.ttf"
+		glowColor="${c.glowColor}"
+		glowOffset="2"
+		glowSize="1"
+		multiLine="false"
+	/>
 
-<!-- Extended Games Infos-->
-<text name="gamesExUL,gamesExULbis,gamesEx2UL,gamesEx3UL,gamesEx4UL" extra="true" zIndex="1200" forceUppercase="true"
-fontPath=":/fonts/CabinCondensed-Bold.ttf"
-glowColor="${c.glowColor}"
-glowOffset="2"
-glowSize="1"
-multiLine="false" 
->
-</text>
 
-<text name="gamesExUL" extra="true" color="${c.textHeader}" fontSize="0.03" padding="0.025 0.045 0 0"
-text="{game:name} • {game:releaseyear}"
->
-<visible>({game:releaseyear}) > 1970</visible>
-<fontSize verticalScreen="true">0.035</fontSize>
-</text>
+	<text
+		name="gamesExUL"
+		extra="true"
+		color="${c.textHeader}"
+		fontSize="0.03"
+		padding="0.025 0.045 0 0"
+		text="{game:name} • {game:releaseyear}"
+	>
+		
+		<visible>({game:releaseyear}) > 1970</visible>
+		<fontSize verticalScreen="true">0.035</fontSize>
+		
+	</text>
 
-<text name="gamesExULbis" extra="true" color="${c.textHeader}" fontSize="0.03" padding="0.025 0.045 0 0"
-text="{game:name}"
->
-<fontSize verticalScreen="true">0.035</fontSize>
-<visible>({game:releaseyear}) == 1970</visible>
-</text>
 
-<text name="gamesEx2UL" extra="true" color="${c.selected}" fontSize="0.024" padding="0.025 0.0825 0 0"
-text="{game:genre} • {game:developer}"
->
-<fontSize verticalScreen="true">0.025</fontSize>
-<padding verticalScreen="true">0.025 0.065 0 0</padding>
-</text>
+	<text
+		name="gamesExULbis"
+		extra="true"
+		color="${c.textHeader}"
+		fontSize="0.03"
+		padding="0.025 0.045 0 0"
+		text="{game:name}"
+	>
+		
+		<visible>({game:releaseyear}) == 1970</visible>
+		<fontSize verticalScreen="true">0.035</fontSize>
+		
+	</text>
 
-<text name="gamesEx3UL" extra="true" color="ffd13b" fontSize="0.019" padding="0.025 0.119 0 0" glowOffset="0" glowSize="2"  glowColor="${c.glowColor2}"
-text="{game:stars}"
->
-<fontSize verticalScreen="true">0.015</fontSize>
-<padding verticalScreen="true">0.025 0.103 0 0</padding>
-</text>
 
-<text name="gamesEx4UL" extra="true" color="${c.selected}" fontPath=":/fonts/players.ttf" fontSize="0.034" padding="0.025 0.138 0 0" glowOffset="0" glowSize="2" glowColor="${c.glowColor2}"
-text="{game:players}"
->
-<visible>({game:players}) > 0</visible>
-<fontSize verticalScreen="true">0.015</fontSize>
-<padding verticalScreen="true">0.025 0.103 0 0</padding>
-</text>
+	<text
+		name="gamesEx2UL"
+		extra="true"
+		color="${c.selected}"
+		fontSize="0.024"
+		padding="0.025 0.0825 0 0"
+		text="{game:genre} • {game:developer}"
+	>
+		
+		<fontSize verticalScreen="true">0.025</fontSize>
+		<padding verticalScreen="true">0.025 0.065 0 0</padding>
 
-<!-- Logos> -->
-<image name="logo">
-<storyboard>
-<animation property="origin" 								to="1 0" 				begin="725"			duration="1" 			mode="easeInOut"				/>
-<animation property="pos" 									to="0.975 0.055" 		begin="725"			duration="1" 			mode="linear"				/>
-<animation property="offsetY" 			from="0.01" 								begin="725"			duration="75" 			mode="linear"				/>
-<animation property="opacity" 								to="0" 					begin="650"			duration="75" 			mode="easeInOut"	autoreverse="true"			/>
-<animation property="scale" 								to="0.66" 				begin="725"			duration="1" 			mode="easeInOut"				/>
-</storyboard>
-<maxSize verticalScreen="true">0.6 0.1</maxSize>
-<storyboard verticalScreen="true">
-<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-</storyboard>
-</image>
+	</text>
 
-<!-- Random fanarts -->
 
-<image name="gameScreenshot" extra="true" ifSubset="gamelistBackgrounds:screenshots"
-linearSmooth="false" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="199"
-default=":/parts/default_screenshot.jpg"
-default="./${v.custom}/default_screenshot.jpg"
-path="{game:image}"
->
-<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-<storyboard event="activateNext">
-<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="activatePrev">
-<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="deactivatePrev">
-<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-</storyboard>
-<storyboard event="deactivateNext">
-<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-</storyboard>
-<visible if="${v.fanartExclude}">false</visible>
-</image>
+	<text
+		name="gamesEx3UL"
+		extra="true"
+		color="ffd13b"
+		fontSize="0.019"
+		padding="0.025 0.119 0 0"
+		glowOffset="0"
+		glowSize="2"
+		glowColor="${c.glowColor2}"
+		text="{game:stars}"
+	>
+		
+		<fontSize verticalScreen="true">0.015</fontSize>
+		<padding verticalScreen="true">0.025 0.103 0 0</padding>
+		
+	</text>
 
-<image name="gameDefaultFanarts" extra="true" ifSubset="gamelistBackgrounds:fanarts"
-linearSmooth="false" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="199"
-default=":/parts/default_screenshot.jpg"
-default="./${v.custom}/default_screenshot.jpg"
-path="{game:image}"
->
-<visible>!exists({game:fanart})</visible>
-<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-<storyboard event="activateNext">
-<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="activatePrev">
-<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="deactivatePrev">
-<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-</storyboard>
-<storyboard event="deactivateNext">
-<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-</storyboard>
-<visible if="${v.fanartExclude}">false</visible>
-</image>
 
-<image name="gameFanart" extra="true" ifSubset="gamelistBackgrounds:fanarts"
-linearSmooth="true" minSize="1 1" origin="0.5 0.5" pos="0.5 0.5" zIndex="200"
-path="{game:fanart}"
->
-<visible>exists({game:fanart})</visible>
-<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
-<storyboard event="activateNext">
-<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="activatePrev">
-<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="deactivatePrev">
-<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-</storyboard>
-<storyboard event="deactivateNext">
-<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-</storyboard>
-<visible if="${v.fanartExclude}">false</visible>
-</image>
+	<text
+		name="gamesEx4UL"
+		extra="true"
+		color="${c.selected}"
+		fontPath=":/fonts/players.ttf"
+		fontSize="0.034"
+		padding="0.025 0.138 0 0"
+		glowOffset="0"
+		glowSize="2"
+		glowColor="${c.glowColor2}"
+		text="{game:players}"
+	>
 
-<!-- Theme or customs backgrounds properties for scraped gamelist-->
-<image name="gamelistBackground" extra="true"
->
-<visible ifSubset="gamelistBackgrounds:fanarts|screenshots">false</visible>
-</image>
+		<visible>({game:players}) > 0</visible>
+		<fontSize verticalScreen="true">0.015</fontSize>
+		<padding verticalScreen="true">0.025 0.103 0 0</padding>
+
+	</text>
+
+
+	<!-- Logos> -->
+	
+	<image
+		name="logo"
+	>
+		
+		<storyboard>
+			<animation property="origin" 								to="1 0" 				begin="725"			duration="1" 			mode="easeInOut"				/>
+			<animation property="pos" 									to="0.975 0.055" 		begin="725"			duration="1" 			mode="linear"				/>
+			<animation property="offsetY" 			from="0.01" 								begin="725"			duration="75" 			mode="linear"				/>
+			<animation property="opacity" 								to="0" 					begin="650"			duration="75" 			mode="easeInOut"	autoreverse="true"			/>
+			<animation property="scale" 								to="0.66" 				begin="725"			duration="1" 			mode="easeInOut"				/>
+		</storyboard>
+		
+		<storyboard verticalScreen="true">
+			<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+			<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+		</storyboard>
+
+		<maxSize verticalScreen="true">0.6 0.1</maxSize>
+	
+	</image>
+
+
+	<!-- Game Screenshot -->
+	
+	<image
+		name="gameScreenshot"
+		extra="true"
+		ifSubset="gamelistBackgrounds:screenshots"
+		linearSmooth="false"
+		minSize="1 1"
+		origin="0.5 0.5"
+		pos="0.5 0.5"
+		zIndex="199"
+	>
+
+		<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
+		
+		<storyboard event="activateNext">
+			<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+		</storyboard>
+		
+		<storyboard event="activatePrev">
+			<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+		</storyboard>
+		
+		<storyboard event="deactivatePrev">
+			<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+		</storyboard>
+		
+		<storyboard event="deactivateNext">
+			<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+		</storyboard>
+		
+		<visible if="${v.fanartExclude}">false</visible>
+		
+	</image>
+
+	<image name="gameScreenshot" extra="true"			default=":/parts/default_screenshot.jpg"/>
+	<image name="gameScreenshot" extra="true"			default="./${v.custom}/default_screenshot.jpg"/>
+	<image name="gameScreenshot" extra="true"			path="{game:image}"/>
+
+
+	<!-- Game default fanart-->
+	
+	<image
+		name="gameDefaultFanarts"
+		extra="true"
+		ifSubset="gamelistBackgrounds:fanarts"
+		linearSmooth="false"
+		minSize="1 1"
+		origin="0.5 0.5"
+		pos="0.5 0.5"
+		zIndex="199"
+	>
+		
+		<visible>!exists({game:fanart})</visible>
+		
+		<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
+		
+		<storyboard event="activateNext">
+			<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+		</storyboard>
+		
+		<storyboard event="activatePrev">
+			<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+		</storyboard>
+		
+		<storyboard event="deactivatePrev">
+			<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+		</storyboard>
+		
+		<storyboard event="deactivateNext">
+			<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+		</storyboard>
+		
+		<visible if="${v.fanartExclude}">false</visible>
+		
+	</image>
+
+	<image name="gameDefaultFanarts" extra="true"			default=":/parts/default_screenshot.jpg"/>
+	<image name="gameDefaultFanarts" extra="true"			default="./${v.custom}/default_screenshot.jpg"/>
+	<image name="gameDefaultFanarts" extra="true"			path="{game:image}"/>
+
+
+	<!-- Game fanart-->
+	
+	<image
+		name="gameFanart"
+		extra="true"
+		ifSubset="gamelistBackgrounds:fanarts"
+		linearSmooth="true"
+		minSize="1 1"
+		origin="0.5 0.5"
+		pos="0.5 0.5"
+		zIndex="200"
+		path="{game:fanart}"
+	>
+		
+		<visible>exists({game:fanart})</visible>
+		
+		<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
+		
+		<storyboard event="activateNext">
+			<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+		</storyboard>
+		
+		<storyboard event="activatePrev">
+			<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+		</storyboard>
+		
+		<storyboard event="deactivatePrev">
+			<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+		</storyboard>
+		
+		<storyboard event="deactivateNext">
+			<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+		</storyboard>
+		
+		<visible if="${v.fanartExclude}">false</visible>
+		
+	</image>
+
+
+	<!-- Theme or customs backgrounds properties for scraped gamelist-->
+	
+	<image
+		name="gamelistBackground"
+		extra="true"
+	>
+
+		<visible ifSubset="gamelistBackgrounds:fanarts|screenshots">false</visible>
+
+	</image>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- BASIC ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="basic">
 
-<!-- Logos> -->
-<image name="logo">
-<storyboard>
-<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-<animation property="scale" 								to="0.66" 				begin="650"			duration="150" 			mode="easeInOut"				/>
-</storyboard>
-<maxSize verticalScreen="true">0.6 0.1</maxSize>
-<storyboard verticalScreen="true">
-<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-</storyboard>
-</image>
+	<!-- Logos> -->
+	
+	<image
+		name="logo"
+	>
 
-<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="15" forceUppercase="true"
-horizontalMargin="0.01"
-origin="0.5 0.5"
-pos="0.5 0.545"
-size="0.95 0.78"
-primaryColor="${c.text}"
-secondaryColor="${c.text}"
-extraTextColor="${c.textHeader}ee"
-extraTextSelectedColor="${c.selected}"
-selectedColor="${c.selected}"
-selectorColor="${c.textHeader}"
-selectorColorEnd="${c.menuSelector}"
-selectorImagePath=":/parts/selectorBasic.png"
-alignment="center"
-scrollSound=":/sounds/scroll.wav"
-scrollSound="./${v.custom}/scroll.wav"
-scrollSound="./${v.custom}/${system.theme}/scroll.wav"
->
-<lines verticalScreen="true">25</lines>
-<pos verticalScreen="true">0.5 0.14</pos>
-<size verticalScreen="true">1 0.82</size>
-</textlist>
+		<storyboard>
+			<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+			<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+			<animation property="scale" 								to="0.66" 				begin="650"			duration="150" 			mode="easeInOut"				/>
+		</storyboard>
 
-<image name="gamelistFrame" extra="true" linearSmooth="true" zIndex="900" path=":/bFrame.png" color="${c.frame}" colorEnd="${ce.frame}" gradientType="vertical" roundCorners="0.005" opacity="0.15"
-origin="0.5 0.5"
-pos="0.5 0.545"
-size="0.95 0.78"
-/>
+		<storyboard verticalScreen="true">
+			<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+			<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+		</storyboard>
+
+		<maxSize verticalScreen="true">0.6 0.1</maxSize>
+
+	</image>
+
+
+	<!-- Game list -->
+	
+	<textlist
+		name="gamelist"
+		zIndex="1000"
+		glowColor="${c.glowColor}"
+		glowOffset="2"
+		glowSize="1"
+		fontPath=":/fonts/Cabin-Bold.ttf"
+		fontSize="0.025"
+		lines="15"
+		forceUppercase="true"
+		horizontalMargin="0.01"
+		origin="0.5 0.5"
+		pos="0.5 0.545"
+		size="0.95 0.78"
+		primaryColor="${c.text}"
+		secondaryColor="${c.text}"
+		extraTextColor="${c.textHeader}ee"
+		extraTextSelectedColor="${c.selected}"
+		selectedColor="${c.selected}"
+		selectorColor="${c.textHeader}"
+		selectorColorEnd="${c.menuSelector}"
+		selectorImagePath=":/parts/selectorBasic.png"
+		alignment="center"
+	>
+
+		<lines verticalScreen="true">25</lines>
+		<pos verticalScreen="true">0.5 0.14</pos>
+		<size verticalScreen="true">1 0.82</size>
+
+	</textlist>
+
+	<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>
+	<textlist name="gamelist"			scrollSound="./${v.custom}/scroll.wav"/>
+	<textlist name="gamelist"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
+
+
+	<!-- Gamelist frame -->
+	
+	<image
+		name="gamelistFrame"
+		extra="true"
+		linearSmooth="true"
+		zIndex="900"
+		path=":/bFrame.png"
+		color="${c.frame}"
+		colorEnd="${ce.frame}"
+		gradientType="vertical"
+		roundCorners="0.005"
+		opacity="0.15"
+		origin="0.5 0.5"
+		pos="0.5 0.545"
+		size="0.95 0.78"
+	/>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- DETAILED ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="detailed">
 
-<textlist name="gamelist" zIndex="1000" glowColor="${c.glowColor}" glowOffset="2" glowSize="1" fontPath=":/fonts/Cabin-Bold.ttf" fontSize="0.025" lines="5" forceUppercase="true"
-horizontalMargin="0.01"
-origin="0.5 0.5"
-pos="0.22 0.7718518518518519"
-size="0.39 0.26"
-primaryColor="${c.text}"
-secondaryColor="${c.text}"
-extraTextColor="${c.textHeader}ee"
-extraTextSelectedColor="${c.selected}"
-selectedColor="${c.selected}"
-selectorColor="${c.textHeader}"
-selectorColorEnd="${c.menuSelector}"
-selectorImagePath=":/parts/selectorBasicShort.png"
-alignment="center"
-scrollSound=":/sounds/scroll.wav"
-scrollSound="./${v.custom}/scroll.wav"
-scrollSound="./${v.custom}/${system.theme}/scroll.wav"
->
-<lines verticalScreen="true">25</lines>
-<pos verticalScreen="true">0.5 0.14</pos>
-<size verticalScreen="true">1 0.82</size>
-</textlist>
+	<!-- Game list -->
+	
+	<textlist
+		name="gamelist"
+		zIndex="1000"
+		glowColor="${c.glowColor}"
+		glowOffset="2"
+		glowSize="1"
+		fontPath=":/fonts/Cabin-Bold.ttf"
+		fontSize="0.025"
+		lines="5"
+		forceUppercase="true"
+		horizontalMargin="0.01"
+		origin="0.5 0.5"
+		pos="0.22 0.7718518518518519"
+		size="0.39 0.26"
+		primaryColor="${c.text}"
+		secondaryColor="${c.text}"
+		extraTextColor="${c.textHeader}ee"
+		extraTextSelectedColor="${c.selected}"
+		selectedColor="${c.selected}"
+		selectorColor="${c.textHeader}"
+		selectorColorEnd="${c.menuSelector}"
+		selectorImagePath=":/parts/selectorBasicShort.png"
+		alignment="center"
+	>
 
-<image name="gamelistFrame" extra="true" linearSmooth="true" zIndex="900" path=":/dFrame.png" color="${c.frame}" colorEnd="${ce.frame}" gradientType="vertical" roundCorners="0.005" opacity="0.45"
-origin="0.5 1"
-pos="0.22 0.9018518518518519"
-size="0.39 0.26"
->
-</image>
+			<lines verticalScreen="true">25</lines>
+			<pos verticalScreen="true">0.5 0.14</pos>
+			<size verticalScreen="true">1 0.82</size>
+			
+	</textlist>
 
-<video name="md_video" zIndex="1100" linearSmooth="true" origin="1 1" pos="0.975 0.9018518518518519" maxSize="0.5 0.32" roundCorners="0.019"
-showSnapshotNoVideo="true"
-showSnapshotDelay="false"
-delay="0.3"
-effect="none"
->
-<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
-<audio>true</audio>
-<storyboard event="activateNext">
-<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
-<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
-</storyboard>
-<storyboard event="activatePrev">
-<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
-<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
-</storyboard>
-<storyboard event="deactivatePrev">
-<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
-</storyboard>
-<storyboard event="deactivateNext">
-<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
-</storyboard>
-</video>
 
-<image name="gameThumbnail" extra="true" default=":/parts/noThumb.png" path="{game:thumbnail}" linearSmooth="true" zIndex="1000" origin="0 1" pos="0.025 0.62" maxSize="0.14625 0.26">
-<shader>:/shaders/shadow3.glsl</shader>
-<!--
-<storyboard event="open">
-<animation property="offsetY"				from="0.0075" 												duration="250"			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="activateNext">
-<animation property="offsetY"				from="0.0075" 												duration="250"			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="activatePrev">
-<animation property="offsetY"				from="-0.0075" 												duration="250"			mode="easeInOut"					/>
-</storyboard>
-<storyboard event="deactivatePrev">
-<animation property="opacity"									to="0" 									duration="1"			mode="linear"						/>
-</storyboard>
-<storyboard event="deactivateNext">
-<animation property="opacity"									to="0" 									duration="1"			mode="linear"						/>
-</storyboard>
--->
-</image>
+	<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>
+	<textlist name="gamelist"			scrollSound="./${v.custom}/scroll.wav"/>
+	<textlist name="gamelist"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
 
-<image name="md_marquee" linearSmooth="true" zIndex="1000" linearSmooth="true" origin="0.5 1" pos="0.280625 0.62" maxSize="0.21 0.12" saturation="1.2" default=":/parts/noMarquee.png">
-<shader>:/shaders/shadow2.glsl</shader>
-</image>
 
-<!-- Game desc -->
-<text name="gameDesc" extra="true" zIndex="1000" fontSize="0.02" fontPath=":/fonts/Welbut__.ttf" glowColor="${c.glowColor}" glowOffset="1" glowSize="2" forceUppercase="false"
-alignment="left" origin="0 1" pos ="0 0.955" padding="0.025 0 0 0" verticalAlignment="bottom" opacity="0" color="${c.text}" singleLineScroll="true" w="1"
->
-<pos verticalScreen="true">0 0.965</pos>
-<storyboard event="open">
-<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
-</storyboard>
-<storyboard event="activatePrev">
-<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
-</storyboard>
-<storyboard event="activateNext">
-<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
-</storyboard>
-<storyboard event="deactivatePrev">
-<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
-</storyboard>
-<storyboard event="deactivateNext">
-<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
-</storyboard>
-<text>{game:desc}</text>
-</text>
+	<!-- Gamelist frame -->
+	
+	<image
+		name="gamelistFrame"
+		extra="true"
+		linearSmooth="true"
+		zIndex="900"
+		path=":/dFrame.png"
+		color="${c.frame}"
+		colorEnd="${ce.frame}"
+		gradientType="vertical"
+		roundCorners="0.005"
+		opacity="0.45"
+		origin="0.5 1"
+		pos="0.22 0.9018518518518519"
+		size="0.39 0.26"
+	/>
+
+
+	<!-- Game video -->
+	
+	<video
+		name="md_video"
+		zIndex="1100"
+		linearSmooth="true"
+		origin="1 1"
+		pos="0.975 0.9018518518518519"
+		maxSize="0.5 0.32"
+		roundCorners="0.019"
+		showSnapshotNoVideo="true"
+		showSnapshotDelay="false"
+		delay="0.3"
+		effect="none"
+		audio="true"
+	>
+
+		<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+
+		<storyboard event="activateNext">
+			<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
+			<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
+		</storyboard>
+
+		<storyboard event="activatePrev">
+			<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
+			<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
+		</storyboard>
+
+		<storyboard event="deactivatePrev">
+			<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
+		</storyboard>
+
+		<storyboard event="deactivateNext">
+			<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
+		</storyboard>
+
+	</video>
+
+
+	<!-- Game thumbnail -->
+	
+	<image
+		name="gameThumbnail"
+		extra="true"
+		default=":/parts/noThumb.png"
+		path="{game:thumbnail}"
+		linearSmooth="true"
+		zIndex="1000"
+		origin="0 1"
+		pos="0.025 0.62"
+		maxSize="0.14625 0.26"
+	>
+
+		<shader>:/shaders/shadow3.glsl</shader>
+
+	</image>
+
+
+	<!-- Game marquee -->
+	
+	<image
+		name="md_marquee"
+		linearSmooth="true"
+		zIndex="1000"
+		origin="0.5 1"
+		pos="0.280625 0.62"
+		maxSize="0.21 0.12"
+		saturation="1.2"
+		default=":/parts/noMarquee.png"
+	>
+
+		<shader>:/shaders/shadow2.glsl</shader>
+
+	</image>
+
+
+	<!-- Game desc -->
+	
+	<text
+		name="gameDesc"
+		extra="true"
+		zIndex="1000"
+		fontSize="0.02"
+		fontPath=":/fonts/Welbut__.ttf"
+		glowColor="${c.glowColor}"
+		glowOffset="1"
+		glowSize="2"
+		forceUppercase="false"
+		alignment="left"
+		origin="0 1"
+		pos ="0 0.955"
+		padding="0.025 0 0 0"
+		verticalAlignment="bottom"
+		opacity="0"
+		color="${c.text}"
+		singleLineScroll="true"
+		w="1"
+	>
+
+		<storyboard event="open">
+			<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
+		</storyboard>
+
+		<storyboard event="activatePrev">
+			<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
+		</storyboard>
+
+		<storyboard event="activateNext">
+			<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
+		</storyboard>
+
+		<storyboard event="deactivatePrev">
+			<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
+		</storyboard>
+
+		<storyboard event="deactivateNext">
+			<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
+		</storyboard>
+
+		<text>{game:desc}</text>
+
+		<pos verticalScreen="true">0 0.965</pos>
+
+	</text>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- GRID -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="grid">
-<imagegrid name="gamegrid" scrollSound=":/sounds/scroll.wav"
-scrollSound="./${v.custom}/scroll.wav"
-scrollSound="./${v.custom}/${system.theme}/scroll.wav"
-/>
+
+	<imagegrid name="gamegrid"			scrollSound=":/sounds/scroll.wav"/>
+	<imagegrid name="gamegrid"			scrollSound="./${v.custom}/scroll.wav"/>
+	<imagegrid name="gamegrid"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
 
 </view>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- GAMECAROUSEL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <view name="gamecarousel">
 
-<gamecarousel name="gamecarousel" zIndex="1000" type="vertical_wheel" origin="1 0" pos="1 0" size="0.34 1" imageSource="marquee" scrollSound=":/sounds/scroll.wav"
-scrollSound="./${v.custom}/scroll.wav"
-scrollSound="./${v.custom}/${system.theme}/scroll.wav"
-logoScale="2"
-logoSize="0.46 0.18"
-logoAlignment="center"
-logoRotation="${v.wheelFlip}17"
-logoRotationOrigin="3 0.5"
-maxLogoCount="9"
-/>
+	<gamecarousel
+		name="gamecarousel"
+		zIndex="1000"
+		type="vertical_wheel"
+		origin="1 0"
+		pos="1 0"
+		size="0.34 1"
+		imageSource="marquee"
+		logoScale="2"
+		logoSize="0.46 0.18"
+		logoAlignment="center"
+		logoRotation="${v.wheelFlip}17"
+		logoRotationOrigin="3 0.5"
+		maxLogoCount="9"
+	/>
 
-<image name="gamecarouselLogo" saturation="1.2"/>
+	<gamecarousel name="gamecarousel"			scrollSound=":/sounds/scroll.wav"/>
+	<gamecarousel name="gamecarousel"			scrollSound="./${v.custom}/scroll.wav"/>
+	<gamecarousel name="gamecarousel"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
 
-<text name="gamecarouselLogoText" color="${c.textHeader}" glowColor="${c.glowColor}" glowSize="8" glowOffset="0" lineSpacing="1.0" fontPath=":/fonts/SCOREBOARD.ttf" fontSize="0.12" forceUppercase="true"/>		
+
+	<image
+		name="gamecarouselLogo"
+		saturation="1.2"
+	/>
+
+
+	<text
+		name="gamecarouselLogoText"
+		color="${c.textHeader}"
+		glowColor="${c.glowColor}"
+		glowSize="8"
+		glowOffset="0"
+		lineSpacing="1.0"
+		fontPath=":/fonts/SCOREBOARD.ttf"
+		fontSize="0.12"
+		forceUppercase="true"
+	/>		
 
 </view>
 
