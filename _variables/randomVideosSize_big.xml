@@ -4,7 +4,7 @@
 
 <variables>
 
-<v.rvSize>1 0.4</v.rvSize>
+<v.rvSize>0.5 0.4</v.rvSize>
 <v.rvSize verticalScreen="true">0.5 1</v.rvSize>
 
 </variables>

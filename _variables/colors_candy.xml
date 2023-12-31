@@ -6,14 +6,17 @@
 
 <v.color>candy</v.color>
 <c.glowColor>00000080</c.glowColor>
+<c.glowColor2>00000026</c.glowColor2>
 <c.selected>ffffff</c.selected>
 <c.base>101014</c.base>
-<c.text>ccc9cb</c.text>
+<c.text>eeebdc</c.text>
 <c.textHeader>ff1493</c.textHeader>
 <c.menuSelector>cc1088</c.menuSelector>
 <ce.menuSelector>bb0077</ce.menuSelector>
 <c.scroll>bb007780</c.scroll>
 <c.menubg>202028</c.menubg>
+<c.frame>ddbbcc</c.frame>
+<ce.frame>323028</ce.frame>
 
 </variables>
 

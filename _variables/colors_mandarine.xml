@@ -6,14 +6,17 @@
 
 <v.color>mandarine</v.color>
 <c.glowColor>00000080</c.glowColor>
+<c.glowColor2>00000026</c.glowColor2>
 <c.selected>ffffff</c.selected>
 <c.base>101014</c.base>
-<c.text>cccfc8</c.text>
+<c.text>eeefea</c.text>
 <c.textHeader>fea347</c.textHeader>
 <c.menuSelector>dd7030</c.menuSelector>
 <ce.menuSelector>dd6020</ce.menuSelector>
 <c.scroll>dd602080</c.scroll>
 <c.menubg>202028</c.menubg>
+<c.frame>ccaaaa</c.frame>
+<ce.frame>312929</ce.frame>
 
 </variables>
 

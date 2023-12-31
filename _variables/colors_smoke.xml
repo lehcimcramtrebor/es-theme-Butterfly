@@ -6,14 +6,17 @@
 
 <v.color>smoke</v.color>
 <c.glowColor>00000080</c.glowColor>
+<c.glowColor2>00000026</c.glowColor2>
 <c.selected>ffffff</c.selected>
 <c.base>101014</c.base>
-<c.text>cccccc</c.text>
+<c.text>eeeeee</c.text>
 <c.textHeader>bbbbcd</c.textHeader>
 <c.menuSelector>40404e</c.menuSelector>
 <ce.menuSelector>30303c</ce.menuSelector>
 <c.scroll>30303580</c.scroll>
 <c.menubg>202028</c.menubg>
+<c.frame>bbbbbb</c.frame>
+<ce.frame>303030</ce.frame>
 
 </variables>
 

@@ -6,14 +6,17 @@
 
 <v.color>wine</v.color>
 <c.glowColor>00000080</c.glowColor>
+<c.glowColor2>00000026</c.glowColor2>
 <c.selected>ffffff</c.selected>
 <c.base>101014</c.base>
-<c.text>cecccc</c.text>
+<c.text>efeeee</c.text>
 <c.textHeader>ff3535</c.textHeader>
 <c.menuSelector>801515</c.menuSelector>
 <ce.menuSelector>700505</ce.menuSelector>
 <c.scroll>70050580</c.scroll>
 <c.menubg>202026</c.menubg>
+<c.frame>ddbbbb</c.frame>
+<ce.frame>323030</ce.frame>
 
 </variables>
 
