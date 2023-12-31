@@ -1025,7 +1025,7 @@ size="0.39 0.26"
 <video name="md_video" zIndex="1100" linearSmooth="true" origin="1 1" pos="0.975 0.9018518518518519" maxSize="0.5 0.32" roundCorners="0.019"
 showSnapshotNoVideo="true"
 showSnapshotDelay="false"
-delay="0"
+delay="0.3"
 effect="none"
 >
 <shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
@@ -1046,7 +1046,7 @@ effect="none"
 </storyboard>
 </video>
 
-<image name="md_thumbnail" linearSmooth="true" zIndex="1000" origin="0 1" pos="0.025 0.62" maxSize="0.14625 0.26">
+<image name="gameThumbnail" extra="true" default=":/parts/noThumb.png" path="{game:thumbnail}" linearSmooth="true" zIndex="1000" origin="0 1" pos="0.025 0.62" maxSize="0.14625 0.26">
 <shader>:/shaders/shadow3.glsl</shader>
 <!--
 <storyboard event="open">
