@@ -8,7 +8,7 @@
 
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-<!-- VARIABLES                                                                                                                                                                                                     -->
+<!-- THEME VARIABLES                                                                                                                                                                                               -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<variables>
@@ -108,7 +108,7 @@
 
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-<!-- SUBSETS                                                                                                                                                                                                       -->
+<!-- SUBSETS AND ASSOCIED LANGUAGE VARIABLES                                                                                                                                                                       -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Music subset -->
@@ -158,6 +158,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Colorset subset -->
 
@@ -181,6 +182,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Help subset -->
 
@@ -207,6 +209,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Controller overlay subset -->
 
@@ -241,6 +244,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Carousel subset -->
 
@@ -273,6 +277,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Wheel inverse -->
 
@@ -291,6 +296,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Random Videos & fanarts -->
 
@@ -390,6 +396,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Subset to display themed backgrounds or scraped fanarts in gamelists -->
 
@@ -409,6 +416,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Logos subsets -->
 
@@ -427,6 +435,7 @@
 		
 	</subset>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Dev console -->
 
@@ -450,368 +459,368 @@
 <!-- MENUS                                                                                                                                                                                                         -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="menu">
+	<view name="menu">
 
-	<menuText
-		name="menutitle"
-		fontPath=":/fonts/Cabin-Bold.ttf"
-		fontSize="0.03"
-		color="${c.text}"
-	/>
-
-
-	<menuText
-		name="menufooter"
-		fontPath=":/fonts/Cabin-Regular.ttf"
-		fontSize="0.018"
-		color="${c.text}"
-	/>
+		<menuText
+			name="menutitle"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.03"
+			color="${c.text}"
+		/>
 
 
-	<menuTextSmall
-		name="menutextsmall"
-		fontPath=":/fonts/CabinCondensed-Regular.ttf"
-		fontSize="0.017"
-	/>
+		<menuText
+			name="menufooter"
+			fontPath=":/fonts/Cabin-Regular.ttf"
+			fontSize="0.018"
+			color="${c.text}"
+		/>
 
 
-	<menuGroup
-		name="menugroup"
-		fontPath=":/fonts/Cabin-Bold.ttf"
-		fontSize="0.026"
-		color="${c.textHeader}"
-		separatorColor="00000000"
-		backgroundColor="00000000"
-		lineSpacing="2.75"
-	/>
+		<menuTextSmall
+			name="menutextsmall"
+			fontPath=":/fonts/CabinCondensed-Regular.ttf"
+			fontSize="0.017"
+		/>
 
 
-	<menuBackground
-		name="menubg"
-		color="${c.menubg}ee"
-		cornerSize="32 32"
-		scrollbarColor="${c.scroll}"
-		scrollbarCorner="0"
-		scrollbarSize="0.0025"
-		scrollbarAlignment="innerright"
-		roundCorners="0.018"
-	>
-		
-		<shader>
-			<path>:/shaders/blur.glsl</path>
-			<blur>3</blur>
-		</shader>
-		
-	</menuBackground>
+		<menuGroup
+			name="menugroup"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.026"
+			color="${c.textHeader}"
+			separatorColor="00000000"
+			backgroundColor="00000000"
+			lineSpacing="2.75"
+		/>
 
 
-	<menuTextEdit
-		name="menutextedit"
-		inactive=":/menu/textinput_ninepatch.png"
-		active=":/menu/textinput_ninepatch_active.png"
-	/>
+		<menuBackground
+			name="menubg"
+			color="${c.menubg}ee"
+			cornerSize="32 32"
+			scrollbarColor="${c.scroll}"
+			scrollbarCorner="0"
+			scrollbarSize="0.0025"
+			scrollbarAlignment="innerright"
+			roundCorners="0.018"
+		>
+			
+			<shader>
+				<path>:/shaders/blur.glsl</path>
+				<blur>3</blur>
+			</shader>
+			
+		</menuBackground>
 
 
-	<menuButton
-		name="menubutton"
-		path=":/menu/button.png"
-		filledPath=":/menu/button_filled.png"
-		cornerSize="8 8"
-	/>
+		<menuTextEdit
+			name="menutextedit"
+			inactive=":/menu/textinput_ninepatch.png"
+			active=":/menu/textinput_ninepatch_active.png"
+		/>
 
 
-	<menuText
-		name="menutext"
-		fontPath=":/fonts/Cabin-Regular.ttf"
-		fontSize="0.025"
-		color="${c.text}"
-		separatorColor="00000000"
-		selectorColor="${c.menuSelector}"
-		selectorColorEnd="${ce.menuSelector}"
-		selectedColor="${c.selected}"
-		selectorGradientType="horizontal"
-	/>
+		<menuButton
+			name="menubutton"
+			path=":/menu/button.png"
+			filledPath=":/menu/button_filled.png"
+			cornerSize="8 8"
+		/>
 
 
-	<menuIcons
-		name="menuicons"
-		iconKodi=":/menu/Kodi.png"
-		iconSystem=":/menu/System.png"
-		iconUpdates=":/menu/Updates.png"
-		iconGames=":/menu/Games.png"
-		iconControllers=":/menu/Controllers.png"
-		iconUI=":/menu/UI.png"
-		iconSound=":/menu/Sound.png"
-		iconNetwork=":/menu/Network.png"
-		iconScraper=":/menu/Scraper.png"
-		iconAdvanced=":/menu/Advanced.png"
-		iconQuit=":/menu/Quit.png"
-		iconRestart=":/menu/Restart.png"
-		iconShutdown=":/menu/Shutdown.png"
-		iconFastShutdown=":/menu/Fastshutdown.png"
-		iconRetroachievements=":/menu/Contest.png"
-		iconManual=":/menu/Manual.png"
-	/>
+		<menuText
+			name="menutext"
+			fontPath=":/fonts/Cabin-Regular.ttf"
+			fontSize="0.025"
+			color="${c.text}"
+			separatorColor="00000000"
+			selectorColor="${c.menuSelector}"
+			selectorColorEnd="${ce.menuSelector}"
+			selectedColor="${c.selected}"
+			selectorGradientType="horizontal"
+		/>
 
-</view>
+
+		<menuIcons
+			name="menuicons"
+			iconKodi=":/menu/Kodi.png"
+			iconSystem=":/menu/System.png"
+			iconUpdates=":/menu/Updates.png"
+			iconGames=":/menu/Games.png"
+			iconControllers=":/menu/Controllers.png"
+			iconUI=":/menu/UI.png"
+			iconSound=":/menu/Sound.png"
+			iconNetwork=":/menu/Network.png"
+			iconScraper=":/menu/Scraper.png"
+			iconAdvanced=":/menu/Advanced.png"
+			iconQuit=":/menu/Quit.png"
+			iconRestart=":/menu/Restart.png"
+			iconShutdown=":/menu/Shutdown.png"
+			iconFastShutdown=":/menu/Fastshutdown.png"
+			iconRetroachievements=":/menu/Contest.png"
+			iconManual=":/menu/Manual.png"
+		/>
+
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- HELP                                                                                                                                                                                                          -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="menu,system,basic,detailed,grid,gamecarousel">
+	<view name="menu,system,basic,detailed,grid,gamecarousel">
 
-	<helpsystem
-		name="help"
-		textColor="${c.text}"
-		fontSize="0.02"
-		origin="0 0.5"
-		pos="0.004 0.98"
-		fontPath=":/fonts/Cabin-Bold.ttf"
-		iconColor="ffffff"
-		glowColor="${c.glowColor}"
-		glowOffset="1" glowSize="1"
-		iconUpDown=":/help/icon_${v.help}_updown.png"
-		iconLeftRight=":/help/icon_${v.help}${v.help}_leftright.png"
-		iconUpDownLeftRight=":/help/icon_${v.help}_all.png"
-		iconA=":/help/icon_${v.help}_a.png"
-		iconB=":/help/icon_${v.help}_b.png"
-		iconX=":/help/icon_${v.help}_x.png"
-		iconY=":/help/icon_${v.help}_y.png"
-		iconL=":/help/icon_${v.help}_l.png"
-		iconR=":/help/icon_${v.help}_r.png"
-		iconStart=":/help/icon_${v.help}_start.png"
-		iconSelect=":/help/icon_${v.help}_select.png"
-	>
+		<helpsystem
+			name="help"
+			textColor="${c.text}"
+			fontSize="0.02"
+			origin="0 0.5"
+			pos="0.004 0.98"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			iconColor="ffffff"
+			glowColor="${c.glowColor}"
+			glowOffset="1" glowSize="1"
+			iconUpDown=":/help/icon_${v.help}_updown.png"
+			iconLeftRight=":/help/icon_${v.help}${v.help}_leftright.png"
+			iconUpDownLeftRight=":/help/icon_${v.help}_all.png"
+			iconA=":/help/icon_${v.help}_a.png"
+			iconB=":/help/icon_${v.help}_b.png"
+			iconX=":/help/icon_${v.help}_x.png"
+			iconY=":/help/icon_${v.help}_y.png"
+			iconL=":/help/icon_${v.help}_l.png"
+			iconR=":/help/icon_${v.help}_r.png"
+			iconStart=":/help/icon_${v.help}_start.png"
+			iconSelect=":/help/icon_${v.help}_select.png"
+		>
+			
+			<iconColor ifSubset="helpIcons:defaultIcons">${c.textHeader}</iconColor>
+			<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+			<pos verticalScreen="true">0.01 0.985</pos>
 		
-		<iconColor ifSubset="helpIcons:defaultIcons">${c.textHeader}</iconColor>
-		<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-		<pos verticalScreen="true">0.01 0.985</pos>
-	
-	</helpsystem>
+		</helpsystem>
 
-</view>
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- SCREEN                                                                                                                                                                                                        -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="screen">
+	<view name="screen">
 
-	<!-- Controller activity -->
-	
-	<controllerActivity
-		name="controllerActivity"
-		pos="0.01 0.012"
-		size="0.185 0.023"
-		color="${c.selected}"
-		activityColor="${c.textHeader}"
-		hotkeyColor="ff3030"
-		imagePath=":/controller/${v.controller}.svg"
-		itemSpacing="${v.controllerSpacing}"
-		gunPath=":/controller/gun.svg"
-	>
+		<!-- Controller activity -->
 		
-		<size verticalScreen="true">0.185 0.016</size>
-		<pos verticalScreen="true">0.02 0.012</pos>
+		<controllerActivity
+			name="controllerActivity"
+			pos="0.01 0.012"
+			size="0.185 0.023"
+			color="${c.selected}"
+			activityColor="${c.textHeader}"
+			hotkeyColor="ff3030"
+			imagePath=":/controller/${v.controller}.svg"
+			itemSpacing="${v.controllerSpacing}"
+			gunPath=":/controller/gun.svg"
+		>
+			
+			<size verticalScreen="true">0.185 0.016</size>
+			<pos verticalScreen="true">0.02 0.012</pos>
+			
+		</controllerActivity>
+
+
+		<!-- Battery indicator -->
 		
-	</controllerActivity>
-
-
-	<!-- Battery indicator -->
-	
-	<batteryIndicator
-		name="batteryIndicator"
-		pos="0 0.01"
-		size="1 0.023"
-		horizontalAlignment="right"
-		itemSpacing="0.005"
-		color="${c.selected}"
-		incharge=":/battery/incharge.svg"
-		full=":/battery/full.svg"
-		at75=":/battery/75.svg"
-		at50=":/battery/50.svg"
-		at25=":/battery/25.svg"
-		empty=":/battery/empty.svg"
-	>
+		<batteryIndicator
+			name="batteryIndicator"
+			pos="0 0.01"
+			size="1 0.023"
+			horizontalAlignment="right"
+			itemSpacing="0.005"
+			color="${c.selected}"
+			incharge=":/battery/incharge.svg"
+			full=":/battery/full.svg"
+			at75=":/battery/75.svg"
+			at50=":/battery/50.svg"
+			at25=":/battery/25.svg"
+			empty=":/battery/empty.svg"
+		>
+			
+			<size verticalScreen="true">1 0.018</size>
+			<pos verticalScreen="true">-0.01 0.011</pos>
 		
-		<size verticalScreen="true">1 0.018</size>
-		<pos verticalScreen="true">-0.01 0.011</pos>
-	
-	</batteryIndicator>
-	
-	
-	<!-- Clock -->
-	
-	<text
-		name="clock"
-		color="${c.text}"
-		fontPath=":/fonts/Cabin-Bold.ttf"
-		fontSize="0.02"
-		origin="1 0.5"
-		pos="0.995 0.98"
-		alignment="right"
-		glowColor="${c.glowColor}"
-		glowOffset="1"
-		glowSize="1"
-	>
+		</batteryIndicator>
 		
-		<color ifHelpPrompts="false">${c.selected}</color>
-
-		<origin ifCheevos="true">1 0</origin>
-
-		<fontSize verticalScreen="true">0.018</fontSize>
-		<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-		<pos verticalScreen="true">0.99 0.9845</pos>
-
-		<fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-		<fontSize ifCheevos="true">0.013</fontSize>
-
-		<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
-		<pos ifCheevos="true">0.997 0.9625</pos>
-		<pos verticalScreen="true" ifCheevos="true">0.996 0.9785</pos>
-	
-	</text>
-
-
-	<!-- Retroachievements username -->
-	
-	<text
-		name="username"
-		extra="true"
-		ifCheevos="true"
-		text="${cheevos.username}"
-		fontPath=":/fonts/CabinCondensed-Bold.ttf"
-		fontSize="0.013"
-		forceUppercase="true"
-		color="${c.textHeader}"
-		alignment="right"
-		origin="1 0"
-		pos="0.997 0.9775"
-		glowColor="${c.glowColor}"
-		glowOffset="1"
-		glowSize="1"
-	>
 		
-		<color ifHelpPrompts="false">${c.selected}</color>
+		<!-- Clock -->
 		
-		<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
-		<pos verticalScreen="true" ifCheevos="true">0.996 0.9875</pos>
-	
-	</text>
+		<text
+			name="clock"
+			color="${c.text}"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.02"
+			origin="1 0.5"
+			pos="0.995 0.98"
+			alignment="right"
+			glowColor="${c.glowColor}"
+			glowOffset="1"
+			glowSize="1"
+		>
+			
+			<color ifHelpPrompts="false">${c.selected}</color>
 
-</view>
+			<origin ifCheevos="true">1 0</origin>
+
+			<fontSize verticalScreen="true">0.018</fontSize>
+			<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+			<pos verticalScreen="true">0.99 0.9845</pos>
+
+			<fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
+			<fontSize ifCheevos="true">0.013</fontSize>
+
+			<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
+			<pos ifCheevos="true">0.997 0.9625</pos>
+			<pos verticalScreen="true" ifCheevos="true">0.996 0.9785</pos>
+		
+		</text>
+
+
+		<!-- Retroachievements username -->
+		
+		<text
+			name="username"
+			extra="true"
+			ifCheevos="true"
+			text="${cheevos.username}"
+			fontPath=":/fonts/CabinCondensed-Bold.ttf"
+			fontSize="0.013"
+			forceUppercase="true"
+			color="${c.textHeader}"
+			alignment="right"
+			origin="1 0"
+			pos="0.997 0.9775"
+			glowColor="${c.glowColor}"
+			glowOffset="1"
+			glowSize="1"
+		>
+			
+			<color ifHelpPrompts="false">${c.selected}</color>
+			
+			<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
+			<pos verticalScreen="true" ifCheevos="true">0.996 0.9875</pos>
+		
+		</text>
+
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- ALL VIEWS COMMONS                                                                                                                                                                                             -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="system,basic,detailed,grid,gamecarousel">
+	<view name="system,basic,detailed,grid,gamecarousel">
 
-	<!-- Hide all under zIndex 100 -->
-	
-	<image
-		name="hide"
-		extra="true"
-		zIndex="100"
-		path=":/plain.png"
-		color="${c.base}"
-		size="1 1"
-	/>
-
-
-	<!-- Scanlines effect -->
-	
-	<image
-		name="scanlines"
-		extra="true"
-		linearSmooth="false"
-		path=":/scanlines.png"
-		tile="true"
-		size="1 1"
-		zIndex="500"
-		color="000000"
-		opacity="0.35"
-	/>
-
-
-	<!-- Shade effect over backgrounds path/size for all views -->
-	
-	<image
-		name="shadeBackground"
-		extra="true"
-		linearSmooth="true"
-		path=":/plain.png"
-		size="1 1"
-		zIndex="300"
-	/>
-
-
-	<!-- Help background -->
-	
-	<image
-		name="helpBackground"
-		extra="true"
-		linearSmooth="true"
-		path=":/plainShadow.png"
-		origin="0 1" pos="0 1"
-		size="1 0.056"
-		zIndex="1100"
-		color="${c.menubg}"
-		opacity="1"
-	>
-	
-		<visible ifHelpPrompts="false">false</visible>
-		<size verticalScreen="true">1 0.04</size>
+		<!-- Hide all under zIndex 100 -->
 		
-	</image>
+		<image
+			name="hide"
+			extra="true"
+			zIndex="100"
+			path=":/plain.png"
+			color="${c.base}"
+			size="1 1"
+		/>
 
 
-	<!-- Logos -->
-	
-	<image
-		name="logo"
-		linearSmooth="true"
-		reflexion="0.025 0"
-		saturation="1.2"
-	/>
+		<!-- Scanlines effect -->
+		
+		<image
+			name="scanlines"
+			extra="true"
+			linearSmooth="false"
+			path=":/scanlines.png"
+			tile="true"
+			size="1 1"
+			zIndex="500"
+			color="000000"
+			opacity="0.35"
+		/>
 
 
-	<image name="logo"						path="./${system.theme}/logo.png"/>
-	<image name="logo"						path="./${system.theme}${v.aes}/logo.png"/>
-	<image name="logo"						path="./${system.theme}/logo-${lang}.png"/>
-	<image name="logo"		region="us"		path="./${system.theme}/us/logo.png"/>
-	<image name="logo"		region="jp"		path="./${system.theme}/jp/logo.png" />
-	<image name="logo"						path="./${v.custom}/${system.theme}/logo.png"/>
+		<!-- Shade effect over backgrounds path/size for all views -->
+		
+		<image
+			name="shadeBackground"
+			extra="true"
+			linearSmooth="true"
+			path=":/plain.png"
+			size="1 1"
+			zIndex="300"
+		/>
 
-</view>
+
+		<!-- Help background -->
+		
+		<image
+			name="helpBackground"
+			extra="true"
+			linearSmooth="true"
+			path=":/plainShadow.png"
+			origin="0 1" pos="0 1"
+			size="1 0.056"
+			zIndex="1100"
+			color="${c.menubg}"
+			opacity="1"
+		>
+		
+			<visible ifHelpPrompts="false">false</visible>
+			<size verticalScreen="true">1 0.04</size>
+			
+		</image>
+
+
+		<!-- Logos -->
+		
+		<image
+			name="logo"
+			linearSmooth="true"
+			reflexion="0.025 0"
+			saturation="1.2"
+		/>
+
+
+		<image name="logo"						path="./${system.theme}/logo.png"/>
+		<image name="logo"						path="./${system.theme}${v.aes}/logo.png"/>
+		<image name="logo"						path="./${system.theme}/logo-${lang}.png"/>
+		<image name="logo"		region="us"		path="./${system.theme}/us/logo.png"/>
+		<image name="logo"		region="jp"		path="./${system.theme}/jp/logo.png" />
+		<image name="logo"						path="./${v.custom}/${system.theme}/logo.png"/>
+
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- SYSTEM VIEW                                                                                                                                                                                                   -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="system">
+	<view name="system">
 
-	<!-- Console -->
-	
-	<text
-		extra="true"
-		name="console"
-		ifSubset="dev:yes"
-		zIndex="5000"
-		fontPath=":/fonts/Welbut__.ttf"
-		fontSize="0.016"
-		size="1 1"
-		alignment="left"
-		verticalAlignment="top"
-		padding="0.025 0.2 0.01 0.01"
-		color="00ff00"
-		glowColor="000000"
-		glowOffset="0"
-		glowSize="4"
-	>
-	
-		<text>
+		<!-- Console -->
+		
+		<text
+			extra="true"
+			name="console"
+			ifSubset="dev:yes"
+			zIndex="5000"
+			fontPath=":/fonts/Welbut__.ttf"
+			fontSize="0.016"
+			size="1 1"
+			alignment="left"
+			verticalAlignment="top"
+			padding="0.025 0.2 0.01 0.01"
+			color="00ff00"
+			glowColor="000000"
+			glowOffset="0"
+			glowSize="4"
+		>
+		
+			<text>
 DEV CONSOLE:
 
 GENERAL:
@@ -837,449 +846,449 @@ Group: ${system.group}
 Savestates: ${system.savestates}
 Netplay: ${system.netplay}
 Cheevos: ${system.cheevos}
+			</text>
+			
 		</text>
+
+
+		<!-- Music -->
 		
-	</text>
+		<sound name="directory"		ifSubset="music:recalbox|batocera|mrBoom|retrobat|comixZone"		path="./resources/music/${v.musicDirectory}/"/>
+		<sound name="bgsound"		ifSubset="music:notAllow"											path="./resources/music/silence.ogg"/>
+		<sound name="bgsound"		ifSubset="music:custom"												path="./${v.custom}/${system.theme}/music.ogg"/>
+		<sound name="bgsound"		ifSubset="music:custom"												path="./${v.custom}/${system.theme}/music.mp3"/>
 
 
-	<!-- Music -->
-	
-	<sound name="directory"		ifSubset="music:recalbox|batocera|mrBoom|retrobat|comixZone"		path="./resources/music/${v.musicDirectory}/"/>
-	<sound name="bgsound"		ifSubset="music:notAllow"											path="./resources/music/silence.ogg"/>
-	<sound name="bgsound"		ifSubset="music:custom"												path="./${v.custom}/${system.theme}/music.ogg"/>
-	<sound name="bgsound"		ifSubset="music:custom"												path="./${v.custom}/${system.theme}/music.mp3"/>
-
-
-	<!-- Extended Infos-->
-	
-	<text
-		name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL"
-		extra="true"
-		zIndex="1000"
-		fontPath=":/fonts/CabinCondensed-Bold.ttf"
-		glowColor="${c.glowColor}"
-		glowOffset="2"
-		glowSize="1"
-		forceUppercase="true"
-	/>
-
-
-	<text
-		name="infosExUL"
-		extra="true"
-		color="${c.selected}"
-		fontSize="0.04"
-		padding="0.025 0.04 0 0"
-		text="${system.manufacturer}"
-	>
-
-		<fontSize verticalScreen="true">0.035</fontSize>
-
-	</text>
-
-
-	<text
-		name="infosEx2UL"
-		extra="true"
-		color="${c.selected}"
-		fontSize="0.03"
-		padding="0.025 0.09 0 0"
-		text="${system.fullName} ${v.custom-collections}${v.p1} ${system.releaseYearOrNull} ${v.p2}"
-	>
+		<!-- Extended Infos-->
 		
-		<text verticalScreen="true">${system.name} ${v.p1} ${system.releaseYearOrNull} ${v.p2}</text>
-		<fontSize verticalScreen="true">0.025</fontSize>
-		<padding verticalScreen="true">0.025 0.065 0 0</padding>
+		<text
+			name="infosExUL,infosEx2UL,infosEx3UL,infosEx4UL"
+			extra="true"
+			zIndex="1000"
+			fontPath=":/fonts/CabinCondensed-Bold.ttf"
+			glowColor="${c.glowColor}"
+			glowOffset="2"
+			glowSize="1"
+			forceUppercase="true"
+		/>
+
+
+		<text
+			name="infosExUL"
+			extra="true"
+			color="${c.selected}"
+			fontSize="0.04"
+			padding="0.025 0.04 0 0"
+			text="${system.manufacturer}"
+		>
+
+			<fontSize verticalScreen="true">0.035</fontSize>
+
+		</text>
+
+
+		<text
+			name="infosEx2UL"
+			extra="true"
+			color="${c.selected}"
+			fontSize="0.03"
+			padding="0.025 0.09 0 0"
+			text="${system.fullName} ${v.custom-collections}${v.p1} ${system.releaseYearOrNull} ${v.p2}"
+		>
+			
+			<text verticalScreen="true">${system.name} ${v.p1} ${system.releaseYearOrNull} ${v.p2}</text>
+			<fontSize verticalScreen="true">0.025</fontSize>
+			<padding verticalScreen="true">0.025 0.065 0 0</padding>
+			
+		</text>
+
+
+		<text
+			name="infosEx3UL"
+			extra="true"
+			color="${c.textHeader}"
+			fontSize="0.022"
+			padding="0.025 0.13 0 0"
+			text="${v.bindingTotalUL}"
+		>
+			
+			<fontSize verticalScreen="true">0.016</fontSize>
+			<padding verticalScreen="true">0.025 0.0875 0 0</padding>
+			
+		</text>
+
+
+		<text
+			name="infosEx4UL"
+			extra="true"
+			color="${c.selected}"
+			fontSize="0.018"
+			padding="0.025 0.1615 0 0"
+			text="${v.bindingFavorites}"
+		>
+			
+			<fontSize verticalScreen="true">0.015</fontSize>
+			<padding verticalScreen="true">0.025 0.103 0 0</padding>
+			
+		</text>
+
+
+		<!-- Desc -->
 		
-	</text>
+		<text
+			name="infosDesc"
+			extra="true"
+			zIndex="1000"
+			fontSize="0.02"
+			fontPath=":/fonts/Welbut__.ttf"
+			glowColor="${c.glowColor}"
+			glowOffset="1"
+			glowSize="2"
+			forceUppercase="false"
+			alignment="left"
+			w="1"
+			origin="0 1"
+			pos ="0 0.955"
+			verticalAlignment="bottom"
+			opacity="0"
+			color="${c.text}"
+			singleLineScroll="true"
+		>
+
+			<storyboard>
+				<animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"							/>
+				<animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
+			</storyboard>
+
+			<text>                                                                                                                                                                                                                                                                                                                                      ${desc}</text>
+
+			<text verticalScreen="true">                                                                                                                                                                                         ${desc}</text>
+
+			<pos verticalScreen="true">0 0.968</pos>
+
+		</text>
 
 
-	<text
-		name="infosEx3UL"
-		extra="true"
-		color="${c.textHeader}"
-		fontSize="0.022"
-		padding="0.025 0.13 0 0"
-		text="${v.bindingTotalUL}"
-	>
+		<!-- Logos Text -->
+
+		<text
+			name="logoText"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.06"
+			color="${c.text}"
+			glowColor="${c.glowColor}"
+			glowOffset="1"
+			glowSize="1"
+			forceUppercase="true"
+			reflexion="0.025 0"
+		/>
+
+
+		<!-- Shade effect over backgrounds properties for system view -->
 		
-		<fontSize verticalScreen="true">0.016</fontSize>
-		<padding verticalScreen="true">0.025 0.0875 0 0</padding>
+		<image
+			name="shadeBackground"
+			extra="true"
+			color="${c.base}cc"
+			colorEnd="${c.base}1a"
+			gradientType="vertical"
+			opacity="0.4"
+		>
+			
+			<storyboard>
+				<animation property="opacity"								to="0.7"				begin="550" 		duration="400" 			mode="easeInOut"						/>
+			</storyboard>
+			
+			<storyboard ifSubset="randomVideos:ur|bl|br|ctr|btm">
+				<animation property="opacity"								to="0.9"				begin="550" 		duration="400" 			mode="easeInOut"						/>
+			</storyboard>
+			
+		</image>
+
+
+		<!-- System view backgrounds -->
 		
-	</text>
-
-
-	<text
-		name="infosEx4UL"
-		extra="true"
-		color="${c.selected}"
-		fontSize="0.018"
-		padding="0.025 0.1615 0 0"
-		text="${v.bindingFavorites}"
-	>
+		<image
+			name="systemBackground"
+			extra="true"
+			linearSmooth="true"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="200"
+		>
+			
+			<storyboard>
+				<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
+				<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"							/>
+			</storyboard>
+			
+			<minSize verticalScreen="false">1 1</minSize>
+			<maxSize verticalScreen="true">99 1</maxSize>
 		
-		<fontSize verticalScreen="true">0.015</fontSize>
-		<padding verticalScreen="true">0.025 0.103 0 0</padding>
+		</image>
+
+		<image name="systemBackground" extra="true"												default=":/parts/default_wallpaper.jpg"/>
+		<image name="systemBackground" extra="true"												default="./${v.custom}/default_wallpaper.jpg"/>
+		<image name="systemBackground" extra="true"												path="{random:fanart}"/>
+		<image name="systemBackground" extra="true"												path="./${system.theme}/wallpaper.m3u"/>
+		<image name="systemBackground" extra="true" 											path="./${v.custom}/theme.jpg"/>
+		<image name="systemBackground" extra="true"												path="./${v.custom}/${system.theme}/wallpaper.m3u"/>
+		<image name="systemBackground" extra="true"		ifSubset="forceRandomFanarts:yes"		path="{random:fanart}"/>
+
+
+		<!-- System carousels -->
 		
-	</text>
-
-
-	<!-- Desc -->
-	
-	<text
-		name="infosDesc"
-		extra="true"
-		zIndex="1000"
-		fontSize="0.02"
-		fontPath=":/fonts/Welbut__.ttf"
-		glowColor="${c.glowColor}"
-		glowOffset="1"
-		glowSize="2"
-		forceUppercase="false"
-		alignment="left"
-		w="1"
-		origin="0 1"
-		pos ="0 0.955"
-		verticalAlignment="bottom"
-		opacity="0"
-		color="${c.text}"
-		singleLineScroll="true"
-	>
-
-		<storyboard>
-			<animation property="opacity"			from="0"			to="0"				 					duration="1000" 		mode="linear"							/>
-			<animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
-		</storyboard>
-
-		<text>                                                                                                                                                                                                                                                                                                                                      ${desc}</text>
-
-		<text verticalScreen="true">                                                                                                                                                                                         ${desc}</text>
-
-		<pos verticalScreen="true">0 0.968</pos>
-
-	</text>
-
-
-	<!-- Logos Text -->
-
-	<text
-		name="logoText"
-		fontPath=":/fonts/Cabin-Bold.ttf"
-		fontSize="0.06"
-		color="${c.text}"
-		glowColor="${c.glowColor}"
-		glowOffset="1"
-		glowSize="1"
-		forceUppercase="true"
-		reflexion="0.025 0"
-	/>
-
-
-	<!-- Shade effect over backgrounds properties for system view -->
-	
-	<image
-		name="shadeBackground"
-		extra="true"
-		color="${c.base}cc"
-		colorEnd="${c.base}1a"
-		gradientType="vertical"
-		opacity="0.4"
-	>
+		<carousel
+			name="systemcarousel"
+			zIndex="1000"
+			color="00000000"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			size="1.05 1"
+			logoSize="0.36 0.216"
+			logoScale="1"
+			defaultTransition="instant"
+			scrollSound=":/sounds/scroll.wav"
+		>
+			
+			<scrollSound>./${v.custom}/scroll.wav</scrollSound>
+			
+			<maxLogoCount verticalScreen="true">3</maxLogoCount>
+			<size verticalScreen="true">1.15 1</size>
+			<logoSize verticalScreen="true">0.50 0.08</logoSize>
 		
-		<storyboard>
-			<animation property="opacity"								to="0.7"				begin="550" 		duration="400" 			mode="easeInOut"						/>
-		</storyboard>
-		
-		<storyboard ifSubset="randomVideos:ur|bl|br|ctr|btm">
-			<animation property="opacity"								to="0.9"				begin="550" 		duration="400" 			mode="easeInOut"						/>
-		</storyboard>
-		
-	</image>
+		</carousel>
 
 
-	<!-- System view backgrounds -->
-	
-	<image
-		name="systemBackground"
-		extra="true"
-		linearSmooth="true"
-		origin="0.5 0.5"
-		pos="0.5 0.5"
-		zIndex="200"
-	>
+		<carousel
+			name="systemcarousel"
+			ifSubset="carousel:wheel"
+			size="0.4 1"
+			origin="1 0.5"
+			pos="1 0.5"
+			type="vertical_wheel"
+			logoRotation="${v.wheelFlip}16"
+			logoRotationOrigin="2.75 0.5"
+			logoAlignment="center"
+		>
 		
-		<storyboard>
-			<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
-			<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"							/>
-		</storyboard>
+			<size verticalScreen="true">1 1</size>
+			<logoSize verticalScreen="true">0.65 0.14</logoSize>
+			<logoRotationOrigin verticalScreen="true">2 0.5</logoRotationOrigin>
+			<logoRotation verticalScreen="true">${v.wheelFlip}26</logoRotation>
+			<maxLogoCount verticalScreen="true">9</maxLogoCount>
 		
-		<minSize verticalScreen="false">1 1</minSize>
-		<maxSize verticalScreen="true">99 1</maxSize>
-	
-	</image>
-
-	<image name="systemBackground" extra="true"												default=":/parts/default_wallpaper.jpg"/>
-	<image name="systemBackground" extra="true"												default="./${v.custom}/default_wallpaper.jpg"/>
-	<image name="systemBackground" extra="true"												path="{random:fanart}"/>
-	<image name="systemBackground" extra="true"												path="./${system.theme}/wallpaper.m3u"/>
-	<image name="systemBackground" extra="true" 											path="./${v.custom}/theme.jpg"/>
-	<image name="systemBackground" extra="true"												path="./${v.custom}/${system.theme}/wallpaper.m3u"/>
-	<image name="systemBackground" extra="true"		ifSubset="forceRandomFanarts:yes"		path="{random:fanart}"/>
+		</carousel>
 
 
-	<!-- System carousels -->
-	
-	<carousel
-		name="systemcarousel"
-		zIndex="1000"
-		color="00000000"
-		origin="0.5 0.5"
-		pos="0.5 0.5"
-		size="1.05 1"
-		logoSize="0.36 0.216"
-		logoScale="1"
-		defaultTransition="instant"
-		scrollSound=":/sounds/scroll.wav"
-	>
-		
-		<scrollSound>./${v.custom}/scroll.wav</scrollSound>
-		
-		<maxLogoCount verticalScreen="true">3</maxLogoCount>
-		<size verticalScreen="true">1.15 1</size>
-		<logoSize verticalScreen="true">0.50 0.08</logoSize>
-	
-	</carousel>
+		<carousel
+			name="systemcarousel"
+			ifSubset="carousel:bottom"
+			origin="0.5 0"
+			pos="0.5 0"
+			size="1.05 0.96"
+			logoAlignment="bottom"
+		/>
 
 
-	<carousel
-		name="systemcarousel"
-		ifSubset="carousel:wheel"
-		size="0.4 1"
-		origin="1 0.5"
-		pos="1 0.5"
-		type="vertical_wheel"
-		logoRotation="${v.wheelFlip}16"
-		logoRotationOrigin="2.75 0.5"
-		logoAlignment="center"
-	>
-	
-		<size verticalScreen="true">1 1</size>
-		<logoSize verticalScreen="true">0.65 0.14</logoSize>
-		<logoRotationOrigin verticalScreen="true">2 0.5</logoRotationOrigin>
-		<logoRotation verticalScreen="true">${v.wheelFlip}26</logoRotation>
-		<maxLogoCount verticalScreen="true">9</maxLogoCount>
-	
-	</carousel>
+		<carousel
+			name="systemcarousel"
+			ifSubset="carousel:vertical"
+			type="vertical"
+			maxLogoCount="5"
+		>
+			
+			<logoSize verticalScreen="true">0.65 0.14</logoSize>
+			<maxLogoCount verticalScreen="true">7</maxLogoCount>
+			
+		</carousel>
 
 
-	<carousel
-		name="systemcarousel"
-		ifSubset="carousel:bottom"
-		origin="0.5 0"
-		pos="0.5 0"
-		size="1.05 0.96"
-		logoAlignment="bottom"
-	/>
+		<!-- Carousel animations -->
+		
+		<control
+			name="logo,logoText"
+		>
+			
+			<storyboard event="activate">
+				<animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"						/>
+				<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
+			</storyboard>
+			
+			<storyboard event="scroll">
+				<animation property="scale" 			from="0.4" 			to="0.4" 								duration="1" 			mode="linear"						/>
+				<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
+				<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+			</storyboard>
+			
+			<storyboard event="deactivate">
+				<animation property="scale" 			from="1" 			to="0.4" 								duration="125" 			mode="linear"						/>
+				<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
+				<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+			</storyboard>
 
 
-	<carousel
-		name="systemcarousel"
-		ifSubset="carousel:vertical"
-		type="vertical"
-		maxLogoCount="5"
-	>
-		
-		<logoSize verticalScreen="true">0.65 0.14</logoSize>
-		<maxLogoCount verticalScreen="true">7</maxLogoCount>
-		
-	</carousel>
+			<storyboard event="activate" ifSubset="carousel:wheel">
+				<animation property="scale"				from="0.6"			to="1"									duration="125" 			mode="easeInOut"					/>
+				<animation property="offsetX"								to="0.1"			begin="550" 		duration="400" 			mode="easeInOut"					/>
+				<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
+			</storyboard>
+			
+			<storyboard event="scroll" ifSubset="carousel:wheel">
+				<animation property="scale" 			from="0.6" 			to="0.6" 								duration="1" 			mode="linear"						/>
+				<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
+				<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
+			</storyboard>
+			
+			<storyboard event="deactivate" ifSubset="carousel:wheel">
+				<animation property="scale" 			from="1" 			to="0.6" 								duration="125" 			mode="easeInOut"					/>
+				<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
+				<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
+			</storyboard>
 
 
-	<!-- Carousel animations -->
-	
-	<control
-		name="logo,logoText"
-	>
-		
-		<storyboard event="activate">
-			<animation property="scale"				from="0.4"			to="1"									duration="125" 			mode="linear"						/>
-			<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
-		</storyboard>
-		
-		<storyboard event="scroll">
-			<animation property="scale" 			from="0.4" 			to="0.4" 								duration="1" 			mode="linear"						/>
-			<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
-			<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-		</storyboard>
-		
-		<storyboard event="deactivate">
-			<animation property="scale" 			from="1" 			to="0.4" 								duration="125" 			mode="linear"						/>
-			<animation property="opacity" 			from="1" 			to="1" 									duration="550" 			mode="linear"						/>
-			<animation property="opacity" 			from="1" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-		</storyboard>
+			<storyboard event="activate" ifSubset="carousel:vertical">
+				<animation property="scale"				from="0.5"			to="1"									duration="125" 			mode="linear"						/>
+				<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="opacity"			from="0.5"			to="1"									duration="1" 			mode="linear"						/>
+			</storyboard>
+			
+			<storyboard event="scroll" ifSubset="carousel:vertical">
+				<animation property="scale" 			from="0.5" 			to="0.5" 								duration="1" 			mode="linear"						/>
+				<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
+				<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+			</storyboard>
+			
+			<storyboard event="deactivate" ifSubset="carousel:vertical">
+				<animation property="scale" 			from="1" 			to="0.5"								duration="125" 			mode="linear"						/>
+				<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
+				<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
+				<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
+			</storyboard>
+			
+		</control>
 
 
-		<storyboard event="activate" ifSubset="carousel:wheel">
-			<animation property="scale"				from="0.6"			to="1"									duration="125" 			mode="easeInOut"					/>
-			<animation property="offsetX"								to="0.1"			begin="550" 		duration="400" 			mode="easeInOut"					/>
-			<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="opacity"			from="1"			to="1"									duration="1" 			mode="linear"/>
-		</storyboard>
+		<!-- System videos -->
 		
-		<storyboard event="scroll" ifSubset="carousel:wheel">
-			<animation property="scale" 			from="0.6" 			to="0.6" 								duration="1" 			mode="linear"						/>
-			<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
-			<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
-		</storyboard>
-		
-		<storyboard event="deactivate" ifSubset="carousel:wheel">
-			<animation property="scale" 			from="1" 			to="0.6" 								duration="125" 			mode="easeInOut"					/>
-			<animation property="opacity" 			from="0.75" 		to="0.75" 								duration="1" 			mode="linear"						/>
-			<animation property="opacity" 			from="0.75" 		to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="offsetX" 								to="1" 				begin="550" 		duration="400" 			mode="easeIn"						/>
-		</storyboard>
+		<video
+			name="sVideo"
+			extra="true"
+			linearSmooth="true"
+			zIndex="800"
+			origin="${v.rvOrigin}"
+			pos="${v.rvPos}"
+			maxSize="${v.rvSize}"
+			roundCorners="0.016"
+		>
+			
+			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+			
+			<storyboard>
+				<animation property="offsetX"			from="1"			to="1"									duration="650" 		mode="linear"							/>
+				<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
+			</storyboard>
+			
+			<storyboard ifSubset="randomVideos:bl">
+				<animation property="offsetX"			from="-1"			to="-1"									duration="650" 		mode="linear"							/>
+				<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
+			</storyboard>
+			
+			<audio>${v.rvAudio}</audio>
+			
+			<visible if="${v.rvExclude}">false</visible>
+			<visible if="${v.displayVideo} == 'yes'">true</visible>
+			<visible if="${v.displayVideo} == 'no'">false</visible>
+			
+		</video>
 
 
-		<storyboard event="activate" ifSubset="carousel:vertical">
-			<animation property="scale"				from="0.5"			to="1"									duration="125" 			mode="linear"						/>
-			<animation property="opacity"								to="0"				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="opacity"			from="0.5"			to="1"									duration="1" 			mode="linear"						/>
-		</storyboard>
-		
-		<storyboard event="scroll" ifSubset="carousel:vertical">
-			<animation property="scale" 			from="0.5" 			to="0.5" 								duration="1" 			mode="linear"						/>
-			<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
-			<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-		</storyboard>
-		
-		<storyboard event="deactivate" ifSubset="carousel:vertical">
-			<animation property="scale" 			from="1" 			to="0.5"								duration="125" 			mode="linear"						/>
-			<animation property="opacity" 			from="0.9" 			to="0.9" 								duration="1" 			mode="linear"						/>
-			<animation property="opacity" 			from="0.9" 			to="0" 				begin="550" 		duration="200" 			mode="easeIn"						/>
-			<animation property="scale" 								to="0.3" 			begin="550" 		duration="200" 			mode="easeIn"						/>
-		</storyboard>
-		
-	</control>
+		<video name="sVideo" extra="true"												default="./resources/parts/default_${v.color}.mp4"/>
+		<video name="sVideo" extra="true"												path="{random}"/>
+		<video name="sVideo" extra="true"												path="./${system.theme}/video.m3u"/>
+		<video name="sVideo" extra="true"												path="./${v.custom}/${system.theme}/video.m3u"/>
+		<video name="sVideo" extra="true"		ifSubset="forceRandomVideos:yes"		path="{random}"/>
 
 
-	<!-- System videos -->
-	
-	<video
-		name="sVideo"
-		extra="true"
-		linearSmooth="true"
-		zIndex="800"
-		origin="${v.rvOrigin}"
-		pos="${v.rvPos}"
-		maxSize="${v.rvSize}"
-		roundCorners="0.016"
-	>
+		<!-- Logos extra -->
 		
-		<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+		<image
+			name="logoEx"
+			extra="true"
+			linearSmooth="true"
+			zIndex="900"
+			saturation="1.2"
+			color="ffffff"
+			origin="1 0.5"
+			pos="0.975 0.8418518518518519"
+			maxSize="0.2 0.12"
+			opacity="0"
+		>
 		
-		<storyboard>
-			<animation property="offsetX"			from="1"			to="1"									duration="650" 		mode="linear"							/>
-			<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
-		</storyboard>
-		
-		<storyboard ifSubset="randomVideos:bl">
-			<animation property="offsetX"			from="-1"			to="-1"									duration="650" 		mode="linear"							/>
-			<animation property="offsetX"								to="0"				begin="550"			duration="400" 		mode="easeInOut"						/>
-		</storyboard>
-		
-		<audio>${v.rvAudio}</audio>
-		
-		<visible if="${v.rvExclude}">false</visible>
-		<visible if="${v.displayVideo} == 'yes'">true</visible>
-		<visible if="${v.displayVideo} == 'no'">false</visible>
-		
-	</video>
+			<shader>:/shaders/shadow2.glsl</shader>
+			
+			<storyboard>
+				<animation property="opacity" 							to="1" 					begin="850"			duration="60" 			mode="linear"						/>
+				<animation property="offsetY" 			from="0.005"	to="0.005" 								duration="850" 			mode="linear"						/>
+				<animation property="offsetY" 							to="0" 					begin="850"			duration="60" 			mode="easeOut"						/>
+			</storyboard>
+			
+			<origin ifSubset="randomVideos:ur|br">0 1</origin>
+			<pos ifSubset="randomVideos:ur|br">0.025 0.9018518518518519</pos>
+			
+			<maxSize verticalScreen="true">0.4 0.08</maxSize>
+			<origin verticalScreen="true">1 0</origin>
+			<pos verticalScreen="true">0.97 0.05</pos>
+			
+			<origin verticalScreen="true" ifSubset="randomVideos:ur|no">1 1</origin>
+			<pos verticalScreen="true" ifSubset="randomVideos:ur|no">0.97 0.93</pos>
+			
+		</image>
 
 
-	<video name="sVideo" extra="true"												default="./resources/parts/default_${v.color}.mp4"/>
-	<video name="sVideo" extra="true"												path="{random}"/>
-	<video name="sVideo" extra="true"												path="./${system.theme}/video.m3u"/>
-	<video name="sVideo" extra="true"												path="./${v.custom}/${system.theme}/video.m3u"/>
-	<video name="sVideo" extra="true"		ifSubset="forceRandomVideos:yes"		path="{random}"/>
+		<image name="logoEx" extra="true"							path="./${system.theme}/logo.png"/>
+		<image name="logoEx" extra="true"							path="./${system.theme}${v.aes}/logo.png"/>
+		<image name="logoEx" extra="true"							path="./${system.theme}/logo-${lang}.png"/>
+		<image name="logoEx" extra="true"		region="us"			path="./${system.theme}/us/logo.png"/>
+		<image name="logoEx" extra="true"		region="jp"			path="./${system.theme}/jp/logo.png"/>
+		<image name="logoEx" extra="true"							path="./${v.custom}/${system.theme}/logo.png"/>
 
-
-	<!-- Logos extra -->
-	
-	<image
-		name="logoEx"
-		extra="true"
-		linearSmooth="true"
-		zIndex="900"
-		saturation="1.2"
-		color="ffffff"
-		origin="1 0.5"
-		pos="0.975 0.8418518518518519"
-		maxSize="0.2 0.12"
-		opacity="0"
-	>
-	
-		<shader>:/shaders/shadow2.glsl</shader>
-		
-		<storyboard>
-			<animation property="opacity" 							to="1" 					begin="850"			duration="60" 			mode="linear"						/>
-			<animation property="offsetY" 			from="0.005"	to="0.005" 								duration="850" 			mode="linear"						/>
-			<animation property="offsetY" 							to="0" 					begin="850"			duration="60" 			mode="easeOut"						/>
-		</storyboard>
-		
-		<origin ifSubset="randomVideos:ur|br">0 1</origin>
-		<pos ifSubset="randomVideos:ur|br">0.025 0.9018518518518519</pos>
-		
-		<maxSize verticalScreen="true">0.4 0.08</maxSize>
-		<origin verticalScreen="true">1 0</origin>
-		<pos verticalScreen="true">0.97 0.05</pos>
-		
-		<origin verticalScreen="true" ifSubset="randomVideos:ur|no">1 1</origin>
-		<pos verticalScreen="true" ifSubset="randomVideos:ur|no">0.97 0.93</pos>
-		
-	</image>
-
-
-	<image name="logoEx" extra="true"							path="./${system.theme}/logo.png"/>
-	<image name="logoEx" extra="true"							path="./${system.theme}${v.aes}/logo.png"/>
-	<image name="logoEx" extra="true"							path="./${system.theme}/logo-${lang}.png"/>
-	<image name="logoEx" extra="true"		region="us"			path="./${system.theme}/us/logo.png"/>
-	<image name="logoEx" extra="true"		region="jp"			path="./${system.theme}/jp/logo.png"/>
-	<image name="logoEx" extra="true"							path="./${v.custom}/${system.theme}/logo.png"/>
-
-</view>
+	</view>
 
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- GAMELISTS COMMONS BASIC DETAILED GRID GAMECAROUSEL                                                                                                                                                            -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="basic,detailed,grid,gamecarousel">
+	<view name="basic,detailed,grid,gamecarousel">
 
-	<!-- Console -->
-	
-	<text
-		name="console"
-		ifSubset="dev:yes"
-		extra="true"
-		zIndex="5000"
-		fontPath=":/fonts/Welbut__.ttf"
-		fontSize="0.016"
-		size="1 1"
-		alignment="left"
-		verticalAlignment="top"
-		padding="0.025 0.02 0.01 0.01"
-		color="00ff00"
-		glowColor="000000"
-		glowOffset="0"
-		glowSize="4"
-	>
+		<!-- Console -->
+		
+		<text
+			name="console"
+			ifSubset="dev:yes"
+			extra="true"
+			zIndex="5000"
+			fontPath=":/fonts/Welbut__.ttf"
+			fontSize="0.016"
+			size="1 1"
+			alignment="left"
+			verticalAlignment="top"
+			padding="0.025 0.02 0.01 0.01"
+			color="00ff00"
+			glowColor="000000"
+			glowOffset="0"
+			glowSize="4"
+		>
 
-		<text>
+			<text>
 DEV CONSOLE:
 
 {game:name}
@@ -1313,677 +1322,677 @@ Mix: {game:mix}
 
 Favorite: {game:favorite}
 Game played: {game:played}
+			</text>
+			
 		</text>
+
+
+		<!-- Open gamelist Mask -->
 		
-	</text>
-
-
-	<!-- Open gamelist Mask -->
-	
-	<image
-		name="openMask"
-		extra="true"
-		path=":/plain.png"
-		zIndex="2000"
-		color="${c.base}ef"
-		size="1 1"
-		origin="0.5 0.5"
-		pos="0.5 0.5"
-		opacity="1"
-	>
-	
-		<storyboard>
-			<animation property="opacity" 							to="0" 					begin="500"			duration="300" 			mode="easeInQuint"					/>
-		</storyboard>
+		<image
+			name="openMask"
+			extra="true"
+			path=":/plain.png"
+			zIndex="2000"
+			color="${c.base}ef"
+			size="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			opacity="1"
+		>
 		
-	</image>
+			<storyboard>
+				<animation property="opacity" 							to="0" 					begin="500"			duration="300" 			mode="easeInQuint"					/>
+			</storyboard>
+			
+		</image>
 
 
-	<!-- Logos> -->
-	
-	<image
-		name="logo"
-		zIndex="2100"
-		pos="0.5 0.5"
-		origin="0.5 0.5"
-		maxSize="0.3 0.18"
-		colorEnd="cccccc"
-	/>
+		<!-- Logos> -->
+		
+		<image
+			name="logo"
+			zIndex="2100"
+			pos="0.5 0.5"
+			origin="0.5 0.5"
+			maxSize="0.3 0.18"
+			colorEnd="cccccc"
+		/>
 
 
-	<!-- Shade over backgrounds properties for gamelists -->
-	
-	<image
-		name="shadeBackground"
-		extra="true"
-		color="${c.base}cc"
-		colorEnd="${c.base}1a"
-		gradientType="vertical"
-		opacity="0.7"
-	/>
+		<!-- Shade over backgrounds properties for gamelists -->
+		
+		<image
+			name="shadeBackground"
+			extra="true"
+			color="${c.base}cc"
+			colorEnd="${c.base}1a"
+			gradientType="vertical"
+			opacity="0.7"
+		/>
 
 
-	<!-- Theme or customs backgrounds properties for all gamelist-->
-	
-	<image
-		name="gamelistBackground"
-		extra="true"
-		linearSmooth="true"
-		minSize="1 1"
-		origin="0.5 0.5"
-		pos="0.5 0.5"
-		zIndex="199"
-	>
-	
-		<shader><path>:/shaders/blur.glsl</path><blur>4</blur></shader>
-	
-	</image>
-	
-	<image name="gamelistBackground" extra="true"		path=":/parts/default_fanart.jpg"/>/>
-	<image name="gamelistBackground" extra="true"		path="./${v.custom}/default_fanart.jpg"/>
-	<image name="gamelistBackground" extra="true"		path="./${system.theme}/wallpaper.jpg"/>
-	<image name="gamelistBackground" extra="true"		path="./${v.custom}/theme.jpg"/>
-	<image name="gamelistBackground" extra="true"		path="./${v.custom}/${system.theme}/wallpaper.jpg"/>
-	
-</view>
+		<!-- Theme or customs backgrounds properties for all gamelist-->
+		
+		<image
+			name="gamelistBackground"
+			extra="true"
+			linearSmooth="true"
+			minSize="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="199"
+		>
+		
+			<shader><path>:/shaders/blur.glsl</path><blur>4</blur></shader>
+		
+		</image>
+		
+		<image name="gamelistBackground" extra="true"		path=":/parts/default_fanart.jpg"/>/>
+		<image name="gamelistBackground" extra="true"		path="./${v.custom}/default_fanart.jpg"/>
+		<image name="gamelistBackground" extra="true"		path="./${system.theme}/wallpaper.jpg"/>
+		<image name="gamelistBackground" extra="true"		path="./${v.custom}/theme.jpg"/>
+		<image name="gamelistBackground" extra="true"		path="./${v.custom}/${system.theme}/wallpaper.jpg"/>
+		
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- SCRAPED GAMELISTS COMMONS DETAILED GRID GAMECAROUSEL                                                                                                                                                          -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="detailed,grid,gamecarousel">
+	<view name="detailed,grid,gamecarousel">
 
-	<!-- Extended Games Infos-->
-	
-	<text
-		name="gamesExUL,gamesExULbis,gamesEx2UL,gamesEx3UL,gamesEx4UL"
-		extra="true"
-		zIndex="1200"
-		forceUppercase="true"
-		fontPath=":/fonts/CabinCondensed-Bold.ttf"
-		glowColor="${c.glowColor}"
-		glowOffset="2"
-		glowSize="1"
-		multiLine="false"
-	/>
-
-
-	<text
-		name="gamesExUL"
-		extra="true"
-		color="${c.textHeader}"
-		fontSize="0.03"
-		padding="0.025 0.045 0 0"
-		text="{game:name} • {game:releaseyear}"
-	>
+		<!-- Extended Games Infos-->
 		
-		<visible>({game:releaseyear}) > 1970</visible>
-		<fontSize verticalScreen="true">0.035</fontSize>
-		
-	</text>
+		<text
+			name="gamesExUL,gamesExULbis,gamesEx2UL,gamesEx3UL,gamesEx4UL"
+			extra="true"
+			zIndex="1200"
+			forceUppercase="true"
+			fontPath=":/fonts/CabinCondensed-Bold.ttf"
+			glowColor="${c.glowColor}"
+			glowOffset="2"
+			glowSize="1"
+			multiLine="false"
+		/>
 
 
-	<text
-		name="gamesExULbis"
-		extra="true"
-		color="${c.textHeader}"
-		fontSize="0.03"
-		padding="0.025 0.045 0 0"
-		text="{game:name}"
-	>
-		
-		<visible>({game:releaseyear}) == 1970</visible>
-		<fontSize verticalScreen="true">0.035</fontSize>
-		
-	</text>
+		<text
+			name="gamesExUL"
+			extra="true"
+			color="${c.textHeader}"
+			fontSize="0.03"
+			padding="0.025 0.045 0 0"
+			text="{game:name} • {game:releaseyear}"
+		>
+			
+			<visible>({game:releaseyear}) > 1970</visible>
+			<fontSize verticalScreen="true">0.035</fontSize>
+			
+		</text>
 
 
-	<text
-		name="gamesEx2UL"
-		extra="true"
-		color="${c.selected}"
-		fontSize="0.024"
-		padding="0.025 0.0825 0 0"
-		text="{game:genre} • {game:developer}"
-	>
-		
-		<fontSize verticalScreen="true">0.025</fontSize>
-		<padding verticalScreen="true">0.025 0.065 0 0</padding>
-
-	</text>
-
-
-	<text
-		name="gamesEx3UL"
-		extra="true"
-		color="ffd13b"
-		fontSize="0.019"
-		padding="0.025 0.119 0 0"
-		glowOffset="0"
-		glowSize="2"
-		glowColor="${c.glowColor2}"
-		text="{game:stars}"
-	>
-		
-		<fontSize verticalScreen="true">0.015</fontSize>
-		<padding verticalScreen="true">0.025 0.103 0 0</padding>
-		
-	</text>
+		<text
+			name="gamesExULbis"
+			extra="true"
+			color="${c.textHeader}"
+			fontSize="0.03"
+			padding="0.025 0.045 0 0"
+			text="{game:name}"
+		>
+			
+			<visible>({game:releaseyear}) == 1970</visible>
+			<fontSize verticalScreen="true">0.035</fontSize>
+			
+		</text>
 
 
-	<text
-		name="gamesEx4UL"
-		extra="true"
-		color="${c.selected}"
-		fontPath=":/fonts/players.ttf"
-		fontSize="0.034"
-		padding="0.025 0.138 0 0"
-		glowOffset="0"
-		glowSize="2"
-		glowColor="${c.glowColor2}"
-		text="{game:players}"
-	>
+		<text
+			name="gamesEx2UL"
+			extra="true"
+			color="${c.selected}"
+			fontSize="0.024"
+			padding="0.025 0.0825 0 0"
+			text="{game:genre} • {game:developer}"
+		>
+			
+			<fontSize verticalScreen="true">0.025</fontSize>
+			<padding verticalScreen="true">0.025 0.065 0 0</padding>
 
-		<visible>({game:players}) > 0</visible>
-		<fontSize verticalScreen="true">0.015</fontSize>
-		<padding verticalScreen="true">0.025 0.103 0 0</padding>
-
-	</text>
+		</text>
 
 
-	<!-- Logos> -->
-	
-	<image
-		name="logo"
-	>
-		
-		<storyboard>
-			<animation property="origin" 								to="1 0" 				begin="725"			duration="1" 			mode="easeInOut"				/>
-			<animation property="pos" 									to="0.975 0.055" 		begin="725"			duration="1" 			mode="linear"				/>
-			<animation property="offsetY" 			from="0.01" 								begin="725"			duration="75" 			mode="linear"				/>
-			<animation property="opacity" 								to="0" 					begin="650"			duration="75" 			mode="easeInOut"	autoreverse="true"			/>
-			<animation property="scale" 								to="0.66" 				begin="725"			duration="1" 			mode="easeInOut"				/>
-		</storyboard>
-		
-		<storyboard verticalScreen="true">
-			<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-			<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-		</storyboard>
-
-		<maxSize verticalScreen="true">0.6 0.1</maxSize>
-	
-	</image>
+		<text
+			name="gamesEx3UL"
+			extra="true"
+			color="ffd13b"
+			fontSize="0.019"
+			padding="0.025 0.119 0 0"
+			glowOffset="0"
+			glowSize="2"
+			glowColor="${c.glowColor2}"
+			text="{game:stars}"
+		>
+			
+			<fontSize verticalScreen="true">0.015</fontSize>
+			<padding verticalScreen="true">0.025 0.103 0 0</padding>
+			
+		</text>
 
 
-	<!-- Game Screenshot -->
-	
-	<image
-		name="gameScreenshot"
-		extra="true"
-		ifSubset="gamelistBackgrounds:screenshots"
-		linearSmooth="false"
-		minSize="1 1"
-		origin="0.5 0.5"
-		pos="0.5 0.5"
-		zIndex="199"
-	>
+		<text
+			name="gamesEx4UL"
+			extra="true"
+			color="${c.selected}"
+			fontPath=":/fonts/players.ttf"
+			fontSize="0.034"
+			padding="0.025 0.138 0 0"
+			glowOffset="0"
+			glowSize="2"
+			glowColor="${c.glowColor2}"
+			text="{game:players}"
+		>
 
-		<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-		
-		<storyboard event="activateNext">
-			<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-		</storyboard>
-		
-		<storyboard event="activatePrev">
-			<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-		</storyboard>
-		
-		<storyboard event="deactivatePrev">
-			<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-		</storyboard>
-		
-		<storyboard event="deactivateNext">
-			<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-		</storyboard>
-		
-		<visible if="${v.fanartExclude}">false</visible>
-		
-	</image>
+			<visible>({game:players}) > 0</visible>
+			<fontSize verticalScreen="true">0.015</fontSize>
+			<padding verticalScreen="true">0.025 0.103 0 0</padding>
 
-	<image name="gameScreenshot" extra="true"			default=":/parts/default_screenshot.jpg"/>
-	<image name="gameScreenshot" extra="true"			default="./${v.custom}/default_screenshot.jpg"/>
-	<image name="gameScreenshot" extra="true"			path="{game:image}"/>
+		</text>
 
 
-	<!-- Game default fanart-->
-	
-	<image
-		name="gameDefaultFanarts"
-		extra="true"
-		ifSubset="gamelistBackgrounds:fanarts"
-		linearSmooth="false"
-		minSize="1 1"
-		origin="0.5 0.5"
-		pos="0.5 0.5"
-		zIndex="199"
-	>
+		<!-- Logos> -->
 		
-		<visible>!exists({game:fanart})</visible>
-		
-		<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-		
-		<storyboard event="activateNext">
-			<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-		</storyboard>
-		
-		<storyboard event="activatePrev">
-			<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-		</storyboard>
-		
-		<storyboard event="deactivatePrev">
-			<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-		</storyboard>
-		
-		<storyboard event="deactivateNext">
-			<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-		</storyboard>
-		
-		<visible if="${v.fanartExclude}">false</visible>
-		
-	</image>
+		<image
+			name="logo"
+		>
+			
+			<storyboard>
+				<animation property="origin" 								to="1 0" 				begin="725"			duration="1" 			mode="easeInOut"				/>
+				<animation property="pos" 									to="0.975 0.055" 		begin="725"			duration="1" 			mode="linear"				/>
+				<animation property="offsetY" 			from="0.01" 								begin="725"			duration="75" 			mode="linear"				/>
+				<animation property="opacity" 								to="0" 					begin="650"			duration="75" 			mode="easeInOut"	autoreverse="true"			/>
+				<animation property="scale" 								to="0.66" 				begin="725"			duration="1" 			mode="easeInOut"				/>
+			</storyboard>
+			
+			<storyboard verticalScreen="true">
+				<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+				<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+			</storyboard>
 
-	<image name="gameDefaultFanarts" extra="true"			default=":/parts/default_screenshot.jpg"/>
-	<image name="gameDefaultFanarts" extra="true"			default="./${v.custom}/default_screenshot.jpg"/>
-	<image name="gameDefaultFanarts" extra="true"			path="{game:image}"/>
+			<maxSize verticalScreen="true">0.6 0.1</maxSize>
+		
+		</image>
 
 
-	<!-- Game fanart-->
-	
-	<image
-		name="gameFanart"
-		extra="true"
-		ifSubset="gamelistBackgrounds:fanarts"
-		linearSmooth="true"
-		minSize="1 1"
-		origin="0.5 0.5"
-		pos="0.5 0.5"
-		zIndex="200"
-		path="{game:fanart}"
-	>
+		<!-- Game Screenshot -->
 		
-		<visible>exists({game:fanart})</visible>
-		
-		<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
-		
-		<storyboard event="activateNext">
-			<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-		</storyboard>
-		
-		<storyboard event="activatePrev">
-			<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-		</storyboard>
-		
-		<storyboard event="deactivatePrev">
-			<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-		</storyboard>
-		
-		<storyboard event="deactivateNext">
-			<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-		</storyboard>
-		
-		<visible if="${v.fanartExclude}">false</visible>
-		
-	</image>
+		<image
+			name="gameScreenshot"
+			extra="true"
+			ifSubset="gamelistBackgrounds:screenshots"
+			linearSmooth="false"
+			minSize="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="199"
+		>
+
+			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
+			
+			<storyboard event="activateNext">
+				<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+			</storyboard>
+			
+			<storyboard event="activatePrev">
+				<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+			</storyboard>
+			
+			<storyboard event="deactivatePrev">
+				<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+			</storyboard>
+			
+			<storyboard event="deactivateNext">
+				<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+			</storyboard>
+			
+			<visible if="${v.fanartExclude}">false</visible>
+			
+		</image>
+
+		<image name="gameScreenshot" extra="true"			default=":/parts/default_screenshot.jpg"/>
+		<image name="gameScreenshot" extra="true"			default="./${v.custom}/default_screenshot.jpg"/>
+		<image name="gameScreenshot" extra="true"			path="{game:image}"/>
 
 
-	<!-- Theme or customs backgrounds properties for scraped gamelist-->
-	
-	<image
-		name="gamelistBackground"
-		extra="true"
-	>
+		<!-- Game default fanart-->
+		
+		<image
+			name="gameDefaultFanarts"
+			extra="true"
+			ifSubset="gamelistBackgrounds:fanarts"
+			linearSmooth="false"
+			minSize="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="199"
+		>
+			
+			<visible>!exists({game:fanart})</visible>
+			
+			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
+			
+			<storyboard event="activateNext">
+				<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+			</storyboard>
+			
+			<storyboard event="activatePrev">
+				<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+			</storyboard>
+			
+			<storyboard event="deactivatePrev">
+				<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+			</storyboard>
+			
+			<storyboard event="deactivateNext">
+				<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+			</storyboard>
+			
+			<visible if="${v.fanartExclude}">false</visible>
+			
+		</image>
 
-		<visible ifSubset="gamelistBackgrounds:fanarts|screenshots">false</visible>
+		<image name="gameDefaultFanarts" extra="true"			default=":/parts/default_screenshot.jpg"/>
+		<image name="gameDefaultFanarts" extra="true"			default="./${v.custom}/default_screenshot.jpg"/>
+		<image name="gameDefaultFanarts" extra="true"			path="{game:image}"/>
 
-	</image>
 
-</view>
+		<!-- Game fanart-->
+		
+		<image
+			name="gameFanart"
+			extra="true"
+			ifSubset="gamelistBackgrounds:fanarts"
+			linearSmooth="true"
+			minSize="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="200"
+			path="{game:fanart}"
+		>
+			
+			<visible>exists({game:fanart})</visible>
+			
+			<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
+			
+			<storyboard event="activateNext">
+				<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
+			</storyboard>
+			
+			<storyboard event="activatePrev">
+				<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
+			</storyboard>
+			
+			<storyboard event="deactivatePrev">
+				<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
+			</storyboard>
+			
+			<storyboard event="deactivateNext">
+				<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
+			</storyboard>
+			
+			<visible if="${v.fanartExclude}">false</visible>
+			
+		</image>
+
+
+		<!-- Theme or customs backgrounds properties for scraped gamelist-->
+		
+		<image
+			name="gamelistBackground"
+			extra="true"
+		>
+
+			<visible ifSubset="gamelistBackgrounds:fanarts|screenshots">false</visible>
+
+		</image>
+
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- BASIC VIEW                                                                                                                                                                                                    -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="basic">
+	<view name="basic">
 
-	<!-- Logos> -->
-	
-	<image
-		name="logo"
-	>
+		<!-- Logos> -->
+		
+		<image
+			name="logo"
+		>
 
-		<storyboard>
-			<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-			<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-			<animation property="scale" 								to="0.66" 				begin="650"			duration="150" 			mode="easeInOut"				/>
-		</storyboard>
+			<storyboard>
+				<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+				<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+				<animation property="scale" 								to="0.66" 				begin="650"			duration="150" 			mode="easeInOut"				/>
+			</storyboard>
 
-		<storyboard verticalScreen="true">
-			<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-			<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-		</storyboard>
+			<storyboard verticalScreen="true">
+				<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+				<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+			</storyboard>
 
-		<maxSize verticalScreen="true">0.6 0.1</maxSize>
+			<maxSize verticalScreen="true">0.6 0.1</maxSize>
 
-	</image>
-
-
-	<!-- Game list -->
-	
-	<textlist
-		name="gamelist"
-		zIndex="1000"
-		glowColor="${c.glowColor}"
-		glowOffset="2"
-		glowSize="1"
-		fontPath=":/fonts/Cabin-Bold.ttf"
-		fontSize="0.025"
-		lines="15"
-		forceUppercase="true"
-		horizontalMargin="0.01"
-		origin="0.5 0.5"
-		pos="0.5 0.545"
-		size="0.95 0.78"
-		primaryColor="${c.text}"
-		secondaryColor="${c.text}"
-		extraTextColor="${c.textHeader}ee"
-		extraTextSelectedColor="${c.selected}"
-		selectedColor="${c.selected}"
-		selectorColor="${c.textHeader}"
-		selectorColorEnd="${c.menuSelector}"
-		selectorImagePath=":/parts/selectorBasic.png"
-		alignment="center"
-	>
-
-		<lines verticalScreen="true">25</lines>
-		<pos verticalScreen="true">0.5 0.14</pos>
-		<size verticalScreen="true">1 0.82</size>
-
-	</textlist>
-
-	<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>
-	<textlist name="gamelist"			scrollSound="./${v.custom}/scroll.wav"/>
-	<textlist name="gamelist"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
+		</image>
 
 
-	<!-- Gamelist frame -->
-	
-	<image
-		name="gamelistFrame"
-		extra="true"
-		linearSmooth="true"
-		zIndex="900"
-		path=":/bFrame.png"
-		color="${c.frame}"
-		colorEnd="${ce.frame}"
-		gradientType="vertical"
-		roundCorners="0.005"
-		opacity="0.15"
-		origin="0.5 0.5"
-		pos="0.5 0.545"
-		size="0.95 0.78"
-	/>
+		<!-- Game list -->
+		
+		<textlist
+			name="gamelist"
+			zIndex="1000"
+			glowColor="${c.glowColor}"
+			glowOffset="2"
+			glowSize="1"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.025"
+			lines="15"
+			forceUppercase="true"
+			horizontalMargin="0.01"
+			origin="0.5 0.5"
+			pos="0.5 0.545"
+			size="0.95 0.78"
+			primaryColor="${c.text}"
+			secondaryColor="${c.text}"
+			extraTextColor="${c.textHeader}ee"
+			extraTextSelectedColor="${c.selected}"
+			selectedColor="${c.selected}"
+			selectorColor="${c.textHeader}"
+			selectorColorEnd="${c.menuSelector}"
+			selectorImagePath=":/parts/selectorBasic.png"
+			alignment="center"
+		>
 
-</view>
+			<lines verticalScreen="true">25</lines>
+			<pos verticalScreen="true">0.5 0.14</pos>
+			<size verticalScreen="true">1 0.82</size>
+
+		</textlist>
+
+		<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>
+		<textlist name="gamelist"			scrollSound="./${v.custom}/scroll.wav"/>
+		<textlist name="gamelist"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
+
+
+		<!-- Gamelist frame -->
+		
+		<image
+			name="gamelistFrame"
+			extra="true"
+			linearSmooth="true"
+			zIndex="900"
+			path=":/bFrame.png"
+			color="${c.frame}"
+			colorEnd="${ce.frame}"
+			gradientType="vertical"
+			roundCorners="0.005"
+			opacity="0.15"
+			origin="0.5 0.5"
+			pos="0.5 0.545"
+			size="0.95 0.78"
+		/>
+
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- DETAILED VIEW                                                                                                                                                                                                 -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="detailed">
+	<view name="detailed">
 
-	<!-- Game list -->
-	
-	<textlist
-		name="gamelist"
-		zIndex="1000"
-		glowColor="${c.glowColor}"
-		glowOffset="2"
-		glowSize="1"
-		fontPath=":/fonts/Cabin-Bold.ttf"
-		fontSize="0.025"
-		lines="5"
-		forceUppercase="true"
-		horizontalMargin="0.01"
-		origin="0.5 0.5"
-		pos="0.22 0.7718518518518519"
-		size="0.39 0.26"
-		primaryColor="${c.text}"
-		secondaryColor="${c.text}"
-		extraTextColor="${c.textHeader}ee"
-		extraTextSelectedColor="${c.selected}"
-		selectedColor="${c.selected}"
-		selectorColor="${c.textHeader}"
-		selectorColorEnd="${c.menuSelector}"
-		selectorImagePath=":/parts/selectorBasicShort.png"
-		alignment="center"
-	>
+		<!-- Game list -->
+		
+		<textlist
+			name="gamelist"
+			zIndex="1000"
+			glowColor="${c.glowColor}"
+			glowOffset="2"
+			glowSize="1"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.025"
+			lines="5"
+			forceUppercase="true"
+			horizontalMargin="0.01"
+			origin="0.5 0.5"
+			pos="0.22 0.7718518518518519"
+			size="0.39 0.26"
+			primaryColor="${c.text}"
+			secondaryColor="${c.text}"
+			extraTextColor="${c.textHeader}ee"
+			extraTextSelectedColor="${c.selected}"
+			selectedColor="${c.selected}"
+			selectorColor="${c.textHeader}"
+			selectorColorEnd="${c.menuSelector}"
+			selectorImagePath=":/parts/selectorBasicShort.png"
+			alignment="center"
+		>
 
-			<lines verticalScreen="true">25</lines>
-			<pos verticalScreen="true">0.5 0.14</pos>
-			<size verticalScreen="true">1 0.82</size>
-			
-	</textlist>
-
-
-	<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>
-	<textlist name="gamelist"			scrollSound="./${v.custom}/scroll.wav"/>
-	<textlist name="gamelist"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
+				<lines verticalScreen="true">25</lines>
+				<pos verticalScreen="true">0.5 0.14</pos>
+				<size verticalScreen="true">1 0.82</size>
+				
+		</textlist>
 
 
-	<!-- Gamelist frame -->
-	
-	<image
-		name="gamelistFrame"
-		extra="true"
-		linearSmooth="true"
-		zIndex="900"
-		path=":/dFrame.png"
-		color="${c.frame}"
-		colorEnd="${ce.frame}"
-		gradientType="vertical"
-		roundCorners="0.005"
-		opacity="0.45"
-		origin="0.5 1"
-		pos="0.22 0.9018518518518519"
-		size="0.39 0.26"
-	/>
+		<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>
+		<textlist name="gamelist"			scrollSound="./${v.custom}/scroll.wav"/>
+		<textlist name="gamelist"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
 
 
-	<!-- Game video -->
-	
-	<video
-		name="md_video"
-		zIndex="1100"
-		linearSmooth="true"
-		origin="1 1"
-		pos="0.975 0.9018518518518519"
-		maxSize="0.5 0.32"
-		roundCorners="0.019"
-		showSnapshotNoVideo="true"
-		showSnapshotDelay="false"
-		delay="0.3"
-		effect="none"
-		audio="true"
-	>
-
-		<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
-
-		<storyboard event="activateNext">
-			<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
-			<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
-		</storyboard>
-
-		<storyboard event="activatePrev">
-			<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
-			<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
-		</storyboard>
-
-		<storyboard event="deactivatePrev">
-			<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
-		</storyboard>
-
-		<storyboard event="deactivateNext">
-			<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
-		</storyboard>
-
-	</video>
+		<!-- Gamelist frame -->
+		
+		<image
+			name="gamelistFrame"
+			extra="true"
+			linearSmooth="true"
+			zIndex="900"
+			path=":/dFrame.png"
+			color="${c.frame}"
+			colorEnd="${ce.frame}"
+			gradientType="vertical"
+			roundCorners="0.005"
+			opacity="0.45"
+			origin="0.5 1"
+			pos="0.22 0.9018518518518519"
+			size="0.39 0.26"
+		/>
 
 
-	<!-- Game thumbnail -->
-	
-	<image
-		name="gameThumbnail"
-		extra="true"
-		default=":/parts/noThumb.png"
-		path="{game:thumbnail}"
-		linearSmooth="true"
-		zIndex="1000"
-		origin="0 1"
-		pos="0.025 0.62"
-		maxSize="0.14625 0.26"
-	>
+		<!-- Game video -->
+		
+		<video
+			name="md_video"
+			zIndex="1100"
+			linearSmooth="true"
+			origin="1 1"
+			pos="0.975 0.9018518518518519"
+			maxSize="0.5 0.32"
+			roundCorners="0.019"
+			showSnapshotNoVideo="true"
+			showSnapshotDelay="false"
+			delay="0.3"
+			effect="none"
+			audio="true"
+		>
 
-		<shader>:/shaders/shadow3.glsl</shader>
+			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
 
-	</image>
+			<storyboard event="activateNext">
+				<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
+				<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
+			</storyboard>
+
+			<storyboard event="activatePrev">
+				<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
+				<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
+			</storyboard>
+
+			<storyboard event="deactivatePrev">
+				<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
+			</storyboard>
+
+			<storyboard event="deactivateNext">
+				<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
+			</storyboard>
+
+		</video>
 
 
-	<!-- Game marquee -->
-	
-	<image
-		name="md_marquee"
-		linearSmooth="true"
-		zIndex="1000"
-		origin="0.5 1"
-		pos="0.280625 0.62"
-		maxSize="0.21 0.12"
-		saturation="1.2"
-		default=":/parts/noMarquee.png"
-	>
+		<!-- Game thumbnail -->
+		
+		<image
+			name="gameThumbnail"
+			extra="true"
+			default=":/parts/noThumb.png"
+			path="{game:thumbnail}"
+			linearSmooth="true"
+			zIndex="1000"
+			origin="0 1"
+			pos="0.025 0.62"
+			maxSize="0.14625 0.26"
+		>
 
-		<shader>:/shaders/shadow2.glsl</shader>
+			<shader>:/shaders/shadow3.glsl</shader>
 
-	</image>
+		</image>
 
 
-	<!-- Game desc -->
-	
-	<text
-		name="gameDesc"
-		extra="true"
-		zIndex="1000"
-		fontSize="0.02"
-		fontPath=":/fonts/Welbut__.ttf"
-		glowColor="${c.glowColor}"
-		glowOffset="1"
-		glowSize="2"
-		forceUppercase="false"
-		alignment="left"
-		origin="0 1"
-		pos ="0 0.955"
-		padding="0.025 0 0 0"
-		verticalAlignment="bottom"
-		opacity="0"
-		color="${c.text}"
-		singleLineScroll="true"
-		w="1"
-	>
+		<!-- Game marquee -->
+		
+		<image
+			name="md_marquee"
+			linearSmooth="true"
+			zIndex="1000"
+			origin="0.5 1"
+			pos="0.280625 0.62"
+			maxSize="0.21 0.12"
+			saturation="1.2"
+			default=":/parts/noMarquee.png"
+		>
 
-		<storyboard event="open">
-			<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
-		</storyboard>
+			<shader>:/shaders/shadow2.glsl</shader>
 
-		<storyboard event="activatePrev">
-			<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
-		</storyboard>
+		</image>
 
-		<storyboard event="activateNext">
-			<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
-		</storyboard>
 
-		<storyboard event="deactivatePrev">
-			<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
-		</storyboard>
+		<!-- Game desc -->
+		
+		<text
+			name="gameDesc"
+			extra="true"
+			zIndex="1000"
+			fontSize="0.02"
+			fontPath=":/fonts/Welbut__.ttf"
+			glowColor="${c.glowColor}"
+			glowOffset="1"
+			glowSize="2"
+			forceUppercase="false"
+			alignment="left"
+			origin="0 1"
+			pos ="0 0.955"
+			padding="0.025 0 0 0"
+			verticalAlignment="bottom"
+			opacity="0"
+			color="${c.text}"
+			singleLineScroll="true"
+			w="1"
+		>
 
-		<storyboard event="deactivateNext">
-			<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
-		</storyboard>
+			<storyboard event="open">
+				<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
+			</storyboard>
 
-		<text>{game:desc}</text>
+			<storyboard event="activatePrev">
+				<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
+			</storyboard>
 
-		<pos verticalScreen="true">0 0.965</pos>
+			<storyboard event="activateNext">
+				<animation property="opacity"								to="1"							 		duration="1" 			mode="linear"							/>
+			</storyboard>
 
-	</text>
+			<storyboard event="deactivatePrev">
+				<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
+			</storyboard>
 
-</view>
+			<storyboard event="deactivateNext">
+				<animation property="opacity"								to="0"							 		duration="1" 			mode="linear"							/>
+			</storyboard>
+
+			<text>{game:desc}</text>
+
+			<pos verticalScreen="true">0 0.965</pos>
+
+		</text>
+
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- GRID VIEW                                                                                                                                                                                                     -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="grid">
+	<view name="grid">
 
-	<imagegrid name="gamegrid"			scrollSound=":/sounds/scroll.wav"/>
-	<imagegrid name="gamegrid"			scrollSound="./${v.custom}/scroll.wav"/>
-	<imagegrid name="gamegrid"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
+		<imagegrid name="gamegrid"			scrollSound=":/sounds/scroll.wav"/>
+		<imagegrid name="gamegrid"			scrollSound="./${v.custom}/scroll.wav"/>
+		<imagegrid name="gamegrid"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
 
-</view>
+	</view>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <!-- GAMECAROUSEL VIEW                                                                                                                                                                                             -->
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<view name="gamecarousel">
+	<view name="gamecarousel">
 
-	<gamecarousel
-		name="gamecarousel"
-		zIndex="1000"
-		type="vertical_wheel"
-		origin="1 0"
-		pos="1 0"
-		size="0.34 1"
-		imageSource="marquee"
-		logoScale="2"
-		logoSize="0.46 0.18"
-		logoAlignment="center"
-		logoRotation="${v.wheelFlip}17"
-		logoRotationOrigin="3 0.5"
-		maxLogoCount="9"
-	/>
+		<gamecarousel
+			name="gamecarousel"
+			zIndex="1000"
+			type="vertical_wheel"
+			origin="1 0"
+			pos="1 0"
+			size="0.34 1"
+			imageSource="marquee"
+			logoScale="2"
+			logoSize="0.46 0.18"
+			logoAlignment="center"
+			logoRotation="${v.wheelFlip}17"
+			logoRotationOrigin="3 0.5"
+			maxLogoCount="9"
+		/>
 
-	<gamecarousel name="gamecarousel"			scrollSound=":/sounds/scroll.wav"/>
-	<gamecarousel name="gamecarousel"			scrollSound="./${v.custom}/scroll.wav"/>
-	<gamecarousel name="gamecarousel"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
-
-
-	<image
-		name="gamecarouselLogo"
-		saturation="1.2"
-	/>
+		<gamecarousel name="gamecarousel"			scrollSound=":/sounds/scroll.wav"/>
+		<gamecarousel name="gamecarousel"			scrollSound="./${v.custom}/scroll.wav"/>
+		<gamecarousel name="gamecarousel"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
 
 
-	<text
-		name="gamecarouselLogoText"
-		color="${c.textHeader}"
-		glowColor="${c.glowColor}"
-		glowSize="8"
-		glowOffset="0"
-		lineSpacing="1.0"
-		fontPath=":/fonts/SCOREBOARD.ttf"
-		fontSize="0.12"
-		forceUppercase="true"
-	/>		
+		<image
+			name="gamecarouselLogo"
+			saturation="1.2"
+		/>
 
-</view>
+
+		<text
+			name="gamecarouselLogoText"
+			color="${c.textHeader}"
+			glowColor="${c.glowColor}"
+			glowSize="8"
+			glowOffset="0"
+			lineSpacing="1.0"
+			fontPath=":/fonts/SCOREBOARD.ttf"
+			fontSize="0.12"
+			forceUppercase="true"
+		/>		
+
+	</view>
 
 </theme>
