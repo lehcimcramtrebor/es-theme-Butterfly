@@ -42,3 +42,5 @@ SCROLL SOUNDS:
 
 You can customize general scroll sound by using "scroll.wav" file at root of "_ButterflyCustom" folder, and you can customize
 sounds of each gamelist with the same file placed in themes folders.
+
+GAMES MEDIAS: Read "READ_ME.txt" file in "_GAMES_MEDIAS_" folder to going to next level customisation (games images customisation).

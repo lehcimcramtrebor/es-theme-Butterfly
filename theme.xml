@@ -846,6 +846,9 @@ Group: ${system.group}
 Savestates: ${system.savestates}
 Netplay: ${system.netplay}
 Cheevos: ${system.cheevos}
+
+Theme path
+${themePath}
 			</text>
 			
 		</text>
@@ -1276,8 +1279,8 @@ Cheevos: ${system.cheevos}
 			ifSubset="dev:yes"
 			extra="true"
 			zIndex="5000"
-			fontPath=":/fonts/Welbut__.ttf"
-			fontSize="0.016"
+			fontPath=":/fonts/Cabin-Regular.ttf"
+			fontSize="0.020"
 			size="1 1"
 			alignment="left"
 			verticalAlignment="top"
@@ -1304,24 +1307,15 @@ File: {game:rom}
 CRC32: {game:crc32}
 MD5: {game:md5}
 
-Video: {game:video}
-Image: {game:image}
-Fanart: {game:fanart}
-Thumbnail: {game:thumbnail}
-Marquee: {game:marquee}
-Boxback: {game:boxback}
-Manual: {game:manual}
-Map: {game:map}
-Titleshot: {game:titleshot}
-Magazine: {game:magazine}
-Bezel: {game:bezel}
-Cartridge: {game:cartridge}
-Boxart: {game:boxart}
-Wheel: {game:wheel}
-Mix: {game:mix}
-
 Favorite: {game:favorite}
 Game played: {game:played}
+
+FILE TO CUSTOMIZE FANART OF THIS GAME:
+_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-fanart.jpg
+
+FILE TO CUSTOMIZE SCREENSHOT OF THIS GAME:
+_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
+
 			</text>
 			
 		</text>
@@ -1524,7 +1518,9 @@ Game played: {game:played}
 		</image>
 
 
-		<!-- Game Screenshot -->
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+		<!-- Game Screenshot if no custom screenshot found -->
 		
 		<image
 			name="gameScreenshot"
@@ -1537,23 +1533,9 @@ Game played: {game:played}
 			zIndex="199"
 		>
 
+			<visible>!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")</visible>
+
 			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-			
-			<storyboard event="activateNext">
-				<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-			</storyboard>
-			
-			<storyboard event="activatePrev">
-				<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-			</storyboard>
-			
-			<storyboard event="deactivatePrev">
-				<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-			</storyboard>
-			
-			<storyboard event="deactivateNext">
-				<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-			</storyboard>
 			
 			<visible if="${v.fanartExclude}">false</visible>
 			
@@ -1564,7 +1546,30 @@ Game played: {game:played}
 		<image name="gameScreenshot" extra="true"			path="{game:image}"/>
 
 
-		<!-- Game default fanart-->
+		<!-- Game Custom Screenshot (no condition but must exists) -->
+		
+		<image
+			name="gameCustomScreenshot"
+			extra="true"
+			ifSubset="gamelistBackgrounds:screenshots"
+			linearSmooth="false"
+			minSize="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="199"
+		>
+
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg"</path>
+
+			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
+			
+			<visible if="${v.fanartExclude}">false</visible>
+			
+		</image>
+
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+		<!-- Game default image if no scraped fanart, no custom fanart and no custom screenshot-->
 		
 		<image
 			name="gameDefaultFanarts"
@@ -1577,25 +1582,14 @@ Game played: {game:played}
 			zIndex="199"
 		>
 			
-			<visible>!exists({game:fanart})</visible>
+			<visible>
+						!exists({game:fanart})
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg")
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg")
+			
+			</visible>
 			
 			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-			
-			<storyboard event="activateNext">
-				<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
-			</storyboard>
-			
-			<storyboard event="activatePrev">
-				<animation property="offsetY"			from="-0.0075"		to="0" 									duration="250" 			mode="easeInOut"					/>
-			</storyboard>
-			
-			<storyboard event="deactivatePrev">
-				<animation property="scale"									to="0" 									duration="1"			mode="linear"						/>
-			</storyboard>
-			
-			<storyboard event="deactivateNext">
-				<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
-			</storyboard>
 			
 			<visible if="${v.fanartExclude}">false</visible>
 			
@@ -1606,7 +1600,37 @@ Game played: {game:played}
 		<image name="gameDefaultFanarts" extra="true"			path="{game:image}"/>
 
 
-		<!-- Game fanart-->
+		<!-- Game default image if no scraped fanart, no custom fanart but exists custom screenshot-->
+		
+		<image
+			name="gameDefaultFanarts2"
+			extra="true"
+			ifSubset="gamelistBackgrounds:fanarts"
+			linearSmooth="false"
+			minSize="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="199"
+		>
+
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg"</path>			
+
+			<visible>
+						!exists({game:fanart})
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg")
+			&amp;&amp;	exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg")
+			
+			</visible>
+			
+			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
+			
+			<visible if="${v.fanartExclude}">false</visible>
+			
+		</image>
+
+
+
+		<!-- Game fanart if exists scraped fanart but no custom fanart -->
 		
 		<image
 			name="gameFanart"
@@ -1620,10 +1644,44 @@ Game played: {game:played}
 			path="{game:fanart}"
 		>
 			
-			<visible>exists({game:fanart})</visible>
+			<visible>exists({game:fanart}) &amp;&amp; !exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg")</visible>
 			
 			<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
 			
+			<visible if="${v.fanartExclude}">false</visible>
+			
+		</image>
+
+
+		<!-- Game custom fanarts (no condition but must exists) -->
+		
+		<image
+			name="gameFanartCustom"
+			extra="true"
+			ifSubset="gamelistBackgrounds:fanarts"
+			linearSmooth="true"
+			minSize="1 1"
+			origin="0.5 0.5"
+			pos="0.5 0.5"
+			zIndex="200"
+		>
+		
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg"</path>
+						
+			<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
+						
+			<visible if="${v.fanartExclude}">false</visible>
+			
+		</image>
+
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+		<!-- Control for all games backgrounds options -->
+		
+		<control
+		name="gameScreenshot,gameCustomScreenshot,gameDefaultFanarts,gameDefaultFanarts2,gameFanart,gameFanartCustom"
+		extra="true"
+		>
 			<storyboard event="activateNext">
 				<animation property="offsetY" 			from="0.0075" 		to="0" 									duration="250" 			mode="easeInOut"					/>
 			</storyboard>
@@ -1639,11 +1697,10 @@ Game played: {game:played}
 			<storyboard event="deactivateNext">
 				<animation property="scale"									to="0"									duration="1"			mode="linear"						/>
 			</storyboard>
-			
-			<visible if="${v.fanartExclude}">false</visible>
-			
-		</image>
-
+		
+		</control>
+		
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 		<!-- Theme or customs backgrounds properties for scraped gamelist-->
 		
