@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?><theme><formatVersion>7</formatVersion><variables>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- MODIFY ONLY AFTER THIS (YOU MUST DELETE COMMENTS TO ACTIVATE A LINE)                                                                                                                                          -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--MODIFY ONLY AFTER THIS (YOU MUST DELETE " <!-- " TO ACTIVATE A LINE) ---------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--			<v.displayVideo>yes</v.displayVideo>										-->
 
@@ -14,17 +14,14 @@
 
 <!--			<desc>Custom_description</desc>												-->
 
-
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--AND DON'T TOUCH ANYTHING AFTER THIS ! ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-<!--READ ME ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- AND DON'T TOUCH ANYTHING AFTER THIS !                                                                                                                                                                         -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<v.p1 if="{system.releaseYearOrNull} >= '1958'">(</v.p1><v.p2 if="{system.releaseYearOrNull} >= '1958'">)</v.p2></variables></theme>
+<!-- READ ME xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!--		
 		Year must be > 1958.
 		
 		"v.displayVideo" variable can be "yes" or "no" and can force force example to display (or not) system view video on systems originally not like "tools", "setup" or "imageviewer" etc..
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-
-<v.p1 if="{system.releaseYearOrNull} >= '1958'">(</v.p1><v.p2 if="{system.releaseYearOrNull} >= '1958'">)</v.p2></variables></theme>
+-->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
