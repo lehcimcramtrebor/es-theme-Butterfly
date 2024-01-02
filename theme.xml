@@ -29,16 +29,6 @@
 		<v.custom ifArch="windows">../../../../_ButterflyCustom</v.custom>
 
 
-		<!-- Gamelist fanarts exclude systems (systems listed here don't display fanarts on gamelists) -->
-
-		<v.fanartExclude>
-			${system.theme} == 'retrobat'
-		||	${system.theme} == 'tools'
-		||	${system.theme} == 'setup'
-		||	${system.theme} == 'imageviewer'
-		</v.fanartExclude>
-
-
 		<!-- System view videos exclude systems (systems listed here don't display video on system view) -->
 
 		<v.rvExclude>
@@ -1316,6 +1306,15 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-fanart.jpg
 FILE TO CUSTOMIZE SCREENSHOT OF THIS GAME:
 _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 
+FILE TO CUSTOMIZE THUMBNAIL OF THIS GAME:
+_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-thumb.png
+
+FILE TO CUSTOMIZE MARQUEE OF THIS GAME:
+_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-marquee.png
+
+FILE TO CUSTOMIZE VIDEO OF THIS GAME:
+_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-video.mp4
+
 			</text>
 			
 		</text>
@@ -1536,9 +1535,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			<visible>!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")</visible>
 
 			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-			
-			<visible if="${v.fanartExclude}">false</visible>
-			
+						
 		</image>
 
 		<image name="gameScreenshot" extra="true"			default=":/parts/default_screenshot.jpg"/>
@@ -1559,12 +1556,10 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			zIndex="199"
 		>
 
-			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg"</path>
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png"</path>
 
 			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-			
-			<visible if="${v.fanartExclude}">false</visible>
-			
+						
 		</image>
 
 		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -1585,14 +1580,12 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			<visible>
 						!exists({game:fanart})
 			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg")
-			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg")
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")
 			
 			</visible>
 			
 			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-			
-			<visible if="${v.fanartExclude}">false</visible>
-			
+						
 		</image>
 
 		<image name="gameDefaultFanarts" extra="true"			default=":/parts/default_screenshot.jpg"/>
@@ -1613,19 +1606,17 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			zIndex="199"
 		>
 
-			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg"</path>			
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png"</path>			
 
 			<visible>
 						!exists({game:fanart})
 			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg")
-			&amp;&amp;	exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.jpg")
+			&amp;&amp;	exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")
 			
 			</visible>
 			
 			<shader><path>:/shaders/blur.glsl</path><blur>2</blur></shader>
-			
-			<visible if="${v.fanartExclude}">false</visible>
-			
+						
 		</image>
 
 
@@ -1647,9 +1638,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			<visible>exists({game:fanart}) &amp;&amp; !exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg")</visible>
 			
 			<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
-			
-			<visible if="${v.fanartExclude}">false</visible>
-			
+						
 		</image>
 
 
@@ -1669,9 +1658,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg"</path>
 						
 			<shader><path>:/shaders/blur.glsl</path><blur>3</blur></shader>
-						
-			<visible if="${v.fanartExclude}">false</visible>
-			
+									
 		</image>
 
 		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -1712,6 +1699,191 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			<visible ifSubset="gamelistBackgrounds:fanarts|screenshots">false</visible>
 
 		</image>
+
+
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+		<!-- Game marquees commons properties if no custom found -->
+
+			<image
+			name="gameMarquee"
+			extra="true"
+			linearSmooth="true"
+			zIndex="1000"
+			saturation="1.2"
+			default=":/parts/noMarquee.png"
+			path="{game:marquee}"
+		>
+
+			<visible>!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-marquee.png")</visible>
+
+			<shader>:/shaders/shadow2.glsl</shader>
+
+		</image>
+
+		<!-- Game custom marquees commons properties (no condition but must exists) -->
+
+			<image
+			name="gameMarqueeCustom"
+			extra="true"
+			linearSmooth="true"
+			zIndex="1000"
+			saturation="1.2"
+		>
+
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-marquee.png"</path>
+
+			<shader>:/shaders/shadow2.glsl</shader>
+
+		</image>
+
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		
+		<!-- Game thumbnails commons properties if no custom found -->
+
+		<image
+			name="gameThumbnail"
+			extra="true"
+			linearSmooth="true"
+			zIndex="1000"
+			default=":/parts/noThumb.png"
+			path="{game:thumbnail}"
+		>
+
+			<visible>!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-thumb.png")</visible>
+
+			<shader>:/shaders/shadow3.glsl</shader>
+
+		</image>
+		
+		<!-- Game custom thumbnails commons properties (no condition but must exists) -->
+
+		<image
+			name="gameThumbnailCustom"
+			extra="true"
+			linearSmooth="true"
+			zIndex="1000"
+		>
+
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-thumb.png"</path>
+
+			<shader>:/shaders/shadow3.glsl</shader>
+
+		</image>
+
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+		<!-- Default theme Game screenshot if nothing other exists -->
+		
+		<image
+			name="gameVideoScreenshotDefault"
+			extra="true"
+			zIndex="1100"
+			linearSmooth="true"
+			roundCorners="0.019"
+			audio="true"
+			path=":/parts/default_videoScreenshot.jpg"
+		>
+
+			<visible>
+						!exists({game:video})
+			&amp;&amp;	!exists({game:image})
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-video.mp4")
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")
+			
+			</visible>
+
+			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+
+		</image>
+
+
+		<!-- Game screenshot if no scraped or custom video found and no custom screenshot too -->
+		
+		<image
+			name="gameVideoScreenshot"
+			extra="true"
+			zIndex="1100"
+			linearSmooth="true"
+			roundCorners="0.019"
+			audio="true"
+			path="{game:image}"
+		>
+
+			<visible>
+						!exists({game:video})
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-video.mp4")
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")
+			
+			</visible>
+
+			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+
+		</image>
+
+
+		<!-- Game custom screenshot if no scraped or custom video found but custom screenshot exists -->
+		
+		<image
+			name="gameVideoScreenshotCustom"
+			extra="true"
+			zIndex="1100"
+			linearSmooth="true"
+			roundCorners="0.019"
+			audio="true"
+		>
+
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png"</path>
+
+			<visible>
+						!exists({game:video})
+			&amp;&amp;	!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-video.mp4")
+			&amp;&amp;	exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")
+			
+			</visible>
+
+			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+
+		</image>
+
+
+		<!-- Game videos if no custom found -->
+		
+		<video
+			name="gameVideo"
+			extra="true"
+			zIndex="1100"
+			linearSmooth="true"
+			roundCorners="0.019"
+			delay="0.3"
+			audio="true"
+			path="{game:video}"
+			effect="none"
+		>
+
+			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+
+		</video>
+
+
+		<!-- Game videos if no custom found -->
+		
+		<video
+			name="gameVideoCustom"
+			extra="true"
+			zIndex="1100"
+			linearSmooth="true"
+			roundCorners="0.019"
+			delay="0.3"
+			audio="true"
+			effect="none"
+		>
+
+			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-video.mp4"</path>
+
+			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+
+		</video>
 
 	</view>
 
@@ -1853,67 +2025,69 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 			extra="true"
 			linearSmooth="true"
 			zIndex="900"
-			path=":/dFrame.png"
 			color="${c.frame}"
 			colorEnd="${ce.frame}"
 			gradientType="vertical"
 			roundCorners="0.005"
-			opacity="0.45"
 			origin="0.5 1"
 			pos="0.22 0.9018518518518519"
 			size="0.39 0.26"
+			opacity="0.45"
+			path=":/dFrame.png"
+		/>
+
+
+		<!-- Game video default Screenshots (scraped and customs) -->
+		
+		<image
+			name="gameVideoScreenshotDefault,gameVideoScreenshot,gameVideoScreenshotCustom"
+			extra="true"
+			zIndex="1100"
+			origin="1 1"
+			pos="0.975 0.9018518518518519"
+			maxSize="0.5 0.32"
 		/>
 
 
 		<!-- Game video -->
 		
 		<video
-			name="md_video"
-			zIndex="1100"
-			linearSmooth="true"
+			name="gameVideo,gameVideoCustom"
+			extra="true"
 			origin="1 1"
 			pos="0.975 0.9018518518518519"
 			maxSize="0.5 0.32"
-			roundCorners="0.019"
-			showSnapshotNoVideo="true"
-			showSnapshotDelay="false"
-			delay="0.3"
-			effect="none"
-			audio="true"
-		>
+		/>
 
-			<shader if="{screen.height} >= '480'">:/shaders/helmic_${v.color}.glsl</shader>
+
+		<control name="gameVideoScreenshotDefault,gameVideoScreenshot,gameVideoScreenshotCustom,gameVideo,gameVideoCustom">
 
 			<storyboard event="activateNext">
-				<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
-				<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
+				<animation property="offsetX"				from="0.525"		to="0.525" 								duration="1000" 		mode="linear"							/>
+				<animation property="offsetX"				from="0.525"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
 			</storyboard>
 
 			<storyboard event="activatePrev">
-				<animation property="offsetX"				from="0.5"		to="0.5" 								duration="1000" 		mode="linear"							/>
-				<animation property="offsetX"				from="0.5"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
+				<animation property="offsetX"				from="0.525"		to="0.5" 								duration="1000" 		mode="linear"							/>
+				<animation property="offsetX"				from="0.525"		to="0" 				begin="1000"		duration="250" 			mode="easeOutCubic"						/>
 			</storyboard>
 
 			<storyboard event="deactivatePrev">
-				<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
+				<animation property="offsetX"								to="0.525" 								duration="60"			mode="easeIn"							/>
 			</storyboard>
 
 			<storyboard event="deactivateNext">
-				<animation property="offsetX"								to="0.5" 								duration="60"			mode="easeIn"							/>
+				<animation property="offsetX"								to="0.525" 								duration="60"			mode="easeIn"							/>
 			</storyboard>
-
-		</video>
-
-
+		
+		</control>
+		
+		
 		<!-- Game thumbnail -->
 		
 		<image
-			name="gameThumbnail"
+			name="gameThumbnail,gameThumbnailCustom"
 			extra="true"
-			default=":/parts/noThumb.png"
-			path="{game:thumbnail}"
-			linearSmooth="true"
-			zIndex="1000"
 			origin="0 1"
 			pos="0.025 0.62"
 			maxSize="0.14625 0.26"
@@ -1927,14 +2101,11 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
 		<!-- Game marquee -->
 		
 		<image
-			name="md_marquee"
-			linearSmooth="true"
-			zIndex="1000"
+			name="gameMarquee,gameMarqueeCustom"
+			extra="true"
 			origin="0.5 1"
 			pos="0.280625 0.62"
 			maxSize="0.21 0.12"
-			saturation="1.2"
-			default=":/parts/noMarquee.png"
 		>
 
 			<shader>:/shaders/shadow2.glsl</shader>
