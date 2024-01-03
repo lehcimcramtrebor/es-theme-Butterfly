@@ -1003,6 +1003,7 @@ Theme path: ${themePath}
 			origin="0.5 0.5"
 			pos="0.5 0.5"
 			zIndex="200"
+			autoFade="true"
 		>
 			
 			<storyboard>
@@ -1515,6 +1516,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			origin="0.5 0.5"
 			pos="0.5 0.5"
 			zIndex="199"
+			autoFade="true"
 		>
 
 			<visible>!exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png")</visible>
@@ -1539,6 +1541,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			origin="0.5 0.5"
 			pos="0.5 0.5"
 			zIndex="199"
+			autoFade="true"
 		>
 
 			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png"</path>
@@ -1560,6 +1563,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			origin="0.5 0.5"
 			pos="0.5 0.5"
 			zIndex="199"
+			autoFade="true"
 		>
 			
 			<visible>
@@ -1589,6 +1593,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			origin="0.5 0.5"
 			pos="0.5 0.5"
 			zIndex="199"
+			autoFade="true"
 		>
 
 			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-image.png"</path>			
@@ -1618,6 +1623,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			pos="0.5 0.5"
 			zIndex="200"
 			path="{game:fanart}"
+			autoFade="true"
 		>
 			
 			<visible>exists({game:fanart}) &amp;&amp; !exists("${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg")</visible>
@@ -1638,6 +1644,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			origin="0.5 0.5"
 			pos="0.5 0.5"
 			zIndex="200"
+			autoFade="true"
 		>
 		
 			<path>"${themePath}/../${v.custom}/_GAMES_MEDIAS_/" + ({game:system}) + "/" + stem({game:rom}) + "-fanart.jpg"</path>
