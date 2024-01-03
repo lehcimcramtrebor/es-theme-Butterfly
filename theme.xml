@@ -162,12 +162,12 @@
 
 	<subset name="colorset" displayName="${lang.colorset}">
 
+		<include name="mandarine"		>./_variables/colors_mandarine.xml</include>
 		<include name="cobalt"			>./_variables/colors_cobalt.xml</include>
 		<include name="smoke"			>./_variables/colors_smoke.xml</include>
 		<include name="mars"			>./_variables/colors_mars.xml</include>
 		<include name="wine"			>./_variables/colors_wine.xml</include>
 		<include name="sinople"			>./_variables/colors_sinople.xml</include>
-		<include name="mandarine"		>./_variables/colors_mandarine.xml</include>
 		<include name="candy"			>./_variables/colors_candy.xml</include>
 		
 	</subset>
@@ -1290,14 +1290,14 @@ File: {game:rom}
 CRC32: {game:crc32}
 MD5: {game:md5}
 
-FILES TO CUSTOMIZE ARTWORKS OF THIS GAME IN FOLDER:
-_ButterflyCustom/_GAMES_MEDIAS_/
+FILES FOR CUSTOMIZE ARTWORKS OF THIS GAME IN FOLDER:
+_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 
-{game:system}/{game:stem}-fanart.jpg
-{game:system}/{game:stem}-image.png
-{game:system}/{game:stem}-thumb.png
-{game:system}/{game:stem}-marquee.png
-{game:system}/{game:stem}-video.mp4
+{game:stem}-fanart.jpg
+{game:stem}-image.png
+{game:stem}-thumb.png
+{game:stem}-marquee.png
+{game:stem}-video.mp4
 
 			</text>
 			
@@ -1484,16 +1484,17 @@ _ButterflyCustom/_GAMES_MEDIAS_/
 		>
 			
 			<storyboard>
-				<animation property="origin" 								to="1 0" 				begin="725"			duration="1" 			mode="easeInOut"				/>
-				<animation property="pos" 									to="0.975 0.055" 		begin="725"			duration="1" 			mode="linear"				/>
-				<animation property="offsetY" 			from="0.01" 								begin="725"			duration="75" 			mode="linear"				/>
-				<animation property="opacity" 								to="0" 					begin="650"			duration="75" 			mode="easeInOut"	autoreverse="true"			/>
-				<animation property="scale" 								to="0.66" 				begin="725"			duration="1" 			mode="easeInOut"				/>
+				<animation property="origin" 								to="1 1" 						begin="725"			duration="1" 			mode="easeInOut"								/>
+				<animation property="pos" 									to="0.965 0.895" 	begin="725"			duration="1" 			mode="linear"									/>
+				<animation property="zIndex" 								to="250" 						begin="725"			duration="1" 			mode="linear"									/>
+				<animation property="offsetY" 			from="0.01" 										begin="725"			duration="75" 			mode="linear"									/>
+				<animation property="opacity" 								to="0" 							begin="650"			duration="75" 			mode="easeInOut"	autoreverse="true"			/>
+				<animation property="scale" 								to="0.66" 						begin="725"			duration="1" 			mode="easeInOut"								/>
 			</storyboard>
 			
 			<storyboard verticalScreen="true">
-				<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-				<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
+				<animation property="origin" 								to="0.5 0.5" 					begin="650"			duration="150" 			mode="easeInOut"								/>
+				<animation property="pos" 									to="0.5 0.075" 					begin="650"			duration="150" 			mode="easeInOut"								/>
 			</storyboard>
 
 			<maxSize verticalScreen="true">0.6 0.1</maxSize>
@@ -2073,7 +2074,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/
 			name="gameThumbnail,gameThumbnailCustom"
 			extra="true"
 			origin="0 1"
-			pos="0.025 0.62"
+			pos="0.0268 0.62"
 			maxSize="0.14625 0.26"
 		>
 
@@ -2087,9 +2088,9 @@ _ButterflyCustom/_GAMES_MEDIAS_/
 		<image
 			name="gameMarquee,gameMarqueeCustom"
 			extra="true"
-			origin="0.5 1"
-			pos="0.280625 0.62"
-			maxSize="0.21 0.12"
+			origin="1 0"
+			pos="0.975 0.055"
+			maxSize="0.21 0.21"
 		>
 
 			<shader>:/shaders/shadow2.glsl</shader>
@@ -2115,7 +2116,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/
 			padding="0.025 0 0 0"
 			verticalAlignment="bottom"
 			opacity="0"
-			color="${c.text}"
+			color="${c.textHeader}"
 			singleLineScroll="true"
 			w="1"
 		>
