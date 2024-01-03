@@ -798,13 +798,13 @@
 			name="console"
 			ifSubset="dev:yes"
 			zIndex="5000"
-			fontPath=":/fonts/Welbut__.ttf"
-			fontSize="0.016"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.022"
 			size="1 1"
 			alignment="left"
 			verticalAlignment="top"
-			padding="0.025 0.2 0.01 0.01"
-			color="00ff00"
+			padding="0.025 0.16 0.01 0.01"
+			color="ffd13b"
 			glowColor="000000"
 			glowOffset="0"
 			glowSize="4"
@@ -814,20 +814,16 @@
 DEV CONSOLE:
 
 GENERAL:
-${screen.ratio} ( ${screen.width}x${screen.height} )
-Vertical screen: ${screen.vertical}
-Architecture: ${global.architecture}
-Lang: ${global.language}
-Help: ${global.help}
-Clock: ${global.clock}
+${screen.ratio} ( ${screen.width}x${screen.height} ), Vertical screen: ${screen.vertical}
+Architecture: ${global.architecture}, Lang: ${global.language}
+Help: ${global.help}, Clock: ${global.clock}
 Cheevos: ${global.cheevos} ( ${global.cheevos.username} )
 Netplay: ${global.netplay} ( ${global.netplay.username} )
 
 SYSTEM:
 Full Name: ${system.fullName}
 Short Name: ${system.name}
-Theme: ( ${system.theme} )
-Collection: ( ${system.collection} )
+Theme: ( ${system.theme} ), Collection: ( ${system.collection} )
 Manufacturer: ${system.manufacturer}
 Sorted by: ${system.sortedBy}
 Release Date: ${system.releaseYear}
@@ -837,8 +833,7 @@ Savestates: ${system.savestates}
 Netplay: ${system.netplay}
 Cheevos: ${system.cheevos}
 
-Theme path
-${themePath}
+Theme path: ${themePath}
 			</text>
 			
 		</text>
@@ -1269,13 +1264,13 @@ ${themePath}
 			ifSubset="dev:yes"
 			extra="true"
 			zIndex="5000"
-			fontPath=":/fonts/Cabin-Regular.ttf"
-			fontSize="0.020"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.024"
 			size="1 1"
-			alignment="left"
+			alignment="right"
 			verticalAlignment="top"
-			padding="0.025 0.02 0.01 0.01"
-			color="00ff00"
+			padding="0.025 0.2 0.01 0.01"
+			color="ffd13b"
 			glowColor="000000"
 			glowOffset="0"
 			glowSize="4"
@@ -1288,32 +1283,21 @@ DEV CONSOLE:
 Genre: {game:genre}
 Family: {game:family}
 Lang: {game:lang}
-Region: {game:region}
-Rating: {game:rating}
-Cheevos hash: {game:cheevosHash}
-Cheevos ID: {game:cheevosId}
+Region: {game:region}, Rating: {game:rating}
+Cheevos hash: {game:cheevosHash}, Cheevos ID: {game:cheevosId}
 
 File: {game:rom}
 CRC32: {game:crc32}
 MD5: {game:md5}
 
-Favorite: {game:favorite}
-Game played: {game:played}
+FILES TO CUSTOMIZE ARTWORKS OF THIS GAME IN FOLDER:
+_ButterflyCustom/_GAMES_MEDIAS_/
 
-FILE TO CUSTOMIZE FANART OF THIS GAME:
-_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-fanart.jpg
-
-FILE TO CUSTOMIZE SCREENSHOT OF THIS GAME:
-_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-image.png
-
-FILE TO CUSTOMIZE THUMBNAIL OF THIS GAME:
-_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-thumb.png
-
-FILE TO CUSTOMIZE MARQUEE OF THIS GAME:
-_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-marquee.png
-
-FILE TO CUSTOMIZE VIDEO OF THIS GAME:
-_ButterflyCustom/_GAMES_MEDIAS_/{game:system}/{game:stem}-video.mp4
+{game:system}/{game:stem}-fanart.jpg
+{game:system}/{game:stem}-image.png
+{game:system}/{game:stem}-thumb.png
+{game:system}/{game:stem}-marquee.png
+{game:system}/{game:stem}-video.mp4
 
 			</text>
 			
