@@ -2152,6 +2152,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 
 			<pos verticalScreen="true">0 0.965</pos>
 
+			<visible>!empty({game:desc})</visible> <!-- visible only if not empty to hide "unknow" -->
 		</text>
 
 	</view>
