@@ -1404,7 +1404,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			text="{game:name} • {game:releaseyear}"
 		>
 			
-			<visible>({game:releaseyear}) > 1970</visible>
+			<visible>!empty({game:releaseyear})</visible>
 			<fontSize verticalScreen="true">0.035</fontSize>
 			
 		</text>
@@ -1419,7 +1419,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			text="{game:name}"
 		>
 			
-			<visible>({game:releaseyear}) == 1970</visible>
+			<visible>empty({game:releaseyear})</visible>
 			<fontSize verticalScreen="true">0.035</fontSize>
 			
 		</text>
