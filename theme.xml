@@ -61,6 +61,15 @@
 		<lang.no>no</lang.no>
 		<lang.no lang="fr">non</lang.no>
 
+		<lang.emptyGenre>unknknow genre</lang.emptyGenre>
+		<lang.emptyGenre lang="fr">genre inconnu</lang.emptyGenre>
+
+		<lang.emptyDevelopper>unknknow developer</lang.emptyDevelopper>
+		<lang.emptyDevelopper lang="fr">développeur inconnu</lang.emptyDevelopper>
+
+		<lang.emptyStars>no rating</lang.emptyStars>
+		<lang.emptyStars lang="fr">notation absente</lang.emptyStars>
+
 
 		<!-- System Infos EX -->
 
@@ -1383,7 +1392,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		<!-- Extended Games Infos-->
 		
 		<text
-			name="gamesExUL,gamesExULbis,gamesEx2UL,gamesEx3UL,gamesEx4UL"
+			name="gamesExUL,gamesExULbis,gamesEx2UL,gamesEx2ULbis,gamesEx2ULter,gamesEx2ULquater,gamesEx3UL,gamesEx3ULbis,gamesEx4UL"
 			extra="true"
 			zIndex="1200"
 			forceUppercase="true"
@@ -1434,6 +1443,71 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			text="{game:genre} • {game:developer}"
 		>
 			
+			<visible>
+						!empty({game:genre})
+			&amp;&amp;	!empty({game:developer})
+			</visible>
+			
+			<fontSize verticalScreen="true">0.025</fontSize>
+			<padding verticalScreen="true">0.025 0.065 0 0</padding>
+
+		</text>
+
+
+		<text
+			name="gamesEx2ULbis"
+			extra="true"
+			color="${c.selected}"
+			fontSize="0.024"
+			padding="0.025 0.0825 0 0"
+			text="${lang.emptyGenre} • ${lang.emptyDevelopper}"
+		>
+			
+			<visible>
+						empty({game:genre})
+			&amp;&amp;	empty({game:developer})
+			</visible>
+			
+			<fontSize verticalScreen="true">0.025</fontSize>
+			<padding verticalScreen="true">0.025 0.065 0 0</padding>
+
+		</text>
+
+
+		<text
+			name="gamesEx2ULter"
+			extra="true"
+			color="${c.selected}"
+			fontSize="0.024"
+			padding="0.025 0.0825 0 0"
+			text="{game:genre} • ${lang.emptyDevelopper}"
+		>
+			
+			<visible>
+						!empty({game:genre})
+			&amp;&amp;	empty({game:developer})
+			</visible>
+			
+			<fontSize verticalScreen="true">0.025</fontSize>
+			<padding verticalScreen="true">0.025 0.065 0 0</padding>
+
+		</text>
+
+
+		<text
+			name="gamesEx2ULquater"
+			extra="true"
+			color="${c.selected}"
+			fontSize="0.024"
+			padding="0.025 0.0825 0 0"
+			text="${lang.emptyGenre} • {game:developer}"
+		>
+			
+			<visible>
+						empty({game:genre})
+			&amp;&amp;	!empty({game:developer})
+			</visible>
+			
 			<fontSize verticalScreen="true">0.025</fontSize>
 			<padding verticalScreen="true">0.025 0.065 0 0</padding>
 
@@ -1452,6 +1526,28 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			text="{game:stars}"
 		>
 			
+			<visible>!empty({game:stars})</visible>
+
+			<fontSize verticalScreen="true">0.015</fontSize>
+			<padding verticalScreen="true">0.025 0.103 0 0</padding>
+			
+		</text>
+
+
+		<text
+			name="gamesEx3ULbis"
+			extra="true"
+			color="ffd13b"
+			fontSize="0.019"
+			padding="0.025 0.119 0 0"
+			glowOffset="0"
+			glowSize="2"
+			glowColor="${c.glowColor2}"
+			text="${lang.emptyStars}"
+		>
+			
+			<visible>empty({game:stars})</visible>
+
 			<fontSize verticalScreen="true">0.015</fontSize>
 			<padding verticalScreen="true">0.025 0.103 0 0</padding>
 			
@@ -2125,6 +2221,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			opacity="0"
 			color="${c.textHeader}"
 			singleLineScroll="true"
+			autoScrollDelay="1000"
 			w="1"
 		>
 
