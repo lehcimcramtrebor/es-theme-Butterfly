@@ -1018,7 +1018,7 @@ Theme path: ${themePath}
 			
 			<storyboard>
 				<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
-				<animation property="scale"				from="1.0025"		to="1"									duration="350" 			mode="easeOut"							/>
+				<animation property="scale"				from="1.0075"		to="1"									duration="350" 			mode="easeInOut"						/>
 			</storyboard>
 			
 			<minSize verticalScreen="false">1 1</minSize>
