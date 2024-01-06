@@ -40,8 +40,8 @@
 
 		<!-- Screen ratio conditions to variables -->
 
-		<v.notWide>${screen.height} > ${screen.width}/1.6</v.notWide>
-		<v.ultraWide>${screen.width} > ${screen.height}*1.8</v.ultraWide>
+		<v.notWide>${screen.height} &gt; ${screen.width}/1.6</v.notWide>
+		<v.ultraWide>${screen.width} &gt; ${screen.height}*1.8</v.ultraWide>
 
 		<v.329>{screen.ratio} == '32/9'</v.329>
 		<v.219>{screen.ratio} == '21/9'</v.219>
@@ -76,12 +76,6 @@
 		<lang.elements>elements</lang.elements>
 		<lang.elements lang="fr">éléments</lang.elements>
 
-		<lang.tables>tables</lang.tables>
-		<lang.tables lang="fr">tables</lang.tables>
-
-		<lang.games>games</lang.games>
-		<lang.games lang="fr">jeux</lang.games>
-
 		<lang.favorites>favorites</lang.favorites>
 		<lang.favorites lang="fr">favoris</lang.favorites>
 
@@ -93,15 +87,6 @@
 		<v.custom-collections if="{system.theme} == 'custom-collections'">( {binding:subSystems} ) </v.custom-collections>
 
 		<v.bindingFavorites>( {binding:favorites} ${lang.favorites} )</v.bindingFavorites>
-
-		<v.bindingFavorites if="
-			{system.theme} == 'auto-favorites'
-		||	{system.theme} == 'retrobat'
-		||	{system.theme} == 'tools'
-		||	{system.theme} == 'setup'
-		||	{system.theme} == 'kodi'
-		||	{system.theme} == 'imageviewer'
-		"></v.bindingFavorites>
 
 	</variables>
 
@@ -925,6 +910,7 @@ Theme path: ${themePath}
 			text="${v.bindingFavorites}"
 		>
 			
+			<visible>{binding:favorites} &gt; 0</visible>
 			<fontSize verticalScreen="true">0.015</fontSize>
 			<padding verticalScreen="true">0.025 0.103 0 0</padding>
 			
