@@ -146,6 +146,7 @@
 
 	<subset name="music" displayName="${lang.music}">
 
+		<include name="notAllow"			displayName="${lang.music_notAllow}"		/>
 		<include name="recalbox"			displayName="${lang.music_recalbox}"		>./_variables/music_recalbox.xml</include>
 		<include name="mrBoom"				displayName="${lang.music_mrBoom}"			>./_variables/music_mrBoom.xml</include>
 		<include name="batocera"			displayName="${lang.music_batocera}"		>./_variables/music_batocera.xml</include>
@@ -153,7 +154,6 @@
 		<include name="retrobat"			displayName="${lang.music_retrobat}"		>./_variables/music_retrobat.xml</include>
 		<include name="frontend"			displayName="${lang.music_frontend}"		/>
 		<include name="custom"				displayName="${lang.music_custom}"			/>
-		<include name="notAllow"			displayName="${lang.music_notAllow}"		/>
 		
 	</subset>
 
@@ -374,8 +374,8 @@
 
 	<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
-		<include name="no"			displayName="${lang.no}"			>./_variables/randomVideosAudio_no.xml</include>
 		<include name="yes"			displayName="${lang.yes}"			>./_variables/randomVideosAudio_yes.xml</include>
+		<include name="no"			displayName="${lang.no}"			>./_variables/randomVideosAudio_no.xml</include>
 		
 	</subset>
 
