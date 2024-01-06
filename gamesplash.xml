@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+	<view name="splash">
+
+		<splash
+			name="splash"
+			backgroundColor="171717"
+		/>
+		
+		<image
+			name="background"
+			linearSmooth="true"
+			pos="0.5 0.4"
+			origin="0.5 0.5"
+			maxSize="0.95 0.4"
+			reflexion="0 0.1"
+			roundCorners="0.01"
+			saturation="1.2"
+		/>
+
+
+		<image
+			name="scanlines"
+			extra="true"
+			path=":/scanlines.png"
+			tile="true"
+			pos="0.5 0.4"
+			origin="0.5 0.5"
+			size="1 0.4"
+			color="171717"
+			zIndex="200"
+		/>
+
+
+		<text
+			name="label"
+			forceUppercase="true"
+			fontPath=":/fonts/Cabin-Bold.ttf"
+			fontSize="0.03"
+			pos="0.5 0.75"
+			origin="0.5 0.5"
+			alignment="center"
+			color="efefef"
+			glowColor="808080"
+			glowOffset="1"
+			glowSize="1"
+			reflexion="0 0.1"
+		/>
+
+
+	</view>
+
+</theme>
