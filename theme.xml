@@ -156,10 +156,10 @@
 
 	<subset name="colorset" displayName="${lang.colorset}">
 
-		<include name="mandarine"		>./_variables/colors_mandarine.xml</include>
 		<include name="cobalt"			>./_variables/colors_cobalt.xml</include>
 		<include name="smoke"			>./_variables/colors_smoke.xml</include>
 		<include name="mars"			>./_variables/colors_mars.xml</include>
+		<include name="mandarine"		>./_variables/colors_mandarine.xml</include>
 		<include name="wine"			>./_variables/colors_wine.xml</include>
 		<include name="sinople"			>./_variables/colors_sinople.xml</include>
 		<include name="candy"			>./_variables/colors_candy.xml</include>
@@ -331,9 +331,9 @@
 
 	<subset name="randomVideos" displayName="${lang.randomVideos}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
-		<include name="bl"									displayName="${lang.bl}"			>./_variables/randomVideos_bl.xml</include>
-		<include name="ur"									displayName="${lang.ur}"			>./_variables/randomVideos_ur.xml</include>
 		<include name="br"									displayName="${lang.br}"			>./_variables/randomVideos_br.xml</include>
+		<include name="ur"									displayName="${lang.ur}"			>./_variables/randomVideos_ur.xml</include>
+		<include name="bl"									displayName="${lang.bl}"			>./_variables/randomVideos_bl.xml</include>
 		<include name="no"									displayName="${lang.noVideo}"		>./_variables/randomVideos_no.xml</include>
 		
 	</subset>
