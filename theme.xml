@@ -314,6 +314,9 @@
 		<lang.br>in bottom right corner</lang.br>
 		<lang.br lang="fr">au coin inférieur droit</lang.br>
 
+		<lang.noVideo>no ( keeps audio actived )</lang.noVideo>
+		<lang.noVideo lang="fr">non ( conserve l'audio actif )</lang.noVideo>
+
 		<lang.small>small</lang.small>
 		<lang.small lang="fr">petite</lang.small>
 
@@ -331,7 +334,7 @@
 		<include name="bl"									displayName="${lang.bl}"			>./_variables/randomVideos_bl.xml</include>
 		<include name="ur"									displayName="${lang.ur}"			>./_variables/randomVideos_ur.xml</include>
 		<include name="br"									displayName="${lang.br}"			>./_variables/randomVideos_br.xml</include>
-		<include name="no"									displayName="${lang.no}"			>./_variables/randomVideos_no.xml</include>
+		<include name="no"									displayName="${lang.noVideo}"		>./_variables/randomVideos_no.xml</include>
 		
 	</subset>
 
@@ -345,7 +348,7 @@
 	</subset>
 
 
-	<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" ifSubset="randomVideos:ur|bl|br" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+	<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
 		<include name="yes"			displayName="${lang.yes}"			>./_variables/randomVideosAudio_yes.xml</include>
 		<include name="no"			displayName="${lang.no}"			>./_variables/randomVideosAudio_no.xml</include>
