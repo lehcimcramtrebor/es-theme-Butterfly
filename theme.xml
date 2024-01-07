@@ -338,8 +338,8 @@
 
 	<subset name="randomVideosSize" displayName="${lang.randomVideosSize}" ifSubset="randomVideos:ur|bl|br" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
-		<include if="{screen.height} >= '600'"												name="medium"		displayName="${lang.medium}"		>./_variables/randomVideosSize_medium.xml</include>
 		<include if="{screen.height} >= '720'"												name="small"		displayName="${lang.small}"			>./_variables/randomVideosSize_small.xml</include>
+		<include if="{screen.height} >= '600'"												name="medium"		displayName="${lang.medium}"		>./_variables/randomVideosSize_medium.xml</include>
 		<include																			name="big"			displayName="${lang.big}"			>./_variables/randomVideosSize_big.xml</include>
 		
 	</subset>
