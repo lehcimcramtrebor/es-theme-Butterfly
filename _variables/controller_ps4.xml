@@ -6,7 +6,6 @@
 
 <v.controller>ps4</v.controller>
 <v.controllerSpacing>0.006</v.controllerSpacing>
-<v.controllerSpacing verticalScreen="true">0.016</v.controllerSpacing>
 
 </variables>
 

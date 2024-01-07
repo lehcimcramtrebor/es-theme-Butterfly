@@ -6,7 +6,6 @@
 
 <v.controller>megadrive6</v.controller>
 <v.controllerSpacing>0.010</v.controllerSpacing>
-<v.controllerSpacing verticalScreen="true">0.022</v.controllerSpacing>
 
 </variables>
 

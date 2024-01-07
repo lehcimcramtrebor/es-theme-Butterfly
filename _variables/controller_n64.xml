@@ -6,7 +6,6 @@
 
 <v.controller>n64</v.controller>
 <v.controllerSpacing>0.003</v.controllerSpacing>
-<v.controllerSpacing verticalScreen="true">0.008</v.controllerSpacing>
 
 </variables>
 

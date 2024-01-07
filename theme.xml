@@ -334,12 +334,6 @@
 		<lang.br>in bottom right corner</lang.br>
 		<lang.br lang="fr">au coin inférieur droit</lang.br>
 
-		<lang.btm>at bottom</lang.btm>
-		<lang.btm lang="fr">centrée en bas</lang.btm>
-
-		<lang.ctr>at center</lang.ctr>
-		<lang.ctr lang="fr">au centre</lang.ctr>
-
 		<lang.small>small</lang.small>
 		<lang.small lang="fr">petite</lang.small>
 
@@ -348,37 +342,30 @@
 
 		<lang.big>big</lang.big>
 		<lang.big lang="fr">grande</lang.big>
-
-		<lang.xtra>extra large</lang.xtra>
-		<lang.xtra lang="fr">très grande</lang.xtra>
-		
+	
 	</variables>
 
 
 	<subset name="randomVideos" displayName="${lang.randomVideos}" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
-		<include name="br"		verticalScreen="true"		displayName="${lang.br}"			>./_variables/randomVideos_br.xml</include>
 		<include name="bl"									displayName="${lang.bl}"			>./_variables/randomVideos_bl.xml</include>
 		<include name="ur"									displayName="${lang.ur}"			>./_variables/randomVideos_ur.xml</include>
-		<include name="br"		verticalScreen="false"		displayName="${lang.br}"			>./_variables/randomVideos_br.xml</include>
+		<include name="br"									displayName="${lang.br}"			>./_variables/randomVideos_br.xml</include>
 		<include name="no"									displayName="${lang.no}"			>./_variables/randomVideos_no.xml</include>
-		<include name="btm"		verticalScreen="true"		displayName="${lang.btm}"			>./_variables/randomVideos_btm.xml</include>
-		<include name="ctr"		verticalScreen="true"		displayName="${lang.ctr}"			>./_variables/randomVideos_ctr.xml</include>
 		
 	</subset>
 
 
-	<subset name="randomVideosSize" displayName="${lang.randomVideosSize}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+	<subset name="randomVideosSize" displayName="${lang.randomVideosSize}" ifSubset="randomVideos:ur|bl|br" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
 		<include if="{screen.height} >= '600'"												name="medium"		displayName="${lang.medium}"		>./_variables/randomVideosSize_medium.xml</include>
 		<include if="{screen.height} >= '720'"												name="small"		displayName="${lang.small}"			>./_variables/randomVideosSize_small.xml</include>
 		<include																			name="big"			displayName="${lang.big}"			>./_variables/randomVideosSize_big.xml</include>
-		<include verticalScreen="true"				ifSubset="randomVideos:btm|ctr"			name="xtra"			displayName="${lang.xtra}"			>./_variables/randomVideosSize_xtra.xml</include>
 		
 	</subset>
 
 
-	<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+	<subset name="randomVideosAudio" displayName="${lang.randomVideosAudio}" ifSubset="randomVideos:ur|bl|br" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
 		<include name="yes"			displayName="${lang.yes}"			>./_variables/randomVideosAudio_yes.xml</include>
 		<include name="no"			displayName="${lang.no}"			>./_variables/randomVideosAudio_no.xml</include>
@@ -386,7 +373,7 @@
 	</subset>
 
 
-	<subset name="forceRandomVideos" displayName="${lang.forceRandomVideos}" ifSubset="randomVideos:ur|bl|br|btm|ctr" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
+	<subset name="forceRandomVideos" displayName="${lang.forceRandomVideos}" ifSubset="randomVideos:ur|bl|br" appliesTo="${lang.randomVideosSubsetDesc} ${v.allViews}"><!-- alt+0160 spaces -->
 
 		<include name="no"			displayName="${lang.no}"		/>
 		<include name="yes"			displayName="${lang.yes}"		/>
@@ -603,8 +590,6 @@
 		>
 			
 			<iconColor ifSubset="helpIcons:defaultIcons">${c.textHeader}</iconColor>
-			<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-			<pos verticalScreen="true">0.01 0.985</pos>
 		
 		</helpsystem>
 
@@ -628,13 +613,8 @@
 			imagePath=":/controller/${v.controller}.svg"
 			itemSpacing="${v.controllerSpacing}"
 			gunPath=":/controller/gun.svg"
-		>
+		/>
 			
-			<size verticalScreen="true">0.185 0.016</size>
-			<pos verticalScreen="true">0.02 0.012</pos>
-			
-		</controllerActivity>
-
 
 		<!-- Battery indicator -->
 		
@@ -651,13 +631,8 @@
 			at50=":/battery/50.svg"
 			at25=":/battery/25.svg"
 			empty=":/battery/empty.svg"
-		>
-			
-			<size verticalScreen="true">1 0.018</size>
-			<pos verticalScreen="true">-0.01 0.011</pos>
-		
-		</batteryIndicator>
-		
+		/>
+							
 		
 		<!-- Clock -->
 		
@@ -678,16 +653,10 @@
 
 			<origin ifCheevos="true">1 0</origin>
 
-			<fontSize verticalScreen="true">0.018</fontSize>
-			<fontPath verticalScreen="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
-			<pos verticalScreen="true">0.99 0.9845</pos>
-
 			<fontPath ifCheevos="true">:/fonts/CabinCondensed-Bold.ttf</fontPath>
 			<fontSize ifCheevos="true">0.013</fontSize>
 
-			<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
 			<pos ifCheevos="true">0.997 0.9625</pos>
-			<pos verticalScreen="true" ifCheevos="true">0.996 0.9785</pos>
 		
 		</text>
 
@@ -712,10 +681,7 @@
 		>
 			
 			<color ifHelpPrompts="false">${c.selected}</color>
-			
-			<fontSize verticalScreen="true" ifCheevos="true">0.013</fontSize>
-			<pos verticalScreen="true" ifCheevos="true">0.996 0.9875</pos>
-		
+					
 		</text>
 
 	</view>
@@ -780,7 +746,6 @@
 		>
 		
 			<visible ifHelpPrompts="false">false</visible>
-			<size verticalScreen="true">1 0.04</size>
 			
 		</image>
 
@@ -887,11 +852,7 @@ Theme path: ${themePath}
 			fontSize="0.04"
 			padding="0.025 0.04 0 0"
 			text="${system.manufacturer}"
-		>
-
-			<fontSize verticalScreen="true">0.035</fontSize>
-
-		</text>
+		/>
 
 
 		<text
@@ -901,14 +862,8 @@ Theme path: ${themePath}
 			fontSize="0.03"
 			padding="0.025 0.09 0 0"
 			text="${system.fullName} ${v.custom-collections}${v.p1} ${system.releaseYearOrNull} ${v.p2}"
-		>
+		/>
 			
-			<text verticalScreen="true">${system.name} ${v.p1} ${system.releaseYearOrNull} ${v.p2}</text>
-			<fontSize verticalScreen="true">0.025</fontSize>
-			<padding verticalScreen="true">0.025 0.065 0 0</padding>
-			
-		</text>
-
 
 		<text
 			name="infosEx3UL"
@@ -917,13 +872,8 @@ Theme path: ${themePath}
 			fontSize="0.022"
 			padding="0.025 0.13 0 0"
 			text="${v.bindingTotalUL}"
-		>
-			
-			<fontSize verticalScreen="true">0.016</fontSize>
-			<padding verticalScreen="true">0.025 0.0875 0 0</padding>
-			
-		</text>
-
+		/>
+						
 
 		<text
 			name="infosEx4UL"
@@ -935,8 +885,6 @@ Theme path: ${themePath}
 		>
 			
 			<visible>{binding:favorites} &gt; 0</visible>
-			<fontSize verticalScreen="true">0.015</fontSize>
-			<padding verticalScreen="true">0.025 0.103 0 0</padding>
 			
 		</text>
 
@@ -961,6 +909,7 @@ Theme path: ${themePath}
 			opacity="0"
 			color="${c.text}"
 			singleLineScroll="true"
+			autoScrollDelay="10"
 		>
 
 			<storyboard>
@@ -968,11 +917,7 @@ Theme path: ${themePath}
 				<animation property="opacity"								to="1"				begin="1000" 		duration="200" 			mode="easeIn"							/>
 			</storyboard>
 
-			<text>                                                                                                                                                                                                                                                                                                                                      ${desc}</text>
-
-			<text verticalScreen="true">                                                                                                                                                                                         ${desc}</text>
-
-			<pos verticalScreen="true">0 0.968</pos>
+			<text>                                                                                                                                                                                                                                                                                                                                    ${desc}</text>
 
 		</text>
 
@@ -1007,7 +952,7 @@ Theme path: ${themePath}
 				<animation property="opacity"								to="0.7"				begin="550" 		duration="400" 			mode="easeInOut"						/>
 			</storyboard>
 			
-			<storyboard ifSubset="randomVideos:ur|bl|br|ctr|btm">
+			<storyboard ifSubset="randomVideos:ur|bl|br">
 				<animation property="opacity"								to="0.9"				begin="550" 		duration="400" 			mode="easeInOut"						/>
 			</storyboard>
 			
@@ -1024,17 +969,16 @@ Theme path: ${themePath}
 			pos="0.5 0.5"
 			zIndex="200"
 			autoFade="true"
+			minSize="1 1"
 		>
 			
 			<storyboard>
 				<animation property="opacity"			from="0.5"			to="1"									duration="350" 			mode="easeOut"							/>
 				<animation property="scale"				from="1.005"		to="1"									duration="350" 			mode="easeInOut"						/>
 			</storyboard>
-			
-			<minSize verticalScreen="false">1 1</minSize>
-			<maxSize verticalScreen="true">99 1</maxSize>
-		
+					
 		</image>
+
 
 		<image name="systemBackground" extra="true"												default=":/parts/default_wallpaper.jpg"/>
 		<image name="systemBackground" extra="true"												default="./${v.custom}/default_wallpaper.jpg"/>
@@ -1061,11 +1005,7 @@ Theme path: ${themePath}
 		>
 			
 			<scrollSound>./${v.custom}/scroll.wav</scrollSound>
-			
-			<maxLogoCount verticalScreen="true">3</maxLogoCount>
-			<size verticalScreen="true">1.15 1</size>
-			<logoSize verticalScreen="true">0.50 0.08</logoSize>
-		
+					
 		</carousel>
 
 
@@ -1079,16 +1019,8 @@ Theme path: ${themePath}
 			logoRotation="${v.wheelFlip}16"
 			logoRotationOrigin="2.75 0.5"
 			logoAlignment="center"
-		>
-		
-			<size verticalScreen="true">1 1</size>
-			<logoSize verticalScreen="true">0.65 0.14</logoSize>
-			<logoRotationOrigin verticalScreen="true">2 0.5</logoRotationOrigin>
-			<logoRotation verticalScreen="true">${v.wheelFlip}26</logoRotation>
-			<maxLogoCount verticalScreen="true">9</maxLogoCount>
-		
-		</carousel>
-
+		/>
+				
 
 		<carousel
 			name="systemcarousel"
@@ -1105,13 +1037,8 @@ Theme path: ${themePath}
 			ifSubset="carousel:vertical"
 			type="vertical"
 			maxLogoCount="5"
-		>
+		/>
 			
-			<logoSize verticalScreen="true">0.65 0.14</logoSize>
-			<maxLogoCount verticalScreen="true">7</maxLogoCount>
-			
-		</carousel>
-
 
 		<!-- Carousel animations -->
 		
@@ -1251,14 +1178,7 @@ Theme path: ${themePath}
 			
 			<origin ifSubset="randomVideos:ur|br">0 1</origin>
 			<pos ifSubset="randomVideos:ur|br">0.025 0.9018518518518519</pos>
-			
-			<maxSize verticalScreen="true">0.4 0.08</maxSize>
-			<origin verticalScreen="true">1 0</origin>
-			<pos verticalScreen="true">0.97 0.05</pos>
-			
-			<origin verticalScreen="true" ifSubset="randomVideos:ur|no">1 1</origin>
-			<pos verticalScreen="true" ifSubset="randomVideos:ur|no">0.97 0.93</pos>
-			
+									
 		</image>
 
 
@@ -1425,7 +1345,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		>
 			
 			<visible>!empty({game:releaseyear})</visible>
-			<fontSize verticalScreen="true">0.035</fontSize>
 			
 		</text>
 
@@ -1440,7 +1359,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		>
 			
 			<visible>empty({game:releaseyear})</visible>
-			<fontSize verticalScreen="true">0.035</fontSize>
 			
 		</text>
 
@@ -1459,9 +1377,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			&amp;&amp;	!empty({game:developer})
 			</visible>
 			
-			<fontSize verticalScreen="true">0.025</fontSize>
-			<padding verticalScreen="true">0.025 0.065 0 0</padding>
-
 		</text>
 
 
@@ -1479,9 +1394,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			&amp;&amp;	empty({game:developer})
 			</visible>
 			
-			<fontSize verticalScreen="true">0.025</fontSize>
-			<padding verticalScreen="true">0.025 0.065 0 0</padding>
-
 		</text>
 
 
@@ -1499,9 +1411,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			&amp;&amp;	empty({game:developer})
 			</visible>
 			
-			<fontSize verticalScreen="true">0.025</fontSize>
-			<padding verticalScreen="true">0.025 0.065 0 0</padding>
-
 		</text>
 
 
@@ -1519,9 +1428,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			&amp;&amp;	!empty({game:developer})
 			</visible>
 			
-			<fontSize verticalScreen="true">0.025</fontSize>
-			<padding verticalScreen="true">0.025 0.065 0 0</padding>
-
 		</text>
 
 
@@ -1733,8 +1639,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 				<animation property="opacity" 								to="0" 							begin="650"			duration="75" 			mode="easeInOut"								/>
 				<animation property="scale" 								to="0.4" 						begin="725"			duration="1" 			mode="easeInOut"								/>
 			</storyboard>
-
-			<maxSize verticalScreen="true">0.6 0.1</maxSize>
 		
 		</image>
 
@@ -2136,13 +2040,6 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 				<animation property="scale" 								to="0.66" 				begin="650"			duration="150" 			mode="easeInOut"				/>
 			</storyboard>
 
-			<storyboard verticalScreen="true">
-				<animation property="origin" 								to="0.5 0.5" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-				<animation property="pos" 									to="0.5 0.075" 			begin="650"			duration="150" 			mode="easeInOut"				/>
-			</storyboard>
-
-			<maxSize verticalScreen="true">0.6 0.1</maxSize>
-
 		</image>
 
 
@@ -2171,14 +2068,9 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			selectorColorEnd="${c.menuSelector}"
 			selectorImagePath=":/parts/selectorBasic.png"
 			alignment="center"
-		>
-
-			<lines verticalScreen="true">25</lines>
-			<pos verticalScreen="true">0.5 0.14</pos>
-			<size verticalScreen="true">1 0.82</size>
-
-		</textlist>
-
+		/>
+		
+		
 		<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>
 		<textlist name="gamelist"			scrollSound="./${v.custom}/scroll.wav"/>
 		<textlist name="gamelist"			scrollSound="./${v.custom}/${system.theme}/scroll.wav"/>
@@ -2235,13 +2127,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			selectorColorEnd="${c.menuSelector}"
 			selectorImagePath=":/parts/selectorBasicShort.png"
 			alignment="center"
-		>
-
-				<lines verticalScreen="true">25</lines>
-				<pos verticalScreen="true">0.5 0.14</pos>
-				<size verticalScreen="true">1 0.82</size>
-				
-		</textlist>
+		/>
 
 
 		<textlist name="gamelist"			scrollSound=":/sounds/scroll.wav"/>

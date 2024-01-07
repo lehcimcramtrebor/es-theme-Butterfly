@@ -6,7 +6,6 @@
 
 <v.controller>xbox</v.controller>
 <v.controllerSpacing>0.005</v.controllerSpacing>
-<v.controllerSpacing verticalScreen="true">0.013</v.controllerSpacing>
 
 </variables>
 
