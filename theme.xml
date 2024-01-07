@@ -392,6 +392,36 @@
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
+	<!-- Subset gamelist backgrounds appearence -->
+
+	<variables>
+
+		<lang.gamelistBrightness>gamelist - backgrounds brightness</lang.gamelistBrightness>
+		<lang.gamelistBrightness lang="fr">liste des jeux - luminosité de l'arrière-plan</lang.gamelistBrightness>
+
+		<lang.dark>dark</lang.dark>
+		<lang.dark lang="fr">sombre</lang.dark>
+
+		<lang.standard>standard</lang.standard>
+		<lang.standard lang="fr">standard</lang.standard>
+
+		<lang.bright>bright</lang.bright>
+		<lang.bright lang="fr">lumineux</lang.bright>
+		
+	</variables>
+
+
+	<subset name="gamelistBrightness" displayName="${lang.gamelistBrightness}" appliesTo="${v.allViews}">
+
+		<include name="standard"			displayName="${lang.standard}"			/>
+		<include name="dark"				displayName="${lang.dark}"				/>
+		<include name="bright"				displayName="${lang.bright}"			/>
+		
+	</subset>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 	<!-- Logos subsets -->
 
 	<variables>
@@ -1307,7 +1337,12 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			colorEnd="${c.base}1a"
 			gradientType="vertical"
 			opacity="0.7"
-		/>
+		>
+		
+		<color ifSubset="gamelistBrightness:dark">${c.base}ff</color>
+		<opacity ifSubset="gamelistBrightness:bright">0.4</opacity>
+		
+		</image>
 
 
 		<!-- Theme or customs backgrounds properties for all gamelist-->
