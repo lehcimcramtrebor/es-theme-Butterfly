@@ -1738,6 +1738,35 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			|| 	contains(lower({game:rom}), 'disc-9')
 			|| 	contains(lower({game:rom}), 'disc9')
 			</visible>
+
+			<x>{game:kidgame} ? 0.9225 : 0.9425</x>
+	
+			<storyboard repeat="forever">
+			
+				<animation property="opacity"									to="0" 												duration="250" 			mode="linear" 	autoreverse="true"				/>
+			
+			</storyboard>
+
+		</image>
+		
+		
+	
+		<!-- Game Disc -->
+		
+		<image
+			name="gamesKid"
+			extra="true"
+			linearSmooth="true"
+			zIndex="1200"
+			color="ccccccef"
+			maxSize="0.5 0.0240740740740741"
+			pos="0.9425 0.0565"
+			origin="1 0"
+			path=":/parts/kid.png"
+
+		>
+			
+			<visible>{game:kidgame} ? 1 : 0</visible>
 	
 			<storyboard repeat="forever">
 			
