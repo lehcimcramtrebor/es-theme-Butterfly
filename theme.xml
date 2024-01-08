@@ -1561,11 +1561,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			maxSize="0.02 0.028"
 			zIndex="1200"
 			color="ffffff"
-		>
-
-			<shader>:/shaders/compat.glsl</shader>
-		
-		</image>
+		/>
 
 
 		<image
