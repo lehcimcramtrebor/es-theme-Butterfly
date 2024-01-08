@@ -52,6 +52,46 @@
 		<v.32>{screen.ratio} == '3/2'</v.32>
 		<v.11>{screen.ratio} == '1/1'</v.11>
 
+		<!-- Multi-disc conditions -->
+		
+		<v.multiDisc>
+			contains(lower({game:rom}), 'disc 1')
+		|| 	contains(lower({game:rom}), 'disc-1')
+		|| 	contains(lower({game:rom}), 'disc1')
+
+		|| 	contains(lower({game:rom}), 'disc 2')
+		|| 	contains(lower({game:rom}), 'disc-2')
+		|| 	contains(lower({game:rom}), 'disc2')
+
+		|| 	contains(lower({game:rom}), 'disc 3')
+		|| 	contains(lower({game:rom}), 'disc-3')
+		|| 	contains(lower({game:rom}), 'disc3')
+
+		|| 	contains(lower({game:rom}), 'disc 4')
+		|| 	contains(lower({game:rom}), 'disc-4')
+		|| 	contains(lower({game:rom}), 'disc4')
+
+		|| 	contains(lower({game:rom}), 'disc 5')
+		|| 	contains(lower({game:rom}), 'disc-5')
+		|| 	contains(lower({game:rom}), 'disc5')
+
+		|| 	contains(lower({game:rom}), 'disc 6')
+		|| 	contains(lower({game:rom}), 'disc-6')
+		|| 	contains(lower({game:rom}), 'disc6')
+
+		|| 	contains(lower({game:rom}), 'disc 7')
+		|| 	contains(lower({game:rom}), 'disc-7')
+		|| 	contains(lower({game:rom}), 'disc7')
+
+		|| 	contains(lower({game:rom}), 'disc 8')
+		|| 	contains(lower({game:rom}), 'disc-8')
+		|| 	contains(lower({game:rom}), 'disc8')
+
+		|| 	contains(lower({game:rom}), 'disc 9')
+		|| 	contains(lower({game:rom}), 'disc-9')
+		|| 	contains(lower({game:rom}), 'disc9')
+		</v.multiDisc>
+
 
 		<!-- General language -->
 
@@ -1649,6 +1689,19 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 
 
 		<image
+			name="md_flag"
+			linearSmooth="true"
+			origin="1 0"
+			pos="0.9725 0.0565"
+			maxSize="0.02 0.05"
+			zIndex="1200"
+			color="ffffff"
+		/>
+
+
+		<!-- Game Hidden-->
+
+		<image
 			name="gameHidden"
 			extra="true"
 			linearSmooth="true"
@@ -1665,93 +1718,18 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 			<shader>:/shaders/compat.glsl</shader>
 			<visible>{game:hidden} ? 1 : 0</visible>
 			<y ifSubset="dock:no">0.21</y>
-			
+
 			<storyboard repeat="forever">
 			
-				<animation property="color"									to="00000000" 										duration="250" 			mode="linear" 	autoreverse="true"				/>
+				<animation property="opacity"									to="0" 										duration="150" 			mode="easeIn" 	autoreverse="true"				/>
+				<animation property="color"										to="ff0000" 								duration="150" 			mode="easeIn" 	autoreverse="true"				/>
 			
 			</storyboard>
 		
 		</image>
 
-
-		<image
-			name="md_flag"
-			linearSmooth="true"
-			origin="1 0"
-			pos="0.9725 0.0565"
-			maxSize="0.02 0.05"
-			zIndex="1200"
-			color="ffffff"
-		/>
 		
-	
-		<!-- Game Disc -->
-		
-		<image
-			name="gamesMultiDisc"
-			extra="true"
-			linearSmooth="true"
-			zIndex="1200"
-			color="ccccccef"
-			maxSize="0.5 0.0240740740740741"
-			pos="0.9425 0.0565"
-			origin="1 0"
-			path=":/parts/multiDisc.png"
-
-		>
-			
-			<visible>
-				contains(lower({game:rom}), 'disc 1')
-			|| 	contains(lower({game:rom}), 'disc-1')
-			|| 	contains(lower({game:rom}), 'disc1')
-
-			|| 	contains(lower({game:rom}), 'disc 2')
-			|| 	contains(lower({game:rom}), 'disc-2')
-			|| 	contains(lower({game:rom}), 'disc2')
-
-			|| 	contains(lower({game:rom}), 'disc 3')
-			|| 	contains(lower({game:rom}), 'disc-3')
-			|| 	contains(lower({game:rom}), 'disc3')
-
-			|| 	contains(lower({game:rom}), 'disc 4')
-			|| 	contains(lower({game:rom}), 'disc-4')
-			|| 	contains(lower({game:rom}), 'disc4')
-
-			|| 	contains(lower({game:rom}), 'disc 5')
-			|| 	contains(lower({game:rom}), 'disc-5')
-			|| 	contains(lower({game:rom}), 'disc5')
-
-			|| 	contains(lower({game:rom}), 'disc 6')
-			|| 	contains(lower({game:rom}), 'disc-6')
-			|| 	contains(lower({game:rom}), 'disc6')
-
-			|| 	contains(lower({game:rom}), 'disc 7')
-			|| 	contains(lower({game:rom}), 'disc-7')
-			|| 	contains(lower({game:rom}), 'disc7')
-
-			|| 	contains(lower({game:rom}), 'disc 8')
-			|| 	contains(lower({game:rom}), 'disc-8')
-			|| 	contains(lower({game:rom}), 'disc8')
-
-			|| 	contains(lower({game:rom}), 'disc 9')
-			|| 	contains(lower({game:rom}), 'disc-9')
-			|| 	contains(lower({game:rom}), 'disc9')
-			</visible>
-
-			<x>{game:kidgame} ? 0.9225 : 0.9425</x>
-	
-			<storyboard repeat="forever">
-			
-				<animation property="opacity"									to="0" 												duration="250" 			mode="linear" 	autoreverse="true"				/>
-			
-			</storyboard>
-
-		</image>
-		
-		
-	
-		<!-- Game kids -->
+		<!-- Game kids icon-->
 		
 		<image
 			name="gamesKid"
@@ -1767,15 +1745,61 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		>
 			
 			<visible>{game:kidgame} ? 1 : 0</visible>
-	
-			<storyboard repeat="forever">
+
+		</image>
+
+
+		<!-- Game Disc -->
+		
+		<image
+			name="gamesMultiDisc"
+			extra="true"
+			linearSmooth="true"
+			zIndex="1200"
+			color="ccccccef"
+			maxSize="0.5 0.0240740740740741"
+			pos="0.9425 0.0565"
+			origin="1 0"
+			path=":/parts/multiDisc.png"
+
+		>
 			
-				<animation property="opacity"									to="0" 												duration="250" 			mode="linear" 	autoreverse="true"				/>
+			<visible>${v.multiDisc}</visible>
+
+			<x>{game:kidgame} ? 0.9225 : 0.9425</x>
 			
-			</storyboard>
+			<offsetX if="${v.notWide}">{game:kidgame} ? -0.005 : 0</offsetX>
 
 		</image>
 		
+		
+		<!-- Game Never Played -->
+		
+		<image
+			name="gamesNeverPlayed"
+			extra="true"
+			linearSmooth="true"
+			zIndex="1200"
+			color="ccccccef"
+			maxSize="0.5 0.0240740740740741"
+			origin="1 0"
+			pos="0.9425 0.0565"
+		>
+			
+			<path>:/parts/np.png</path>
+			<path>:/parts/np-${lang}.png</path>
+
+			<visible>{game:gametime} == 0 ? 1 : 0</visible>
+
+			<x>{game:kidgame} ? 0.9225 : 0.9425</x>
+			<x if="{v.notWide}">{game:kidgame} ? 0.9175 : 0.9425</x>
+			
+			<offsetX>${v.multiDisc} ? -0.065 : 0</offsetX>
+			<offsetX if="{v.notWide}">${v.multiDisc} ? -0.085 : 0</offsetX>
+			<offsetX if="{v.ultraWide}">${v.multiDisc} ? -0.055 : 0</offsetX>
+
+		</image>
+	
 		
 		<!-- Logos -->
 		
