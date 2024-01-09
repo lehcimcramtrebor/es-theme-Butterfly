@@ -503,6 +503,27 @@
 	</subset>
 
 
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+	<!-- Icon right (flag, neverplayed, multi-disc) -->
+
+	<variables>
+
+		<lang.dockRight>gamelist - display upper right flags</lang.dockRight>
+		<lang.dockRight lang="fr">liste des jeux - afficher les drapeaux en haut à droite</lang.dockRight>
+		
+	</variables>
+
+
+	<subset name="dockRight" displayName="${lang.dockRight}" appliesTo="${v.allViews}">
+
+		<include name="yes"			displayName="${lang.yes}"			/>
+		<include name="no"			displayName="${lang.no}"			/>
+		
+	</subset>
+
+
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 	<!-- Game description -->
@@ -1691,7 +1712,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		<image
 			name="md_flag"
 			linearSmooth="true"
-			ifSubset="dock:yes"
+			ifSubset="dockRight:yes"
 			origin="1 0"
 			pos="0.9725 0.0565"
 			maxSize="0.02 0.05"
@@ -1735,7 +1756,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		<image
 			name="gamesKid"
 			extra="true"
-			ifSubset="dock:yes"
+			ifSubset="dockRight:yes"
 			linearSmooth="true"
 			zIndex="1200"
 			color="ccccccef"
@@ -1756,7 +1777,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		<image
 			name="gamesMultiDisc"
 			extra="true"
-			ifSubset="dock:yes"
+			ifSubset="dockRight:yes"
 			linearSmooth="true"
 			zIndex="1200"
 			color="ccccccef"
@@ -1781,7 +1802,7 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		<image
 			name="gamesNeverPlayed"
 			extra="true"
-			ifSubset="dock:yes"
+			ifSubset="dockRight:yes"
 			linearSmooth="true"
 			zIndex="1200"
 			color="ccccccef"
@@ -2275,8 +2296,8 @@ _ButterflyCustom/_GAMES_MEDIAS_/{game:system}/
 		>
 
 			<shader>:/shaders/shadow2.glsl</shader>
-			<origin ifSubset="dock:no">1 0</origin>
-			<y ifSubset="dock:no">0.055</y>
+			<origin ifSubset="dockRight:no">1 0</origin>
+			<y ifSubset="dockRight:no">0.055</y>
 
 		</image>
 
